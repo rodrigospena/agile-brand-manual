@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 96px;
+        letter-spacing: 0.14em;
+      }
+      .brand-subtitle-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+      }
+    </style>
+  </defs>
+  
+  
+  <!-- Símbolo à Esquerda -->
+  <g transform="translate(180, 200) scale(0.48) translate(-400, -380)">
+    
+    <polygon points="400,80 635,680 500,680 435,530 365,530 300,680 165,680" fill="#0B1B3D" />
+    
+    <!-- Residential Pitched Roof Transitioning to Urban Core -->
+    <polygon points="400,250 470,305 400,355 330,305" fill="#FF9544" />
+    <polygon points="330,305 400,355 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,355 470,305 470,680 400,680" fill="#E65100" />
+    
+    <!-- Residential Window Grid + Commercial Louvers -->
+    <rect x="345" y="380" width="40" height="40" transform="matrix(0.9 0.45 0 1 0 -160)" fill="#FFFFFF" />
+    <polygon points="330,480 400,525 400,545 330,500" fill="#FFFFFF" />
+    <polygon points="330,560 400,605 400,625 330,580" fill="#FFFFFF" />
+    <polygon points="420,440 455,418 455,680 420,680" fill="#FFFFFF" opacity="0.3" />
+  
+  </g>
+  
+  <!-- Divisor Vertical Técnico -->
+  <line x1="390" y1="80" x2="390" y2="320" stroke="#64748B" stroke-width="2" opacity="0.35"/>
+  
+  <!-- Texto à Direita -->
+  <text x="440" y="210" class="brand-title-h" fill="#0B1B3D">AGILE</text>
+  <text x="445" y="268" class="brand-subtitle-h" fill="#FF6B00">ENGENHARIA E REGULARIZAÇÃO</text>
+</svg>

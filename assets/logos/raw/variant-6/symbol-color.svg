@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v6">
+    
+    <!-- Dynamic Agility "A" with subtle forward apex sweep -->
+    <polygon points="415,85 640,680 505,680 445,535 375,535 305,680 170,680" fill="#0B1B3D" />
+    
+    <!-- Dynamic Isometric Building -->
+    <polygon points="410,270 480,320 405,365 335,320" fill="#FFA25B" />
+    <polygon points="335,320 405,365 405,680 335,680" fill="#FF6B00" />
+    <polygon points="405,365 480,320 480,680 405,680" fill="#E65100" />
+    
+    <!-- Aerodynamic Fast Louvers with Angled Forward Cut -->
+    <polygon points="335,380 405,425 405,445 335,400" fill="#FFFFFF" />
+    <polygon points="335,445 405,490 405,510 335,465" fill="#FFFFFF" />
+    <polygon points="335,510 405,555 405,575 335,530" fill="#FFFFFF" />
+    <polygon points="335,575 405,620 405,640 335,595" fill="#FFFFFF" />
+    <polygon points="335,640 405,680 405,680 335,660" fill="#FFFFFF" />
+  
+  </g>
+</svg>

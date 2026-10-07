@@ -1,0 +1,71 @@
+/* Agile Brand Design Tokens */
+:root {
+  /* Core Brand Colors */
+  --color-navy-900: #0B1B3D;
+  --color-navy-800: #12244E;
+  --color-navy-700: #1C356F;
+  --color-navy-600: #294A94;
+  --color-navy-100: #E6ECF8;
+  --color-navy-50:  #F0F4FC;
+
+  --color-orange-500: #FF6B00;
+  --color-orange-600: #E65A00;
+  --color-orange-400: #FF8533;
+  --color-orange-100: #FFEBD6;
+  --color-orange-50:  #FFF6ED;
+
+  --color-white: #FFFFFF;
+  --color-slate-900: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-slate-700: #334155;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50:  #F8FAFC;
+
+  /* Semantic UI Tokens */
+  --bg-primary: #081229;
+  --bg-secondary: #0D1D3D;
+  --bg-card: rgba(18, 36, 78, 0.65);
+  --bg-card-border: rgba(255, 107, 0, 0.18);
+  --bg-card-hover: rgba(24, 48, 102, 0.85);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-accent: #FF6B00;
+
+  /* Typography */
+  --font-brand: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 35px rgba(255, 107, 0, 0.3);
+  --shadow-blueprint: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

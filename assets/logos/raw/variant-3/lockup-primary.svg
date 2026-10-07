@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 88px;
+        letter-spacing: 0.16em;
+        text-anchor: middle;
+      }
+      .brand-subtitle {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  
+  <!-- Símbolo Centralizado (Escala 0.78) -->
+  <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
+    
+    <polygon points="400,90 640,680 500,680 440,540 360,540 300,680 160,680" fill="#0B1B3D" />
+    
+    <!-- Solid Monolithic Prism -->
+    <polygon points="400,270 480,320 400,370 320,320" fill="#FFB076" />
+    <polygon points="320,320 400,370 400,680 320,680" fill="#FF6B00" />
+    <polygon points="400,370 480,320 480,680 400,680" fill="#E65100" />
+    
+    <!-- High-Contrast Architectural Portal Cutout on Right Face -->
+    <polygon points="420,440 460,415 460,680 420,680" fill="#0B1B3D" opacity="0.85" />
+    <!-- Single Top Floor Window on Left Face -->
+    <polygon points="335,360 385,392 385,425 335,393" fill="#FFFFFF" />
+  
+  </g>
+  
+  <!-- Logotipo Oficial Agile (SEM ACENTO) -->
+  <text x="400" y="780" class="brand-title" fill="#0B1B3D">AGILE</text>
+  
+  <!-- Linhas de Apoio e Tagline -->
+  <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+  <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+  <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+</svg>

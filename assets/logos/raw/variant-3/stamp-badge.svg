@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .stamp-text {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: 0.25em;
+        fill: #0B1B3D;
+      }
+      .stamp-sub {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: 0.22em;
+        fill: #FF6B00;
+      }
+    </style>
+    <!-- Trajetos Circulares para Texto em Curva -->
+    <path id="circleTop" d="M 100,300 A 200,200 0 0,1 500,300" fill="none"/>
+    <path id="circleBottom" d="M 500,300 A 200,200 0 0,1 100,300" fill="none"/>
+  </defs>
+  
+  
+  <!-- Círculos de Carimbo Técnico -->
+  <circle cx="300" cy="300" r="280" fill="none" stroke="#0B1B3D" stroke-width="5"/>
+  <circle cx="300" cy="300" r="262" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="300" r="175" fill="none" stroke="#0B1B3D" stroke-width="2.5"/>
+  
+  <!-- Textos Circulares -->
+  <text class="stamp-text">
+    <textPath href="#circleTop" startOffset="50%" text-anchor="middle">
+      AGILE ENGENHARIA
+    </textPath>
+  </text>
+  
+  <text class="stamp-sub">
+    <textPath href="#circleBottom" startOffset="50%" text-anchor="middle">
+      REGULARIZAÇÃO DE IMÓVEIS
+    </textPath>
+  </text>
+  
+  <!-- Pontos Decorativos -->
+  <circle cx="95" cy="300" r="6" fill="#FF6B00"/>
+  <circle cx="505" cy="300" r="6" fill="#FF6B00"/>
+  
+  <!-- Símbolo Central -->
+  <g transform="translate(300, 305) scale(0.32) translate(-400, -380)">
+    
+    <polygon points="400,90 640,680 500,680 440,540 360,540 300,680 160,680" fill="#0B1B3D" />
+    
+    <!-- Solid Monolithic Prism -->
+    <polygon points="400,270 480,320 400,370 320,320" fill="#FFB076" />
+    <polygon points="320,320 400,370 400,680 320,680" fill="#FF6B00" />
+    <polygon points="400,370 480,320 480,680 400,680" fill="#E65100" />
+    
+    <!-- High-Contrast Architectural Portal Cutout on Right Face -->
+    <polygon points="420,440 460,415 460,680 420,680" fill="#0B1B3D" opacity="0.85" />
+    <!-- Single Top Floor Window on Left Face -->
+    <polygon points="335,360 385,392 385,425 335,393" fill="#FFFFFF" />
+  
+  </g>
+</svg>

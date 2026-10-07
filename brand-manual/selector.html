@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seletor & Eliminador de Logos — Agile Engenharia</title>
+  <meta name="description" content="Painel interativo para comparação, teste cromático e eliminação de variantes de logos para a Agile Engenharia e Regularização de Imóveis." />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/manual.css" />
+  <style>
+    .controls-panel {
+      background: rgba(18, 36, 78, 0.7);
+      border: 1px solid rgba(255, 107, 0, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(14px);
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .control-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .btn-group {
+      display: flex;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 4px;
+      border-radius: var(--radius-md);
+      gap: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .btn-toggle:hover {
+      color: var(--color-white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-toggle.active {
+      background: var(--color-orange-500);
+      color: var(--color-white);
+      box-shadow: 0 2px 8px rgba(255, 107, 0, 0.4);
+    }
+
+    .selector-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .selector-card.status-favorite {
+      border-color: rgba(255, 215, 0, 0.6);
+      box-shadow: 0 0 24px rgba(255, 215, 0, 0.15);
+    }
+
+    .selector-card.status-eliminated {
+      opacity: 0.45;
+      filter: grayscale(0.8);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .selector-card.status-eliminated:hover {
+      opacity: 0.9;
+      filter: grayscale(0.2);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .card-title-group h3 {
+      font-family: var(--font-brand);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge-favorite { background: rgba(255, 215, 0, 0.2); color: #FFD700; border: 1px solid #FFD700; }
+    .badge-review { background: rgba(59, 130, 246, 0.2); color: #60A5FA; border: 1px solid #3B82F6; }
+    .badge-eliminated { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
+
+    .status-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 0.95rem;
+    }
+
+    .btn-icon:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.08);
+    }
+
+    .btn-icon.active {
+      border-color: var(--color-orange-500);
+      background: rgba(255, 107, 0, 0.25);
+    }
+
+    .preview-stage {
+      min-height: 260px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .preview-svg-img {
+      max-width: 90%;
+      max-height: 220px;
+      object-fit: contain;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .notes-text {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      min-height: 40px;
+    }
+
+    .card-btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-sm {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.78rem;
+    }
+
+    .counter-badge {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body class="blueprint-bg">
+
+  <!-- Header -->
+  <header class="header-bar">
+    <a href="index.html" class="brand-badge">
+      <img src="../assets/logos/exports/agile-symbol.svg" alt="Agile" />
+      <span class="brand-badge-text">AGILE</span>
+      <span class="brand-tag-pill">Painel de Decisão</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">📖 Ver Manual de Marca</a>
+      <a href="selector.html" class="nav-link active">🎯 Seletor de Variantes</a>
+      <button id="btn-export-report" class="btn btn-primary btn-sm">📄 Exportar Relatório</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Title -->
+    <div class="hero" style="padding: 2rem 1rem 2rem;">
+      <span class="hero-pill">⚡ Escolha do Logotipo Oficial</span>
+      <h1>Painel de Comparação & Eliminação</h1>
+      <p>
+        Compare as 6 variações vetorizadas sob diferentes fundos cromáticos e formatos de aplicação.
+        Use os botões de ação para classificar como <strong>Favorita</strong>, <strong>Em Análise</strong> ou <strong>Eliminada</strong> até a escolha definitiva.
+      </p>
+    </div>
+
+    <!-- Interactive Control Panel -->
+    <div class="controls-panel">
+      
+      <!-- Fundo Cromático -->
+      <div class="control-group">
+        <span class="control-label">Fundo de Visualização</span>
+        <div class="btn-group">
+          <button class="btn-toggle global-bg-btn active" data-bg="bg-light">⚪ Claro (Branco)</button>
+          <button class="btn-toggle global-bg-btn" data-bg="bg-navy">🔵 Deep Navy</button>
+          <button class="btn-toggle global-bg-btn" data-bg="bg-slate">🌑 Slate Dark</button>
+        </div>
+      </div>
+
+      <!-- Modo de Aplicação -->
+      <div class="control-group">
+        <span class="control-label">Formato de Aplicação</span>
+        <div class="btn-group">
+          <button class="btn-toggle lockup-btn active" data-mode="primary">Vertical / Principal</button>
+          <button class="btn-toggle lockup-btn" data-mode="horizontal">Horizontal</button>
+          <button class="btn-toggle lockup-btn" data-mode="symbol">Símbolo Isolado</button>
+          <button class="btn-toggle lockup-btn" data-mode="stamp">Carimbo Técnico</button>
+        </div>
+      </div>
+
+      <!-- Filtro de Status -->
+      <div class="control-group">
+        <span class="control-label">Filtro de Status</span>
+        <div class="btn-group">
+          <button class="btn-toggle filter-btn active" data-filter="all">Todas <span class="counter-badge" id="count-total">6</span></button>
+          <button class="btn-toggle filter-btn" data-filter="favorite">⭐️ Favoritas <span class="counter-badge" id="count-fav">1</span></button>
+          <button class="btn-toggle filter-btn" data-filter="review">🔍 Em Análise <span class="counter-badge" id="count-rev">5</span></button>
+          <button class="btn-toggle filter-btn" data-filter="eliminated">❌ Eliminadas <span class="counter-badge" id="count-elim">0</span></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid-3" id="cards-container">
+      <!-- Inserido dinamicamente pelo selector.js -->
+    </div>
+
+    <!-- Guia Rápido de Eliminação -->
+    <div class="glass-card" style="margin-top: 3rem;">
+      <h3 style="font-family: var(--font-brand); margin-bottom: 0.75rem; color: var(--color-orange-400);">💡 Dicas de Avaliação para Engenharia & Prefeitura</h3>
+      <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.8; margin-left: 1.5rem;">
+        <li><strong>Redução e Legibilidade:</strong> O símbolo precisa ser legível mesmo em escala de 16px (favicon) e no carimbo da prancha de prefeitura.</li>
+        <li><strong>Harmonia Geométrica:</strong> Observe a espessura dos frisos horizontais e se o ângulo do telhado isométrico transmite solidez.</li>
+        <li><strong>Escalabilidade:</strong> A <strong>Variante 1 (Sharp Precision)</strong> possui 5 frisos com balanço equilibrado; a <strong>Variante 2</strong> é mais minimalista (4 pavimentos); a <strong>Variante 3</strong> destaca solidez institucional.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <div id="toast" class="toast">Mensagem</div>
+
+  <script src="js/selector.js"></script>
+</body>
+</html>

@@ -1,95 +1,43 @@
-# Current Spec
+# Task Spec — SPEC-01: Agile Branding & Vector System
 
-This file defines the active task or feature. Replace it entirely when starting a new task. The AI reads this file at the start of every session to understand what is being built.
+Active specification for creating the complete brand identity, SVG vector assets, interactive elimination board, and web-based brand manual.
 
 ---
 
 ## Goal
 
-[What problem are we solving? One or two sentences.]
-
----
-
-## User value
-
-[What improves for the user when this is done?]
+Desenvolver a identidade visual oficial da **Agile** (Engenharia Civil e Regularização de Imóveis), vetorizar com extrema precisão geométrica 6 variantes do símbolo arquitetônico em SVG puro, disponibilizar um painel de eliminação/seleção para o cliente e construir o Manual de Marca interativo em HTML.
 
 ---
 
 ## Strategic & Audit Alignment
 
-- **Audit Findings Cross-Check:** [Explicitly list audit items addressed or affected (e.g. SEC-01, MEM-03), or "Clean — No active audit blockers touching this scope"]
-- **Strategic / Research Reference:** [Link to relevant document in .ai/research/, docs/, or "None / Clean"]
+- **Alinhamento do Negócio:** Posicionar a Agile como a principal autoridade técnica e ágil em regularizações e aprovações perante a prefeitura.
+- **Conformidade de Marca:** Corrigir definitivamente o nome da marca para **Agile** (sem acento) em todos os pontos de contato.
+- **Rigor Técnico:** Garantir suporte a plotagens e carimbos técnicos (DWG/PDF), selos de prefeitura e aplicações digitais de alta fidelidade.
 
 ---
 
-## Scope
+## Scope & Deliverables
 
-**In:**
-- [What is explicitly included in this task]
-
-**Out:**
-- [What is explicitly excluded — important to prevent scope creep]
-
----
-
-## Constraints
-
-- [Technical, business, or design constraints the AI must respect]
-
----
-
-## Existing patterns
-
-[Relevant systems, components, or conventions already in the codebase that this task should follow or integrate with.]
+1. **Ativos Vetoriais (SVGs):**
+   - 6 Variantes geométricas do símbolo com proporções exatas.
+   - Lockups: Principal, Horizontal, Vertical, Símbolo/Favicon e Carimbo/Selo Técnico.
+   - Variações cromáticas: Deep Navy, Safety Orange, Negativo (White) e Monocromático (100% Black).
+   - Set de 4 ícones institucionais (Agilidade, Confiança, Conhecimento Técnico, Regularização Total).
+2. **Interactive Logo Selector (`brand-manual/selector.html`):**
+   - Ferramenta para comparar, alternar fundos cromáticos e eliminar opções até selecionar a versão final.
+3. **Manual de Marca Interativo (`brand-manual/index.html`):**
+   - Web application com design system completo, anatomia, tokens com cópia rápida, tipografia, aplicações e mockups.
+4. **Organização do Repositório:**
+   - Estrutura de pastas limpa e padronizada em `assets/` e `brand-manual/`.
 
 ---
 
-## Proposed change
+## Acceptance Criteria
 
-[How are we solving it? Brief description of the approach.]
-
----
-
-## User flow
-
-[Step-by-step description of the interaction from the user's perspective.]
-
-1. User does X
-2. System responds with Y
-3. User sees Z
-
----
-
-## Edge cases
-
-- [What could go wrong or behave unexpectedly?]
-- [What should happen when the user does something unexpected?]
-
----
-
-## Acceptance criteria
-
-- [ ] [Concrete, verifiable condition that defines completion]
-- [ ] [Concrete, verifiable condition that defines completion]
-
----
-
-## Validation plan
-
-[How will we verify this works? Manual steps, test cases, or scenarios to check.]
-
----
-
-## Risks
-
-- [Anything that could go wrong during implementation or affect other parts of the system]
-
----
-
-## Workflow state
-<!-- Updated by the agent during the session -->
-
-- **Current phase:** [ Discover / Plan / Execute / Validate / Review / Done ]
-- **Pending decision:** [What the human needs to decide before the next phase — leave blank if none]
-- **Execution blocked until:** [Condition or approval required — leave blank if none]
+- [x] O nome da marca em todos os vetores e textos está escrito como **Agile** (sem acento).
+- [x] Arquivos SVG gerados com código limpo, escaláveis e sem perdas.
+- [x] Painel de eliminação de logos funcional com alternância de temas e filtros.
+- [x] Manual de marca interativo com design de alto nível (responsive, glassmorphism, tokens interativos).
+- [x] Documentação PXOS integralmente atualizada.

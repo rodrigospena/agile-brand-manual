@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v3">
+    
+    <polygon points="400,90 640,680 500,680 440,540 360,540 300,680 160,680" fill="#000000" />
+    
+    <!-- Solid Monolithic Prism -->
+    <polygon points="400,270 480,320 400,370 320,320" fill="#94A3B8" />
+    <polygon points="320,320 400,370 400,680 320,680" fill="#000000" />
+    <polygon points="400,370 480,320 480,680 400,680" fill="#475569" />
+    
+    <!-- High-Contrast Architectural Portal Cutout on Right Face -->
+    <polygon points="420,440 460,415 460,680 420,680" fill="#000000" opacity="0.85" />
+    <!-- Single Top Floor Window on Left Face -->
+    <polygon points="335,360 385,392 385,425 335,393" fill="#FFFFFF" />
+  
+  </g>
+</svg>
