@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 88px;
+        letter-spacing: 0.16em;
+        text-anchor: middle;
+      }
+      .brand-subtitle {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  
+  <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
+    
+    <!-- Isometric Orange Frame Behind -->
+    <polygon points="400,160 560,260 560,520 400,620 240,520 240,260" 
+      fill="none" stroke="#FF6B00" stroke-width="22" stroke-linejoin="round" />
+    <line x1="400" y1="160" x2="400" y2="620" stroke="#FF6B00" stroke-width="16" stroke-dasharray="16 12" />
+    <!-- Dominant Interlocking A in Front -->
+    <polygon points="400,100 630,680 500,680 440,530 360,530 300,680 170,680" 
+      fill="#0B1B3D" />
+    <polygon points="400,250 445,360 355,360" fill="#FFFFFF" />
+  
+  </g>
+  
+  <text x="400" y="780" class="brand-title" fill="#0B1B3D">AGILE</text>
+  <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+  <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+  <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+</svg>

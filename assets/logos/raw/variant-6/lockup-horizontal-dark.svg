@@ -19,18 +19,12 @@
   </defs>
   <rect width="1200" height="400" fill="#0B1B3D"/>
   
-  <!-- Símbolo à Esquerda -->
   <g transform="translate(180, 200) scale(0.48) translate(-400, -380)">
     
-    <!-- Dynamic Agility "A" with subtle forward apex sweep -->
     <polygon points="415,85 640,680 505,680 445,535 375,535 305,680 170,680" fill="#FFFFFF" />
-    
-    <!-- Dynamic Isometric Building -->
-    <polygon points="410,270 480,320 405,365 335,320" fill="#FFFFFF" />
+    <polygon points="410,270 480,320 405,365 335,320" fill="#FFA25B" />
     <polygon points="335,320 405,365 405,680 335,680" fill="#FF6B00" />
     <polygon points="405,365 480,320 480,680 405,680" fill="#FFA768" />
-    
-    <!-- Aerodynamic Fast Louvers with Angled Forward Cut -->
     <polygon points="335,380 405,425 405,445 335,400" fill="#0B1B3D" />
     <polygon points="335,445 405,490 405,510 335,465" fill="#0B1B3D" />
     <polygon points="335,510 405,555 405,575 335,530" fill="#0B1B3D" />
@@ -39,10 +33,7 @@
   
   </g>
   
-  <!-- Divisor Vertical Técnico -->
   <line x1="390" y1="80" x2="390" y2="320" stroke="#64748B" stroke-width="2" opacity="0.35"/>
-  
-  <!-- Texto à Direita -->
   <text x="440" y="210" class="brand-title-h" fill="#FFFFFF">AGILE</text>
   <text x="445" y="268" class="brand-subtitle-h" fill="#FF6B00">ENGENHARIA E REGULARIZAÇÃO</text>
 </svg>

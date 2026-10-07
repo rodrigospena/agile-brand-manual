@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v8">
+    
+    <!-- Isometric Orange Frame Behind -->
+    <polygon points="400,160 560,260 560,520 400,620 240,520 240,260" 
+      fill="none" stroke="#CBD5E1" stroke-width="22" stroke-linejoin="round" />
+    <line x1="400" y1="160" x2="400" y2="620" stroke="#CBD5E1" stroke-width="16" stroke-dasharray="16 12" />
+    <!-- Dominant Interlocking A in Front -->
+    <polygon points="400,100 630,680 500,680 440,530 360,530 300,680 170,680" 
+      fill="#FFFFFF" />
+    <polygon points="400,250 445,360 355,360" fill="#FFFFFF" />
+  
+  </g>
+</svg>

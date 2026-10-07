@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 88px;
+        letter-spacing: 0.16em;
+        text-anchor: middle;
+      }
+      .brand-subtitle {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  
+  <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
+    
+    <!-- Left A Leg Facets -->
+    <polygon points="400,90 400,320 280,680 170,680" fill="#0B1B3D" />
+    <polygon points="400,320 400,540 330,680 280,680" fill="#1E3A8A" />
+    <!-- Right A Leg Facets -->
+    <polygon points="400,90 520,680 630,680 400,320" fill="#FF6B00" />
+    <polygon points="400,320 470,680 520,680 400,540" fill="#E65100" />
+    <!-- Central Rising Facet Diamond -->
+    <polygon points="400,240 445,360 400,420 355,360" fill="#FF9E59" />
+  
+  </g>
+  
+  <text x="400" y="780" class="brand-title" fill="#0B1B3D">AGILE</text>
+  <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+  <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+  <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+</svg>

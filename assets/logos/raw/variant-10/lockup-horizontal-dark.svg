@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 96px;
+        letter-spacing: 0.14em;
+      }
+      .brand-subtitle-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="400" fill="#0B1B3D"/>
+  
+  <g transform="translate(180, 200) scale(0.48) translate(-400, -380)">
+    
+    <!-- Outer Arch Frame -->
+    <polygon points="400,90 620,680 490,680 440,540 360,540 310,680 180,680" fill="#FFFFFF" />
+    <!-- 3D Hexagonal Solid Prism -->
+    <polygon points="400,260 480,310 400,360 320,310" fill="#FFA768" />
+    <polygon points="320,310 400,360 400,680 320,630" fill="#FF6B00" />
+    <polygon points="400,360 480,310 480,630 400,680" fill="#E65100" />
+    <!-- 3 Clean Technical Windows -->
+    <polygon points="340,360 385,390 385,420 340,390" fill="#FFFFFF" />
+    <polygon points="340,440 385,470 385,500 340,470" fill="#FFFFFF" />
+    <polygon points="340,520 385,550 385,580 340,550" fill="#FFFFFF" />
+  
+  </g>
+  
+  <line x1="390" y1="80" x2="390" y2="320" stroke="#64748B" stroke-width="2" opacity="0.35"/>
+  <text x="440" y="210" class="brand-title-h" fill="#FFFFFF">AGILE</text>
+  <text x="445" y="268" class="brand-subtitle-h" fill="#FF6B00">ENGENHARIA E REGULARIZAÇÃO</text>
+</svg>

@@ -21,18 +21,12 @@
   </defs>
   <rect width="800" height="1000" fill="#0B1B3D"/>
   
-  <!-- Símbolo Centralizado (Escala 0.78) -->
   <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
     
-    <!-- Outer "A" Frame with Chamfered Modern Peak -->
     <polygon points="400,100 620,680 495,680 435,530 365,530 305,680 180,680" fill="#FFFFFF" />
-    
-    <!-- Negative Space Cutout & Isometric Building -->
     <polygon points="400,290 475,335 400,380 325,335" fill="#FFFFFF" />
     <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
     <polygon points="400,380 475,335 475,680 400,680" fill="#FFA768" />
-    
-    <!-- 4 Clean Architectural Floor Slots -->
     <polygon points="325,390 400,435 400,455 325,410" fill="#0B1B3D" />
     <polygon points="325,465 400,510 400,530 325,485" fill="#0B1B3D" />
     <polygon points="325,540 400,585 400,605 325,560" fill="#0B1B3D" />
@@ -40,10 +34,7 @@
   
   </g>
   
-  <!-- Logotipo Oficial Agile (SEM ACENTO) -->
   <text x="400" y="780" class="brand-title" fill="#FFFFFF">AGILE</text>
-  
-  <!-- Linhas de Apoio e Tagline -->
   <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
   <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
   <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>

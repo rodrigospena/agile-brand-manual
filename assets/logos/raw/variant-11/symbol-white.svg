@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v11">
+    
+    <!-- Left Architectural Wing -->
+    <polygon points="360,200 360,680 200,680 320,200" fill="#FFFFFF" />
+    <!-- Right Architectural Wing -->
+    <polygon points="440,200 440,680 600,680 480,200" fill="#CBD5E1" />
+    <!-- Center Ascending Arrow Pillar -->
+    <polygon points="400,90 460,210 425,210 425,680 375,680 375,210 340,210" fill="#FFFFFF" />
+    <polygon points="400,90 460,210 400,180 340,210" fill="#FFA768" />
+  
+  </g>
+</svg>

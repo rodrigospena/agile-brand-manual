@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v10">
+    
+    <!-- Outer Arch Frame -->
+    <polygon points="400,90 620,680 490,680 440,540 360,540 310,680 180,680" fill="#000000" />
+    <!-- 3D Hexagonal Solid Prism -->
+    <polygon points="400,260 480,310 400,360 320,310" fill="#94A3B8" />
+    <polygon points="320,310 400,360 400,680 320,630" fill="#000000" />
+    <polygon points="400,360 480,310 480,630 400,680" fill="#475569" />
+    <!-- 3 Clean Technical Windows -->
+    <polygon points="340,360 385,390 385,420 340,390" fill="#FFFFFF" />
+    <polygon points="340,440 385,470 385,500 340,470" fill="#FFFFFF" />
+    <polygon points="340,520 385,550 385,580 340,550" fill="#FFFFFF" />
+  
+  </g>
+</svg>

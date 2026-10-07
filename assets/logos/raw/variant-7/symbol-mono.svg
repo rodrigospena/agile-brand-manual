@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v7">
+    
+    <!-- Ultra Clean Solid "A" with precise negative building cutout -->
+    <polygon points="400,90 640,680 510,680 440,520 360,520 290,680 160,680" fill="#000000" />
+    <!-- Negative Space Cutout for Building -->
+    <polygon points="400,280 460,320 460,680 340,680 340,320" fill="#FFFFFF" />
+    <!-- Orange Accent Cube inside Cutout -->
+    <polygon points="400,310 445,340 400,370 355,340" fill="#64748B" />
+    <polygon points="355,340 400,370 400,680 355,680" fill="#64748B" />
+    <polygon points="400,370 445,340 445,680 400,680" fill="#E65100" />
+  
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-v12">
+    
+    <!-- Left A Leg Facets -->
+    <polygon points="400,90 400,320 280,680 170,680" fill="#FFFFFF" />
+    <polygon points="400,320 400,540 330,680 280,680" fill="#CBD5E1" />
+    <!-- Right A Leg Facets -->
+    <polygon points="400,90 520,680 630,680 400,320" fill="#FFFFFF" />
+    <polygon points="400,320 470,680 520,680 400,540" fill="#94A3B8" />
+    <!-- Central Rising Facet Diamond -->
+    <polygon points="400,240 445,360 400,420 355,360" fill="#E2E8F0" />
+  
+  </g>
+</svg>

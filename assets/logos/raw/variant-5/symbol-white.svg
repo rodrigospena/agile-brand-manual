@@ -3,16 +3,11 @@
   
   <g id="agile-symbol-v5">
     
-    <!-- Drafting Compass A Outline with Technical Linework -->
     <polygon points="400,90 630,680 490,680 435,540 365,540 310,680 170,680" 
       fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linejoin="round" />
-    
-    <!-- Inner Technical Isometric Solid -->
     <polygon points="400,290 470,335 400,375 330,335" fill="#FFFFFF" opacity="0.9" />
     <polygon points="330,335 400,375 400,670 330,670" fill="#FFFFFF" />
     <polygon points="400,375 470,335 470,670 400,670" fill="#FFFFFF" opacity="0.8" />
-    
-    <!-- Precision Louver Lines in White -->
     <line x1="330" y1="410" x2="400" y2="450" stroke="#FFFFFF" stroke-width="12" />
     <line x1="330" y1="475" x2="400" y2="515" stroke="#FFFFFF" stroke-width="12" />
     <line x1="330" y1="540" x2="400" y2="580" stroke="#FFFFFF" stroke-width="12" />

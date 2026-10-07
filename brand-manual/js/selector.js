@@ -1,21 +1,27 @@
-// Agile Logo Elimination Board & Selector
+// Agile Logo Elimination Board & Selector (12 Vector Variants + AI Concepts)
 document.addEventListener('DOMContentLoaded', () => {
   const state = {
     globalBg: 'bg-light',
     lockupMode: 'primary', // 'symbol', 'primary', 'horizontal', 'stamp'
     filter: 'all', // 'all', 'favorite', 'review', 'eliminated'
     variants: {
-      1: { name: 'Variante 1 — Sharp Precision', status: 'favorite', notes: 'Geometria clássica 5 frisos, equilíbrio e precisão milimétrica' },
-      2: { name: 'Variante 2 — Minimalist Louvers', status: 'review', notes: '4 pavimentos com respiros generosos e ar contemporâneo' },
-      3: { name: 'Variante 3 — Solid Monolith', status: 'review', notes: 'Solidez e peso estrutural de engenharia pesada com recorte portal' },
-      4: { name: 'Variante 4 — Hybrid Residence', status: 'review', notes: 'Mescla cobertura residencial e corpo comercial' },
-      5: { name: 'Variante 5 — Technical Compass', status: 'review', notes: 'Linhas técnicas de compasso e prancha de desenho' },
-      6: { name: 'Variante 6 — Dynamic Agility', status: 'review', notes: 'Inclinação aerodinâmica ágil simbolizando rapidez' }
+      1: { name: 'Variante 1 — Sharp Precision', styleTag: 'Geometria Clássica', status: 'favorite', notes: '5 frisos técnicos, equilíbrio e proporção áurea clássica de engenharia.' },
+      2: { name: 'Variante 2 — Minimalist Louvers', styleTag: 'Contemporâneo', status: 'review', notes: '4 pavimentos com respiros generosos e ar arquitetônico moderno.' },
+      3: { name: 'Variante 3 — Solid Monolith', styleTag: 'Solidez Estrutural', status: 'review', notes: 'Solidez e peso estrutural de engenharia pesada com recorte portal.' },
+      4: { name: 'Variante 4 — Hybrid Residence', styleTag: 'Residencial & Comercial', status: 'review', notes: 'Mescla cobertura residencial e corpo vertical comercial.' },
+      5: { name: 'Variante 5 — Technical Compass', styleTag: 'Linhas de Compasso', status: 'review', notes: 'Linhas técnicas de compasso e prancha de desenho arquitetônico.' },
+      6: { name: 'Variante 6 — Dynamic Agility', styleTag: 'Agilidade & Velocidade', status: 'review', notes: 'Inclinação aerodinâmica ágil simbolizando rapidez no alvará.' },
+      7: { name: 'Variante 7 — Swiss Monogram', styleTag: 'Ultra-Minimalista', status: 'review', notes: 'Estilo suíço puro com recorte do prédio em espaço negativo.' },
+      8: { name: 'Variante 8 — Wireframe Interlock', styleTag: 'Isometria 3D', status: 'review', notes: 'Cubo isométrico 3D interligado à letra A estrutural.' },
+      9: { name: 'Variante 9 — Skyline Monoline', styleTag: 'Linhas Finas / Skyline', status: 'review', notes: 'Torre de arranha-céu vertical com frisos lineares finos.' },
+      10: { name: 'Variante 10 — Hexagonal Prism', styleTag: 'Prisma Hexagonal', status: 'review', notes: 'Prisma hexagonal de engenharia com 3 pavimentos iluminados.' },
+      11: { name: 'Variante 11 — Apex Ascent Arrow', styleTag: 'Seta de Ascensão', status: 'review', notes: 'Seta de ascensão central dominante ladeada por duas torres.' },
+      12: { name: 'Variante 12 — Origami Faceted 3D', styleTag: 'Maximalista 3D', status: 'review', notes: 'Facetação geométrica 3D lapidada de alto impacto visual.' }
     }
   };
 
   // Load saved state from LocalStorage if available
-  const saved = localStorage.getItem('agile_logo_selector_state');
+  const saved = localStorage.getItem('agile_logo_selector_state_v2');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
@@ -26,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function saveState() {
-    localStorage.setItem('agile_logo_selector_state', JSON.stringify(state));
+    localStorage.setItem('agile_logo_selector_state_v2', JSON.stringify(state));
     updateCounters();
   }
 
@@ -55,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     container.innerHTML = '';
 
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 12; i++) {
       const v = state.variants[i];
       if (state.filter !== 'all' && v.status !== state.filter) {
         continue;
@@ -88,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.innerHTML = `
         <div class="card-header">
           <div class="card-title-group">
+            <span class="style-tag-pill">${v.styleTag}</span>
             <h3>${v.name}</h3>
             <span class="badge badge-${v.status}">${getStatusLabel(v.status)}</span>
           </div>
@@ -119,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getStatusLabel(status) {
-    if (status === 'favorite') return '⭐️ Favorita / Finalista';
+    if (status === 'favorite') return '⭐️ Favorita';
     if (status === 'eliminated') return '❌ Eliminada';
     return '🔍 Em Análise';
   }
@@ -174,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnExport.addEventListener('click', () => {
       let report = `RELATÓRIO DE SELEÇÃO DE LOGOTIPO — AGILE ENGENHARIA\nData: ${new Date().toLocaleDateString('pt-BR')}\n=======================================================\n\n`;
       Object.entries(state.variants).forEach(([num, v]) => {
-        report += `[${getStatusLabel(v.status).toUpperCase()}] ${v.name}\n`;
+        report += `[${getStatusLabel(v.status).toUpperCase()}] ${v.name} (${v.styleTag})\n`;
         report += `Notas: ${v.notes}\n\n`;
       });
       const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });

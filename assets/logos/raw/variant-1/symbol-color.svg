@@ -3,22 +3,11 @@
   
   <g id="agile-symbol-v1">
     
-    <!-- Outer "A" Architectural Frame -->
     <polygon points="400,90 630,680 490,680 435,540 365,540 310,680 170,680" fill="#0B1B3D" />
-    
-    <!-- Subtle Upward Growth / Arrow in the Apex -->
     <polygon points="400,160 445,260 400,240 355,260" fill="#1D3B7A" opacity="0.35" />
-    
-    <!-- Isometric Roof / Cap -->
     <polygon points="400,280 470,325 400,365 330,325" fill="#FFA059" />
-    
-    <!-- Left Isometric Facade (Technical Louvers) -->
     <polygon points="330,325 400,365 400,680 330,680" fill="#FF6B00" />
-    
-    <!-- Right Isometric Facade (Structural Solid Wall) -->
     <polygon points="400,365 470,325 470,680 400,680" fill="#E65100" />
-    
-    <!-- 5 Horizontal Louver Slots -->
     <polygon points="330,375 400,415 400,430 330,390" fill="#FFFFFF" />
     <polygon points="330,435 400,475 400,490 330,450" fill="#FFFFFF" />
     <polygon points="330,495 400,535 400,550 330,510" fill="#FFFFFF" />

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .stamp-text {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: 0.25em;
+        fill: #0B1B3D;
+      }
+      .stamp-sub {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: 0.22em;
+        fill: #FF6B00;
+      }
+    </style>
+    <path id="circleTop" d="M 100,300 A 200,200 0 0,1 500,300" fill="none"/>
+    <path id="circleBottom" d="M 500,300 A 200,200 0 0,1 100,300" fill="none"/>
+  </defs>
+  
+  
+  <circle cx="300" cy="300" r="280" fill="none" stroke="#0B1B3D" stroke-width="5"/>
+  <circle cx="300" cy="300" r="262" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="300" r="175" fill="none" stroke="#0B1B3D" stroke-width="2.5"/>
+  
+  <text class="stamp-text">
+    <textPath href="#circleTop" startOffset="50%" text-anchor="middle">
+      AGILE ENGENHARIA
+    </textPath>
+  </text>
+  
+  <text class="stamp-sub">
+    <textPath href="#circleBottom" startOffset="50%" text-anchor="middle">
+      REGULARIZAÇÃO DE IMÓVEIS
+    </textPath>
+  </text>
+  
+  <circle cx="95" cy="300" r="6" fill="#FF6B00"/>
+  <circle cx="505" cy="300" r="6" fill="#FF6B00"/>
+  
+  <g transform="translate(300, 305) scale(0.32) translate(-400, -380)">
+    
+    <!-- Left Architectural Wing -->
+    <polygon points="360,200 360,680 200,680 320,200" fill="#0B1B3D" />
+    <!-- Right Architectural Wing -->
+    <polygon points="440,200 440,680 600,680 480,200" fill="#0B1B3D" />
+    <!-- Center Ascending Arrow Pillar -->
+    <polygon points="400,90 460,210 425,210 425,680 375,680 375,210 340,210" fill="#FF6B00" />
+    <polygon points="400,90 460,210 400,180 340,210" fill="#FFA768" />
+  
+  </g>
+</svg>
