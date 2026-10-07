@@ -1,30 +1,37 @@
-// Agile Logo Elimination Board & Selector (Featuring Exact Master Official Vector)
+// Agile Logo Elimination Board & Selector
 document.addEventListener('DOMContentLoaded', () => {
   const state = {
     globalBg: 'bg-light',
     lockupMode: 'primary', // 'symbol', 'primary', 'horizontal', 'stamp'
     filter: 'all', // 'all', 'favorite', 'review', 'eliminated'
     variants: {
-      'oficial-master': { 
-        name: 'Logotipo Oficial Master', 
+      'oficial-var2': { 
+        name: 'Variante 2 — Minimalist Louvers (Oficial Escolhida)', 
         styleTag: '🏆 Versão Oficial Escolhida', 
         status: 'favorite', 
+        pathDir: 'variant-2',
+        notes: 'Símbolo com 4 pavimentos em respiro negativo e o nome AGILE limpo (sem slogan), máxima autoridade e clareza.' 
+      },
+      'oficial-master': { 
+        name: 'Master Faixas Diagonais', 
+        styleTag: 'Faixas Diagonais', 
+        status: 'review', 
         pathDir: 'opcao-oficial-master',
-        notes: 'Geometria perfeita do "A" arquitetônico com torre isométrica central, 4 faixas diagonais brancas e base pura.' 
+        notes: 'Geometria do "A" com torre central em 4 faixas diagonais brancas.' 
       },
       'opcao-3': { 
         name: 'Opção 3 — Asymmetric Dynamic Apex', 
         styleTag: 'Ápice em Vela Dinâmica', 
         status: 'review', 
         pathDir: 'opcao-3-asymmetric-apex',
-        notes: 'Ápice assimétrico dinâmico com edifício isométrico reto e sóbrio.' 
+        notes: 'Ápice assimétrico dinâmico com edifício isométrico sóbrio.' 
       },
       'opcao-6': { 
         name: 'Opção 6 — Dynamic Clean Ribbon', 
         styleTag: 'Fitas 3D / Desburocratização', 
         status: 'review', 
         pathDir: 'opcao-6-dynamic-ribbon',
-        notes: 'Fitas dinâmicas em 3D abraçando o edifício com linhas retas horizontais puras.' 
+        notes: 'Fitas dinâmicas em 3D abraçando o edifício com linhas retas.' 
       },
       'maos-limpas': { 
         name: 'Mãos de Proteção & Segurança', 
@@ -34,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         notes: 'Mãos elegantes com curvatura anatômica abraçando a edificação.' 
       },
       1: { name: 'Variante 1 — Sharp Precision', styleTag: 'Geometria Clássica', status: 'review', pathDir: 'variant-1', notes: '5 frisos técnicos horizontais retos, proporção clássica de engenharia.' },
-      2: { name: 'Variante 2 — Minimalist Louvers', styleTag: 'Contemporâneo', status: 'review', pathDir: 'variant-2', notes: '4 pavimentos com respiros generosos e ar arquitetônico moderno.' },
       3: { name: 'Variante 3 — Solid Monolith', styleTag: 'Solidez Estrutural', status: 'review', pathDir: 'variant-3', notes: 'Solidez e peso estrutural de engenharia pesada com recorte portal.' },
       4: { name: 'Variante 4 — Hybrid Residence', styleTag: 'Residencial & Comercial', status: 'review', pathDir: 'variant-4', notes: 'Mescla cobertura residencial e corpo vertical comercial.' },
       5: { name: 'Variante 5 — Technical Compass', styleTag: 'Linhas de Compasso', status: 'review', pathDir: 'variant-5', notes: 'Linhas técnicas de compasso e prancha de desenho arquitetônico.' },
@@ -48,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const saved = localStorage.getItem('agile_logo_selector_state_v6');
+  const saved = localStorage.getItem('agile_logo_selector_state_final');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
@@ -59,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function saveState() {
-    localStorage.setItem('agile_logo_selector_state_v6', JSON.stringify(state));
+    localStorage.setItem('agile_logo_selector_state_final', JSON.stringify(state));
     updateCounters();
   }
 
@@ -98,22 +104,43 @@ document.addEventListener('DOMContentLoaded', () => {
       card.id = `card-var-${key}`;
 
       let svgPath = '';
-      if (state.lockupMode === 'symbol') {
-        svgPath = `../assets/logos/raw/${v.pathDir}/symbol-color.svg`;
-        if (state.globalBg === 'bg-navy') svgPath = `../assets/logos/raw/${v.pathDir}/symbol-dark.svg`;
-        if (state.globalBg === 'bg-slate') svgPath = `../assets/logos/raw/${v.pathDir}/symbol-white.svg`;
-      } else if (state.lockupMode === 'horizontal') {
-        svgPath = `../assets/logos/raw/${v.pathDir}/lockup-horizontal.svg`;
-        if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
-          svgPath = `../assets/logos/raw/${v.pathDir}/lockup-horizontal-dark.svg`;
+      if (key === 'oficial-var2') {
+        if (state.lockupMode === 'symbol') {
+          svgPath = `../assets/logos/official/agile-symbol.svg`;
+          if (state.globalBg === 'bg-navy') svgPath = `../assets/logos/official/agile-symbol-dark.svg`;
+          if (state.globalBg === 'bg-slate') svgPath = `../assets/logos/official/agile-symbol-white.svg`;
+        } else if (state.lockupMode === 'horizontal') {
+          svgPath = `../assets/logos/official/agile-logo-horizontal.svg`;
+          if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
+            svgPath = `../assets/logos/official/agile-logo-horizontal-dark.svg`;
+          }
+        } else if (state.lockupMode === 'stamp') {
+          svgPath = `../assets/logos/official/agile-technical-stamp.svg`;
+        } else {
+          // primary
+          svgPath = `../assets/logos/official/agile-logo-primary.svg`;
+          if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
+            svgPath = `../assets/logos/official/agile-logo-primary-dark.svg`;
+          }
         }
-      } else if (state.lockupMode === 'stamp') {
-        svgPath = `../assets/logos/raw/${v.pathDir}/stamp-badge.svg`;
       } else {
-        // primary
-        svgPath = `../assets/logos/raw/${v.pathDir}/lockup-primary.svg`;
-        if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
-          svgPath = `../assets/logos/raw/${v.pathDir}/lockup-primary-dark.svg`;
+        if (state.lockupMode === 'symbol') {
+          svgPath = `../assets/logos/raw/${v.pathDir}/symbol-color.svg`;
+          if (state.globalBg === 'bg-navy') svgPath = `../assets/logos/raw/${v.pathDir}/symbol-dark.svg`;
+          if (state.globalBg === 'bg-slate') svgPath = `../assets/logos/raw/${v.pathDir}/symbol-white.svg`;
+        } else if (state.lockupMode === 'horizontal') {
+          svgPath = `../assets/logos/raw/${v.pathDir}/lockup-horizontal.svg`;
+          if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
+            svgPath = `../assets/logos/raw/${v.pathDir}/lockup-horizontal-dark.svg`;
+          }
+        } else if (state.lockupMode === 'stamp') {
+          svgPath = `../assets/logos/raw/${v.pathDir}/stamp-badge.svg`;
+        } else {
+          // primary
+          svgPath = `../assets/logos/raw/${v.pathDir}/lockup-primary.svg`;
+          if (state.globalBg === 'bg-navy' || state.globalBg === 'bg-slate') {
+            svgPath = `../assets/logos/raw/${v.pathDir}/lockup-primary-dark.svg`;
+          }
         }
       }
 

@@ -1,56 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
-      .brand-title-master {
+      .brand-title-official {
         font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
         font-weight: 800;
-        font-size: 92px;
+        font-size: 96px;
         letter-spacing: 0.18em;
-        text-anchor: middle;
-      }
-      .brand-subtitle-master {
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        font-weight: 700;
-        font-size: 21px;
-        letter-spacing: 0.28em;
         text-anchor: middle;
       }
     </style>
   </defs>
-  <rect width="800" height="1000" fill="#0B1B3D"/>
+  <rect width="800" height="900" fill="#0B1B3D"/>
   
-  <!-- Símbolo Centralizado -->
-  <g transform="translate(400, 360) scale(0.85) translate(-400, -380)">
+  <!-- Símbolo Variante 2 Minimalist Louvers -->
+  <g transform="translate(400, 360) scale(0.92) translate(-400, -380)">
     
-    <!-- Outer "A" Architectural Frame -->
-    <polygon points="400,60 660,700 520,700 440,510 360,510 280,700 140,700" fill="#FFFFFF" />
+    <!-- Outer "A" Frame with Chamfered Modern Peak -->
+    <polygon points="400,100 620,680 495,680 435,530 365,530 305,680 180,680" fill="#FFFFFF" />
     
-    <!-- Central Isometric Tower -->
-    <!-- Top Roof Diamond -->
-    <polygon points="400,270 475,320 400,370 325,320" fill="#FFA559" />
+    <!-- Central Isometric Building -->
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FFFFFF" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#FFA768" />
     
-    <!-- Left Orange Facade (Divided by 4 Clean Diagonal White Bands) -->
-    <!-- Segment 1 (Top) -->
-    <polygon points="325,320 400,370 400,405 325,355" fill="#FF6B00" />
-    <!-- Segment 2 -->
-    <polygon points="325,380 400,430 400,480 325,430" fill="#FF6B00" />
-    <!-- Segment 3 -->
-    <polygon points="325,455 400,505 400,555 325,505" fill="#FF6B00" />
-    <!-- Segment 4 (Bottom) -->
-    <polygon points="325,530 400,580 400,680 325,630" fill="#FF6B00" />
-    
-    <!-- Right Solid Deep Navy Facade -->
-    <polygon points="400,370 475,320 475,630 400,680" fill="#0B1B3D" />
+    <!-- 4 Clean Architectural Floor Louver Slots -->
+    <polygon points="325,390 400,435 400,455 325,410" fill="#0B1B3D" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#0B1B3D" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#0B1B3D" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#0B1B3D" />
   
   </g>
   
-  <!-- Tipografia Oficial AGILE (Sem acento) -->
-  <text x="400" y="780" class="brand-title-master" fill="#FFFFFF">AGILE</text>
-  
-  <!-- Linhas e Tagline -->
-  <line x1="120" y1="835" x2="160" y2="835" stroke="#FF6B00" stroke-width="4" stroke-linecap="round" />
-  <text x="400" y="842" class="brand-subtitle-master" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
-  <line x1="640" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="4" stroke-linecap="round" />
+  <!-- Nome Oficial AGILE (Sem Slogan) -->
+  <text x="400" y="770" class="brand-title-official" fill="#FFFFFF">AGILE</text>
 </svg>

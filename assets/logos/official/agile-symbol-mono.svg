@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol">
+    
+    <!-- Outer "A" Frame with Chamfered Modern Peak -->
+    <polygon points="400,100 620,680 495,680 435,530 365,530 305,680 180,680" fill="#000000" />
+    
+    <!-- Central Isometric Building -->
+    <polygon points="400,290 475,335 400,380 325,335" fill="#94A3B8" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#000000" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#64748B" />
+    
+    <!-- 4 Clean Architectural Floor Louver Slots -->
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+  </g>
+</svg>
