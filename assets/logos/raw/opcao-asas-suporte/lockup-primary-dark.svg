@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 88px;
+        letter-spacing: 0.16em;
+        text-anchor: middle;
+      }
+      .brand-subtitle {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  <rect width="800" height="1000" fill="#0B1B3D"/>
+  <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
+    
+    <!-- Structural Letter A -->
+    <polygon points="400,80 635,680 500,680 440,540 360,540 300,680 165,680" fill="#FFFFFF" />
+    
+    <!-- Central Tower -->
+    <polygon points="400,240 470,285 400,330 330,285" fill="#FFA559" />
+    <polygon points="330,285 400,330 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,330 470,285 470,680 400,680" fill="#1E3A8A" />
+    
+    <!-- Louvers -->
+    <polygon points="330,350 370,325 400,390 360,415" fill="#FFFFFF" />
+    <polygon points="330,430 370,405 400,470 360,495" fill="#FFFFFF" />
+    <polygon points="330,510 370,485 400,550 360,575" fill="#FFFFFF" />
+    <polygon points="330,590 370,565 400,630 360,655" fill="#FFFFFF" />
+
+    <!-- Left Aerodynamic Foundation Wing -->
+    <path d="M 330,450 
+             C 260,460 210,540 165,680 
+             L 260,680 
+             C 290,580 315,510 330,470 Z" 
+          fill="#FF6B00" />
+    <path d="M 330,530 C 280,540 240,600 200,680 L 260,680 C 290,620 310,570 330,545 Z" fill="#D95200" />
+
+    <!-- Right Aerodynamic Foundation Wing -->
+    <path d="M 470,450 
+             C 540,460 590,540 635,680 
+             L 540,680 
+             C 510,580 485,510 470,470 Z" 
+          fill="#FF6B00" />
+    <path d="M 470,530 C 520,540 560,600 600,680 L 540,680 C 510,620 490,570 470,545 Z" fill="#D95200" />
+  
+  </g>
+  <text x="400" y="780" class="brand-title" fill="#FFFFFF">AGILE</text>
+  <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+  <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+  <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+</svg>

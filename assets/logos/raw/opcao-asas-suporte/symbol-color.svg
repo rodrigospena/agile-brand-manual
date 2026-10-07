@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="symbol">
+    
+    <!-- Structural Letter A -->
+    <polygon points="400,80 635,680 500,680 440,540 360,540 300,680 165,680" fill="#0B1B3D" />
+    
+    <!-- Central Tower -->
+    <polygon points="400,240 470,285 400,330 330,285" fill="#FFA559" />
+    <polygon points="330,285 400,330 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,330 470,285 470,680 400,680" fill="#18316B" />
+    
+    <!-- Louvers -->
+    <polygon points="330,350 370,325 400,390 360,415" fill="#FFFFFF" />
+    <polygon points="330,430 370,405 400,470 360,495" fill="#FFFFFF" />
+    <polygon points="330,510 370,485 400,550 360,575" fill="#FFFFFF" />
+    <polygon points="330,590 370,565 400,630 360,655" fill="#FFFFFF" />
+
+    <!-- Left Aerodynamic Foundation Wing -->
+    <path d="M 330,450 
+             C 260,460 210,540 165,680 
+             L 260,680 
+             C 290,580 315,510 330,470 Z" 
+          fill="#FF6B00" />
+    <path d="M 330,530 C 280,540 240,600 200,680 L 260,680 C 290,620 310,570 330,545 Z" fill="#D95200" />
+
+    <!-- Right Aerodynamic Foundation Wing -->
+    <path d="M 470,450 
+             C 540,460 590,540 635,680 
+             L 540,680 
+             C 510,580 485,510 470,470 Z" 
+          fill="#FF6B00" />
+    <path d="M 470,530 C 520,540 560,600 600,680 L 540,680 C 510,620 490,570 470,545 Z" fill="#D95200" />
+  
+  </g>
+</svg>

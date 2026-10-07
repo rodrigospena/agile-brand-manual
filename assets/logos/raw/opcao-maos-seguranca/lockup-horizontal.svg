@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 96px;
+        letter-spacing: 0.14em;
+      }
+      .brand-subtitle-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+      }
+    </style>
+  </defs>
+  
+  <g transform="translate(180, 200) scale(0.48) translate(-400, -380)">
+    
+    <!-- Letter "A" Silhouette -->
+    <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#0B1B3D" />
+    
+    <!-- Central Tower -->
+    <polygon points="400,260 475,310 400,360 325,310" fill="#FFA559" />
+    <polygon points="325,310 400,360 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,360 475,310 475,680 400,680" fill="#18316B" />
+    
+    <!-- Louvers -->
+    <polygon points="325,375 365,350 400,420 360,445" fill="#FFFFFF" />
+    <polygon points="325,455 365,430 400,500 360,525" fill="#FFFFFF" />
+    <polygon points="325,535 365,510 400,580 360,605" fill="#FFFFFF" />
+    <polygon points="325,615 365,590 400,660 360,680" fill="#FFFFFF" />
+
+    <!-- Left Faceted Geometric Hand (Cupping Upward) -->
+    <polygon points="325,470 280,520 220,680 285,680 325,530" fill="#FF6B00" />
+    <polygon points="325,530 285,680 330,680 330,590" fill="#D95200" />
+    <polygon points="325,470 305,485 300,510 325,500" fill="#D95200" />
+
+    <!-- Right Faceted Geometric Hand (Cupping Upward) -->
+    <polygon points="475,470 520,520 580,680 515,680 475,530" fill="#FF6B00" />
+    <polygon points="475,530 515,680 470,680 470,590" fill="#D95200" />
+    <polygon points="475,470 495,485 500,510 475,500" fill="#D95200" />
+  
+  </g>
+  <line x1="390" y1="80" x2="390" y2="320" stroke="#64748B" stroke-width="2" opacity="0.35"/>
+  <text x="440" y="210" class="brand-title-h" fill="#0B1B3D">AGILE</text>
+  <text x="445" y="268" class="brand-subtitle-h" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+</svg>

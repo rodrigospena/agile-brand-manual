@@ -1,21 +1,42 @@
-// Agile Logo Elimination Board & Selector (Including Vectorized Opção 3 & Opção 6)
+// Agile Logo Elimination Board & Selector (All Vector Options including Protective Hands / Cradle)
 document.addEventListener('DOMContentLoaded', () => {
   const state = {
     globalBg: 'bg-light',
     lockupMode: 'primary', // 'symbol', 'primary', 'horizontal', 'stamp'
     filter: 'all', // 'all', 'favorite', 'review', 'eliminated'
     variants: {
+      'cradle-protecao': { 
+        name: 'Design A — Architectural Cradle', 
+        styleTag: '🌟 Mãos de Proteção Refinadas', 
+        status: 'favorite', 
+        pathDir: 'opcao-cradle-protecao',
+        notes: 'Curvatura elegante e precisa que abraça o edifício como mãos de proteção patrimonial e fundação estrutural.' 
+      },
+      'maos-seguranca': { 
+        name: 'Design B — Geometric Hands of Security', 
+        styleTag: '🌟 Mãos Facetadas / Segurança', 
+        status: 'favorite', 
+        pathDir: 'opcao-maos-seguranca',
+        notes: 'Mãos geométricas com planos facetados de luz e sombra abraçando a torre com autoridade de engenharia.' 
+      },
+      'asas-suporte': { 
+        name: 'Design C — Foundation Wings', 
+        styleTag: '🌟 Asas de Sustentação & Cuidado', 
+        status: 'favorite', 
+        pathDir: 'opcao-asas-suporte',
+        notes: 'Asas aerodinâmicas ascendentes que sustentam a base da edificação transmitindo agilidade e suporte.' 
+      },
       'opcao-3': { 
         name: 'Opção 3 — Asymmetric Dynamic Apex', 
         styleTag: 'Vetorizada Oficial (Opção 3)', 
-        status: 'favorite', 
+        status: 'review', 
         pathDir: 'opcao-3-asymmetric-apex',
         notes: 'Ápice assimétrico com caimento dinâmico em vela/asa e torre isométrica com 4 frisos.' 
       },
       'opcao-6': { 
         name: 'Opção 6 — Dynamic Ribbon Swoosh', 
         styleTag: 'Vetorizada Oficial (Opção 6)', 
-        status: 'favorite', 
+        status: 'review', 
         pathDir: 'opcao-6-dynamic-ribbon',
         notes: 'Fitas dinâmicas em laranja envolvendo o edifício e formando a travessa do A com efeito 3D.' 
       },
@@ -34,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const saved = localStorage.getItem('agile_logo_selector_state_v3');
+  const saved = localStorage.getItem('agile_logo_selector_state_v4');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
@@ -45,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function saveState() {
-    localStorage.setItem('agile_logo_selector_state_v3', JSON.stringify(state));
+    localStorage.setItem('agile_logo_selector_state_v4', JSON.stringify(state));
     updateCounters();
   }
 

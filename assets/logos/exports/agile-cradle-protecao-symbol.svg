@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="symbol">
+    
+    <!-- Outer "A" Frame with Architectural Precision -->
+    <polygon points="400,85 635,680 500,680 440,540 360,540 300,680 165,680" fill="#0B1B3D" />
+    
+    <!-- Central Isometric Tower (Clean Proportions) -->
+    <polygon points="400,250 470,295 400,340 330,295" fill="#FFA559" />
+    <polygon points="330,295 400,340 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,340 470,295 470,680 400,680" fill="#18316B" />
+    
+    <!-- 4 Clean Diagonal Louver Stripes on Left Facade -->
+    <polygon points="330,360 370,335 400,400 360,425" fill="#FFFFFF" />
+    <polygon points="330,440 370,415 400,480 360,505" fill="#FFFFFF" />
+    <polygon points="330,520 370,495 400,560 360,585" fill="#FFFFFF" />
+    <polygon points="330,600 370,575 400,640 360,665" fill="#FFFFFF" />
+
+    <!-- Left Protective Hand / Foundation Cradle (Sleek Tapered Curve) -->
+    <!-- Shadow Depth Layer -->
+    <path d="M 330,560 
+             C 275,540 220,600 165,680 
+             L 245,680 
+             C 285,620 310,580 330,575 Z" 
+          fill="#D95200" />
+    <!-- Front Hand / Protective Palm Curve -->
+    <path d="M 330,480 
+             C 310,495 290,525 285,550 
+             C 260,575 220,625 165,680 
+             L 270,680 
+             C 300,605 320,545 330,510 Z" 
+          fill="#FF6B00" />
+    <!-- Palm Tip / Cradle Thumb Detail -->
+    <path d="M 330,480 C 315,485 305,505 315,525 C 325,510 328,495 330,480 Z" fill="#D95200" />
+
+    <!-- Right Protective Hand / Foundation Cradle -->
+    <!-- Shadow Depth Layer -->
+    <path d="M 470,560 
+             C 525,540 580,600 635,680 
+             L 555,680 
+             C 515,620 490,580 470,575 Z" 
+          fill="#D95200" />
+    <!-- Front Hand / Protective Palm Curve -->
+    <path d="M 470,480 
+             C 490,495 510,525 515,550 
+             C 540,575 580,625 635,680 
+             L 530,680 
+             C 500,605 480,545 470,510 Z" 
+          fill="#FF6B00" />
+    <!-- Palm Tip / Cradle Thumb Detail -->
+    <path d="M 470,480 C 485,485 495,505 485,525 C 475,510 472,495 470,480 Z" fill="#D95200" />
+  
+  </g>
+</svg>

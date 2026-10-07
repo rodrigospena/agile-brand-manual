@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="symbol">
+    
+    <!-- Letter "A" Silhouette -->
+    <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#000000" />
+    
+    <!-- Central Tower -->
+    <polygon points="400,260 475,310 400,360 325,310" fill="#94A3B8" />
+    <polygon points="325,310 400,360 400,680 325,680" fill="#000000" />
+    <polygon points="400,360 475,310 475,680 400,680" fill="#475569" />
+    
+    <!-- Louvers -->
+    <polygon points="325,375 365,350 400,420 360,445" fill="#FFFFFF" />
+    <polygon points="325,455 365,430 400,500 360,525" fill="#FFFFFF" />
+    <polygon points="325,535 365,510 400,580 360,605" fill="#FFFFFF" />
+    <polygon points="325,615 365,590 400,660 360,680" fill="#FFFFFF" />
+
+    <!-- Left Faceted Geometric Hand (Cupping Upward) -->
+    <polygon points="325,470 280,520 220,680 285,680 325,530" fill="#000000" />
+    <polygon points="325,530 285,680 330,680 330,590" fill="#334155" />
+    <polygon points="325,470 305,485 300,510 325,500" fill="#334155" />
+
+    <!-- Right Faceted Geometric Hand (Cupping Upward) -->
+    <polygon points="475,470 520,520 580,680 515,680 475,530" fill="#000000" />
+    <polygon points="475,530 515,680 470,680 470,590" fill="#334155" />
+    <polygon points="475,470 495,485 500,510 475,500" fill="#334155" />
+  
+  </g>
+</svg>
