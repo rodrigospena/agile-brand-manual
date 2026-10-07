@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 96px;
+        letter-spacing: 0.14em;
+      }
+      .brand-subtitle-h {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="400" fill="#0B1B3D"/>
+  <g transform="translate(180, 200) scale(0.48) translate(-400, -380)">
+    
+    <!-- Triangular Outer "A" Frame in Deep Navy -->
+    <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#FFFFFF" />
+    
+    <!-- Central Isometric Tower -->
+    <!-- Top Roof Diamond -->
+    <polygon points="400,270 475,320 400,370 325,320" fill="#FFA559" />
+    
+    <!-- Left Orange Facade -->
+    <polygon points="325,320 400,370 400,680 325,680" fill="#FF6B00" />
+    
+    <!-- Right Navy Shaded Facade -->
+    <polygon points="400,370 475,320 475,680 400,680" fill="#1E3A8A" />
+    
+    <!-- 4 Diagonal Slanted Louver Stripes on Left Facade -->
+    <polygon points="325,385 365,360 400,430 360,455" fill="#FFFFFF" />
+    <polygon points="325,465 365,440 400,510 360,535" fill="#FFFFFF" />
+    <polygon points="325,545 365,520 400,590 360,615" fill="#FFFFFF" />
+    <polygon points="325,625 365,600 400,670 360,680" fill="#FFFFFF" />
+
+    <!-- Left Dynamic Ribbon Swoosh -->
+    <!-- Underside Shadow Curve -->
+    <path d="M 325,500 C 270,490 230,550 170,680 L 230,680 C 270,590 300,540 325,525 Z" fill="#D95200" />
+    <!-- Front Upper Highlight Ribbon -->
+    <path d="M 325,450 C 250,460 210,540 170,680 L 250,680 C 280,560 310,500 325,475 Z" fill="#FF6B00" />
+
+    <!-- Right Dynamic Ribbon Swoosh -->
+    <!-- Underside Shadow Curve -->
+    <path d="M 475,500 C 530,490 570,550 630,680 L 570,680 C 530,590 500,540 475,525 Z" fill="#D95200" />
+    <!-- Front Upper Highlight Ribbon -->
+    <path d="M 475,450 C 550,460 590,540 630,680 L 550,680 C 520,560 490,500 475,475 Z" fill="#FF6B00" />
+  
+  </g>
+  <line x1="390" y1="80" x2="390" y2="320" stroke="#64748B" stroke-width="2" opacity="0.35"/>
+  <text x="440" y="210" class="brand-title-h" fill="#FFFFFF">AGILE</text>
+  <text x="445" y="268" class="brand-subtitle-h" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .brand-title {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 88px;
+        letter-spacing: 0.16em;
+        text-anchor: middle;
+      }
+      .brand-subtitle {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  <rect width="800" height="1000" fill="#0B1B3D"/>
+  <g transform="translate(400, 370) scale(0.85) translate(-400, -380)">
+    
+    <!-- Asymmetric Dynamic Crest Apex on Outer "A" -->
+    <path d="M 175,680 
+             L 360,180 
+             L 460,90 
+             C 455,140 435,170 425,200 
+             L 625,680 
+             L 500,680 
+             L 440,540 
+             L 360,540 
+             L 300,680 Z" 
+          fill="#FFFFFF" />
+    
+    <!-- Central Isometric Building -->
+    <!-- Top Roof Diamond -->
+    <polygon points="400,270 475,320 400,370 325,320" fill="#FFA559" />
+    
+    <!-- Left Orange Facade -->
+    <polygon points="325,320 400,370 400,680 325,680" fill="#FF6B00" />
+    
+    <!-- Right Navy Shaded Facade -->
+    <polygon points="400,370 475,320 475,680 400,680" fill="#1E3A8A" />
+    
+    <!-- 4 Diagonal Slanted Louver Stripes on Left Facade -->
+    <polygon points="325,385 365,360 400,430 360,455" fill="#FFFFFF" />
+    <polygon points="325,465 365,440 400,510 360,535" fill="#FFFFFF" />
+    <polygon points="325,545 365,520 400,590 360,615" fill="#FFFFFF" />
+    <polygon points="325,625 365,600 400,670 360,680" fill="#FFFFFF" />
+  
+  </g>
+  <text x="400" y="780" class="brand-title" fill="#FFFFFF">AGILE</text>
+  <line x1="120" y1="835" x2="220" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+  <text x="400" y="842" class="brand-subtitle" fill="#FF6B00">REGULARIZAÇÃO DE IMÓVEIS</text>
+  <line x1="580" y1="835" x2="680" y2="835" stroke="#FF6B00" stroke-width="2.5" opacity="0.7"/>
+</svg>
