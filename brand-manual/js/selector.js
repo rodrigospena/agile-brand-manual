@@ -1,37 +1,37 @@
-// Agile Logo Elimination Board & Selector (Clean Vectors - No Rhombuses)
+// Agile Logo Elimination Board & Selector (Featuring Exact Master Official Vector)
 document.addEventListener('DOMContentLoaded', () => {
   const state = {
     globalBg: 'bg-light',
     lockupMode: 'primary', // 'symbol', 'primary', 'horizontal', 'stamp'
     filter: 'all', // 'all', 'favorite', 'review', 'eliminated'
     variants: {
-      'maos-limpas': { 
-        name: 'Mãos de Proteção & Segurança', 
-        styleTag: '🌟 Mãos Humanas / Cuidado', 
+      'oficial-master': { 
+        name: 'Logotipo Oficial Master', 
+        styleTag: '🏆 Versão Oficial Escolhida', 
         status: 'favorite', 
-        pathDir: 'opcao-maos-limpas',
-        notes: 'Mãos elegantes com curvatura anatômica abraçando a edificação com frisos retos limpos (sem losangos).' 
-      },
-      'maos-minimalistas': { 
-        name: 'Mãos de Suporte Minimalistas', 
-        styleTag: '🌟 Traço Contínuo Minimalista', 
-        status: 'favorite', 
-        pathDir: 'opcao-maos-minimalistas',
-        notes: 'Silhueta fluida e contínua de mãos integradas à base do A com edifício sólido e sóbrio.' 
-      },
-      'opcao-6': { 
-        name: 'Opção 6 — Dynamic Clean Ribbon', 
-        styleTag: 'Fitas 3D / Desburocratização', 
-        status: 'favorite', 
-        pathDir: 'opcao-6-dynamic-ribbon',
-        notes: 'Fitas dinâmicas em 3D abraçando o edifício com linhas retas horizontais puras (sem losangos).' 
+        pathDir: 'opcao-oficial-master',
+        notes: 'Geometria perfeita do "A" arquitetônico com torre isométrica central, 4 faixas diagonais brancas e base pura.' 
       },
       'opcao-3': { 
         name: 'Opção 3 — Asymmetric Dynamic Apex', 
         styleTag: 'Ápice em Vela Dinâmica', 
         status: 'review', 
         pathDir: 'opcao-3-asymmetric-apex',
-        notes: 'Ápice assimétrico dinâmico com edifício isométrico reto e sóbrio (sem losangos).' 
+        notes: 'Ápice assimétrico dinâmico com edifício isométrico reto e sóbrio.' 
+      },
+      'opcao-6': { 
+        name: 'Opção 6 — Dynamic Clean Ribbon', 
+        styleTag: 'Fitas 3D / Desburocratização', 
+        status: 'review', 
+        pathDir: 'opcao-6-dynamic-ribbon',
+        notes: 'Fitas dinâmicas em 3D abraçando o edifício com linhas retas horizontais puras.' 
+      },
+      'maos-limpas': { 
+        name: 'Mãos de Proteção & Segurança', 
+        styleTag: 'Mãos Humanas / Cuidado', 
+        status: 'review', 
+        pathDir: 'opcao-maos-limpas',
+        notes: 'Mãos elegantes com curvatura anatômica abraçando a edificação.' 
       },
       1: { name: 'Variante 1 — Sharp Precision', styleTag: 'Geometria Clássica', status: 'review', pathDir: 'variant-1', notes: '5 frisos técnicos horizontais retos, proporção clássica de engenharia.' },
       2: { name: 'Variante 2 — Minimalist Louvers', styleTag: 'Contemporâneo', status: 'review', pathDir: 'variant-2', notes: '4 pavimentos com respiros generosos e ar arquitetônico moderno.' },
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const saved = localStorage.getItem('agile_logo_selector_state_v5');
+  const saved = localStorage.getItem('agile_logo_selector_state_v6');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function saveState() {
-    localStorage.setItem('agile_logo_selector_state_v5', JSON.stringify(state));
+    localStorage.setItem('agile_logo_selector_state_v6', JSON.stringify(state));
     updateCounters();
   }
 

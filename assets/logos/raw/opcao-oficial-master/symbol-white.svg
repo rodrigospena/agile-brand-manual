@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="agile-symbol-master">
+    
+    <!-- Outer "A" Architectural Frame -->
+    <polygon points="400,60 660,700 520,700 440,510 360,510 280,700 140,700" fill="#FFFFFF" />
+    
+    <!-- Central Isometric Tower -->
+    <!-- Top Roof Diamond -->
+    <polygon points="400,270 475,320 400,370 325,320" fill="#E2E8F0" />
+    
+    <!-- Left Orange Facade (Divided by 4 Clean Diagonal White Bands) -->
+    <!-- Segment 1 (Top) -->
+    <polygon points="325,320 400,370 400,405 325,355" fill="#FFFFFF" />
+    <!-- Segment 2 -->
+    <polygon points="325,380 400,430 400,480 325,430" fill="#FFFFFF" />
+    <!-- Segment 3 -->
+    <polygon points="325,455 400,505 400,555 325,505" fill="#FFFFFF" />
+    <!-- Segment 4 (Bottom) -->
+    <polygon points="325,530 400,580 400,680 325,630" fill="#FFFFFF" />
+    
+    <!-- Right Solid Deep Navy Facade -->
+    <polygon points="400,370 475,320 475,630 400,680" fill="#CBD5E1" />
+  
+  </g>
+</svg>
