@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  
+  <g id="symbol">
+    
+    <!-- Letra "A" Externa -->
+    <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#FFFFFF" />
+    
+    <!-- Edifício Central Limpo (Sem Losangos) -->
+    <!-- Topo Isométrico -->
+    <polygon points="400,260 470,305 400,350 330,305" fill="#E2E8F0" />
+    
+    <!-- Fachada Esquerda em Laranja Puro com 3 frisos horizontais retos -->
+    <polygon points="330,305 400,350 400,680 330,680" fill="#FFFFFF" />
+    <line x1="330" y1="400" x2="400" y2="445" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="330" y1="470" x2="400" y2="515" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="330" y1="540" x2="400" y2="585" stroke="#FFFFFF" stroke-width="8" />
+    
+    <!-- Fachada Direita em Azul Sólido -->
+    <polygon points="400,350 470,305 470,680 400,680" fill="#CBD5E1" />
+
+    <!-- Mão Esquerda Elegante (Curvatura natural abraçando o prédio) -->
+    <path d="M 170,680 
+             C 210,630 250,560 300,520 
+             C 315,505 325,480 330,460 
+             C 330,490 325,520 310,545 
+             C 275,600 240,650 220,680 Z" 
+          fill="#FFFFFF" />
+    <path d="M 330,460 C 315,485 305,515 315,535 C 325,515 328,490 330,460 Z" fill="#94A3B8" />
+
+    <!-- Mão Direita Elegante (Simétrica abraçando o prédio) -->
+    <path d="M 630,680 
+             C 590,630 550,560 500,520 
+             C 485,505 475,480 470,460 
+             C 470,490 475,520 490,545 
+             C 525,600 560,650 580,680 Z" 
+          fill="#FFFFFF" />
+    <path d="M 470,460 C 485,485 495,515 485,535 C 475,515 472,490 470,460 Z" fill="#94A3B8" />
+  
+  </g>
+</svg>

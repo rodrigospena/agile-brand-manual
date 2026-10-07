@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .stamp-text {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: 0.25em;
+        fill: #0B1B3D;
+      }
+      .stamp-sub {
+        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: 0.22em;
+        fill: #FF6B00;
+      }
+    </style>
+    <path id="cTop" d="M 100,300 A 200,200 0 0,1 500,300" fill="none"/>
+    <path id="cBot" d="M 500,300 A 200,200 0 0,1 100,300" fill="none"/>
+  </defs>
+  
+  <circle cx="300" cy="300" r="280" fill="none" stroke="#0B1B3D" stroke-width="5"/>
+  <circle cx="300" cy="300" r="262" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="300" r="175" fill="none" stroke="#0B1B3D" stroke-width="2.5"/>
+  <text class="stamp-text">
+    <textPath href="#cTop" startOffset="50%" text-anchor="middle">AGILE ENGENHARIA</textPath>
+  </text>
+  <text class="stamp-sub">
+    <textPath href="#cBot" startOffset="50%" text-anchor="middle">REGULARIZAÇÃO DE IMÓVEIS</textPath>
+  </text>
+  <circle cx="95" cy="300" r="6" fill="#FF6B00"/>
+  <circle cx="505" cy="300" r="6" fill="#FF6B00"/>
+  <g transform="translate(300, 305) scale(0.32) translate(-400, -380)">
+    
+    <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#0B1B3D" />
+    
+    <!-- Edifício Sólido Limpo -->
+    <polygon points="400,260 470,305 400,350 330,305" fill="#FFA559" />
+    <polygon points="330,305 400,350 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,350 470,305 470,680 400,680" fill="#18316B" />
+    
+    <!-- Mãos Fluidas Minimalistas (Traçado Contínuo) -->
+    <!-- Braço/Mão Esquerda -->
+    <path d="M 170,680 
+             Q 250,560 330,480 
+             L 330,530 
+             Q 270,590 220,680 Z" 
+          fill="#FF6B00" />
+          
+    <!-- Braço/Mão Direita -->
+    <path d="M 630,680 
+             Q 550,560 470,480 
+             L 470,530 
+             Q 530,590 580,680 Z" 
+          fill="#FF6B00" />
+  
+  </g>
+</svg>

@@ -3,36 +3,24 @@
   
   <g id="symbol">
     
-    <!-- Triangular Outer "A" Frame in Deep Navy -->
     <polygon points="400,90 630,680 500,680 440,540 360,540 300,680 170,680" fill="#0B1B3D" />
     
-    <!-- Central Isometric Tower -->
-    <!-- Top Roof Diamond -->
-    <polygon points="400,270 475,320 400,370 325,320" fill="#FFA559" />
+    <!-- Edifício Limpo -->
+    <polygon points="400,260 470,305 400,350 330,305" fill="#FFA559" />
+    <polygon points="330,305 400,350 400,680 330,680" fill="#FF6B00" />
+    <polygon points="400,350 470,305 470,680 400,680" fill="#18316B" />
     
-    <!-- Left Orange Facade -->
-    <polygon points="325,320 400,370 400,680 325,680" fill="#FF6B00" />
-    
-    <!-- Right Navy Shaded Facade -->
-    <polygon points="400,370 475,320 475,680 400,680" fill="#18316B" />
-    
-    <!-- 4 Diagonal Slanted Louver Stripes on Left Facade -->
-    <polygon points="325,385 365,360 400,430 360,455" fill="#FFFFFF" />
-    <polygon points="325,465 365,440 400,510 360,535" fill="#FFFFFF" />
-    <polygon points="325,545 365,520 400,590 360,615" fill="#FFFFFF" />
-    <polygon points="325,625 365,600 400,670 360,680" fill="#FFFFFF" />
+    <!-- 3 Linhas Horizontais Limpas na Fachada -->
+    <line x1="330" y1="400" x2="400" y2="445" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="330" y1="470" x2="400" y2="515" stroke="#FFFFFF" stroke-width="8" />
+    <line x1="330" y1="540" x2="400" y2="585" stroke="#FFFFFF" stroke-width="8" />
 
-    <!-- Left Dynamic Ribbon Swoosh -->
-    <!-- Underside Shadow Curve -->
-    <path d="M 325,500 C 270,490 230,550 170,680 L 230,680 C 270,590 300,540 325,525 Z" fill="#D95200" />
-    <!-- Front Upper Highlight Ribbon -->
-    <path d="M 325,450 C 250,460 210,540 170,680 L 250,680 C 280,560 310,500 325,475 Z" fill="#FF6B00" />
+    <!-- Fitas Curvas em 3D Suaves -->
+    <path d="M 330,520 C 270,510 220,570 170,680 L 230,680 C 270,600 300,560 330,545 Z" fill="#D95200" />
+    <path d="M 330,470 C 260,480 210,550 170,680 L 240,680 C 270,580 300,530 330,500 Z" fill="#FF6B00" />
 
-    <!-- Right Dynamic Ribbon Swoosh -->
-    <!-- Underside Shadow Curve -->
-    <path d="M 475,500 C 530,490 570,550 630,680 L 570,680 C 530,590 500,540 475,525 Z" fill="#D95200" />
-    <!-- Front Upper Highlight Ribbon -->
-    <path d="M 475,450 C 550,460 590,540 630,680 L 550,680 C 520,560 490,500 475,475 Z" fill="#FF6B00" />
+    <path d="M 470,520 C 530,510 580,570 630,680 L 570,680 C 530,600 500,560 470,545 Z" fill="#D95200" />
+    <path d="M 470,470 C 540,480 590,550 630,680 L 560,680 C 530,580 500,530 470,500 Z" fill="#FF6B00" />
   
   </g>
 </svg>

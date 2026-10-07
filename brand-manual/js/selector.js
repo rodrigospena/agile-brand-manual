@@ -1,46 +1,39 @@
-// Agile Logo Elimination Board & Selector (All Vector Options including Protective Hands / Cradle)
+// Agile Logo Elimination Board & Selector (Clean Vectors - No Rhombuses)
 document.addEventListener('DOMContentLoaded', () => {
   const state = {
     globalBg: 'bg-light',
     lockupMode: 'primary', // 'symbol', 'primary', 'horizontal', 'stamp'
     filter: 'all', // 'all', 'favorite', 'review', 'eliminated'
     variants: {
-      'cradle-protecao': { 
-        name: 'Design A — Architectural Cradle', 
-        styleTag: '🌟 Mãos de Proteção Refinadas', 
+      'maos-limpas': { 
+        name: 'Mãos de Proteção & Segurança', 
+        styleTag: '🌟 Mãos Humanas / Cuidado', 
         status: 'favorite', 
-        pathDir: 'opcao-cradle-protecao',
-        notes: 'Curvatura elegante e precisa que abraça o edifício como mãos de proteção patrimonial e fundação estrutural.' 
+        pathDir: 'opcao-maos-limpas',
+        notes: 'Mãos elegantes com curvatura anatômica abraçando a edificação com frisos retos limpos (sem losangos).' 
       },
-      'maos-seguranca': { 
-        name: 'Design B — Geometric Hands of Security', 
-        styleTag: '🌟 Mãos Facetadas / Segurança', 
+      'maos-minimalistas': { 
+        name: 'Mãos de Suporte Minimalistas', 
+        styleTag: '🌟 Traço Contínuo Minimalista', 
         status: 'favorite', 
-        pathDir: 'opcao-maos-seguranca',
-        notes: 'Mãos geométricas com planos facetados de luz e sombra abraçando a torre com autoridade de engenharia.' 
+        pathDir: 'opcao-maos-minimalistas',
+        notes: 'Silhueta fluida e contínua de mãos integradas à base do A com edifício sólido e sóbrio.' 
       },
-      'asas-suporte': { 
-        name: 'Design C — Foundation Wings', 
-        styleTag: '🌟 Asas de Sustentação & Cuidado', 
+      'opcao-6': { 
+        name: 'Opção 6 — Dynamic Clean Ribbon', 
+        styleTag: 'Fitas 3D / Desburocratização', 
         status: 'favorite', 
-        pathDir: 'opcao-asas-suporte',
-        notes: 'Asas aerodinâmicas ascendentes que sustentam a base da edificação transmitindo agilidade e suporte.' 
+        pathDir: 'opcao-6-dynamic-ribbon',
+        notes: 'Fitas dinâmicas em 3D abraçando o edifício com linhas retas horizontais puras (sem losangos).' 
       },
       'opcao-3': { 
         name: 'Opção 3 — Asymmetric Dynamic Apex', 
-        styleTag: 'Vetorizada Oficial (Opção 3)', 
+        styleTag: 'Ápice em Vela Dinâmica', 
         status: 'review', 
         pathDir: 'opcao-3-asymmetric-apex',
-        notes: 'Ápice assimétrico com caimento dinâmico em vela/asa e torre isométrica com 4 frisos.' 
+        notes: 'Ápice assimétrico dinâmico com edifício isométrico reto e sóbrio (sem losangos).' 
       },
-      'opcao-6': { 
-        name: 'Opção 6 — Dynamic Ribbon Swoosh', 
-        styleTag: 'Vetorizada Oficial (Opção 6)', 
-        status: 'review', 
-        pathDir: 'opcao-6-dynamic-ribbon',
-        notes: 'Fitas dinâmicas em laranja envolvendo o edifício e formando a travessa do A com efeito 3D.' 
-      },
-      1: { name: 'Variante 1 — Sharp Precision', styleTag: 'Geometria Clássica', status: 'review', pathDir: 'variant-1', notes: '5 frisos técnicos, equilíbrio e proporção áurea clássica de engenharia.' },
+      1: { name: 'Variante 1 — Sharp Precision', styleTag: 'Geometria Clássica', status: 'review', pathDir: 'variant-1', notes: '5 frisos técnicos horizontais retos, proporção clássica de engenharia.' },
       2: { name: 'Variante 2 — Minimalist Louvers', styleTag: 'Contemporâneo', status: 'review', pathDir: 'variant-2', notes: '4 pavimentos com respiros generosos e ar arquitetônico moderno.' },
       3: { name: 'Variante 3 — Solid Monolith', styleTag: 'Solidez Estrutural', status: 'review', pathDir: 'variant-3', notes: 'Solidez e peso estrutural de engenharia pesada com recorte portal.' },
       4: { name: 'Variante 4 — Hybrid Residence', styleTag: 'Residencial & Comercial', status: 'review', pathDir: 'variant-4', notes: 'Mescla cobertura residencial e corpo vertical comercial.' },
@@ -55,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const saved = localStorage.getItem('agile_logo_selector_state_v4');
+  const saved = localStorage.getItem('agile_logo_selector_state_v5');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
@@ -66,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function saveState() {
-    localStorage.setItem('agile_logo_selector_state_v4', JSON.stringify(state));
+    localStorage.setItem('agile_logo_selector_state_v5', JSON.stringify(state));
     updateCounters();
   }
 
