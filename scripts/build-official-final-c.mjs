@@ -47,19 +47,25 @@ function coordsToSvgPath(points, startX, baselineY, fontSize, unitsPerEm) {
 
 /**
  * Builds pure vector path for AGILE wordmark with:
- * - 'A' without crossbar, optically thickened by +24% (legW=208)
- * - Exact logometric span: width matches the base of the symbol icon perfectly (404.8px)
+// -------------------------------------------------------------------------
+// 1. TYPOGRAPHY: OFFICIAL CUSTOM GEOMETRIC WORDMARK 'AGILE'
+// -------------------------------------------------------------------------
+/**
+ * Wordmark Generator:
+ * - 'A' with open chevron geometry, calibrated to exact stroke weight (155 upm, matching I, L, E stems)
+ * - Optical kerning calibrated across diagonal and straight pairs
+ * - Exact logometric span: width matches the base of the symbol icon (404.8px)
  */
 function buildVerticalAlignedWordmark(targetStartX = 197.6, targetTotalWidth = 404.8, baselineY = 775, fontSize = 96) {
   const scale = fontSize / 1000;
   
-  // Glyph widths:
-  const legW = 208;
-  const outerW_A = 730;
-  const topW = 220;
+  // Calibrated stroke weight: 155 upm matches Plus Jakarta Sans ExtraBold stems
+  const legW = 155;
+  const outerW_A = 690;
+  const topW = 175;
   const topX1 = (outerW_A - topW) / 2;
   const topX2 = topX1 + topW;
-  const apexY = 745 - (legW * 0.96);
+  const apexY = 745 - (legW * 0.98);
 
   const glyphA_w = outerW_A * scale;
   
@@ -84,7 +90,7 @@ function buildVerticalAlignedWordmark(targetStartX = 197.6, targetTotalWidth = 4
   const baseGap = totalGapSpace / 4;
 
   // Optical Kerning offsets:
-  // Diagonal 'A' creates a large triangular void at the top right, so A-G needs tighter spacing.
+  // Diagonal 'A' creates a large triangular void at top right, so A-G needs tighter spacing.
   // Straight stems 'I' and 'L' need more breathing room so they don't look cramped.
   // Sum of offsets = -16 + 4 + 9 + 3 = 0, perfectly preserving targetTotalWidth (404.8px).
   const gapAG = baseGap - 16;
@@ -95,7 +101,7 @@ function buildVerticalAlignedWordmark(targetStartX = 197.6, targetTotalWidth = 4
   let curX = targetStartX;
   const paths = [];
 
-  // 1. A (Custom open architectural geometry matching Option C)
+  // 1. A (Custom open architectural chevron matching Option C)
   const ptsA = [
     [0, 0],
     [topX1, 745],
@@ -135,12 +141,12 @@ function buildHorizontalWordmark(startX = 340, baselineY = 215, fontSize = 98, t
   let curX = startX;
   const paths = [];
 
-  const legW = 208;
-  const outerW_A = 730;
-  const topW = 220;
+  const legW = 155;
+  const outerW_A = 690;
+  const topW = 175;
   const topX1 = (outerW_A - topW) / 2;
   const topX2 = topX1 + topW;
-  const apexY = 745 - (legW * 0.96);
+  const apexY = 745 - (legW * 0.98);
 
   const ptsA = [
     [0, 0],
@@ -152,11 +158,10 @@ function buildHorizontalWordmark(startX = 340, baselineY = 215, fontSize = 98, t
     [legW, 0]
   ];
   paths.push(coordsToSvgPath(ptsA, curX, baselineY, fontSize, 1000));
-  // Optical kerning after 'A':
   curX += (outerW_A * scale) + (tracking - 16);
 
   const glyphChars = ['G', 'I', 'L', 'E'];
-  const trackingOffsets = [4, 9, 3, 0]; // Optical tracking for G-I, I-L, L-E
+  const trackingOffsets = [4, 9, 3, 0];
 
   glyphChars.forEach((ch, idx) => {
     const g = font.charToGlyph(ch);
@@ -272,10 +277,66 @@ function buildHorizontalLockup(colorMode = 'color') {
 }
 
 /**
- * RECONSTRUCTED HIGH-IMPACT TECHNICAL STAMP
- * - Both Top and Bottom text are completely upright and legible
- * - Clean architectural double-ring border and precision tick marks
- * - Prominent, balanced typography
+ * Places glyphs along an arc as pure vector paths with exact trigonometry.
+ */
+function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = true, letterSpacingExtra = 0) {
+  const scale = fontSize / 1000;
+  const glyphs = [];
+  let totalArcLength = 0;
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (ch === ' ') {
+      glyphs.push({ ch, isSpace: true, width: 280 * scale });
+      totalArcLength += (280 * scale) + (letterSpacingExtra * radius);
+      continue;
+    }
+    const g = font.charToGlyph(ch);
+    const bb = g.getBoundingBox();
+    const w = (bb.x2 - bb.x1) * scale;
+    const xOffset = bb.x1 * scale;
+    glyphs.push({ ch, glyph: g, width: w, xOffset, isSpace: false });
+    totalArcLength += w + (letterSpacingExtra * radius);
+  }
+
+  totalArcLength -= (letterSpacingExtra * radius);
+  const totalTheta = totalArcLength / radius;
+
+  let currentArc = 0;
+  const paths = [];
+
+  for (let i = 0; i < glyphs.length; i++) {
+    const item = glyphs[i];
+    if (item.isSpace) {
+      currentArc += item.width + (letterSpacingExtra * radius);
+      continue;
+    }
+
+    const glyphCenterArc = currentArc + (item.width / 2);
+    const thetaRel = (glyphCenterArc / totalArcLength - 0.5) * totalTheta;
+    const angle = isTop ? (centerAngle + thetaRel) : (centerAngle - thetaRel);
+
+    const gx = cx + radius * Math.cos(angle);
+    const gy = cy + radius * Math.sin(angle);
+
+    const rotDeg = isTop ? (angle + Math.PI / 2) * (180 / Math.PI) : (angle - Math.PI / 2) * (180 / Math.PI);
+
+    const p = item.glyph.getPath(-item.width / 2 - item.xOffset, 0, fontSize);
+    const d = commandsToSvgPath(p.commands);
+
+    paths.push(`<path d="${d}" transform="translate(${gx.toFixed(2)}, ${gy.toFixed(2)}) rotate(${rotDeg.toFixed(2)})" />`);
+
+    currentArc += item.width + (letterSpacingExtra * radius);
+  }
+
+  return paths.join('\n');
+}
+
+/**
+ * RECONSTRUCTED HIGH-IMPACT TECHNICAL STAMP (100% MATHEMATICAL & OPTICAL PERFECTION)
+ * - Pure vector paths for both text arcs, eliminating browser font drift
+ * - Centered central symbol (centroid 400, 390 -> 300, 300)
+ * - Precision architectural double ring and cardinal diamond markers
  */
 function buildStamp(colorMode = 'color') {
   let mainColor = NAVY;
@@ -296,36 +357,38 @@ function buildStamp(colorMode = 'color') {
     subColor = BLACK;
   }
 
+  const topTextPaths = buildArcTextPaths('AGILE', 300, 300, 222, 52, -Math.PI / 2, true, 0.05);
+  const botTextPaths = buildArcTextPaths('ENGENHARIA CIVIL', 300, 300, 222, 24, Math.PI / 2, false, 0.025);
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
-  <defs>
-    <!-- Top Arc for AGILE (radius 220, clockwise) -->
-    <path id="stampTopArc" d="M 70,300 A 230,230 0 1,1 530,300" fill="none"/>
-    <!-- Bottom Arc for ENGENHARIA CIVIL (radius 230, counter-clockwise so text sits upright) -->
-    <path id="stampBotArc" d="M 70,300 A 230,230 0 0,0 530,300" fill="none"/>
-  </defs>
+  <!-- Precision Concentric Stamp Rings -->
+  <circle cx="300" cy="300" r="284" fill="none" stroke="${mainColor}" stroke-width="5.5"/>
+  <circle cx="300" cy="300" r="268" fill="none" stroke="${mainColor}" stroke-width="1.75"/>
+  <circle cx="300" cy="300" r="168" fill="none" stroke="${mainColor}" stroke-width="2.5"/>
   
-  <!-- Anéis Estruturais de Precisão (Double Ring Profissional) -->
-  <circle cx="300" cy="300" r="285" fill="none" stroke="${mainColor}" stroke-width="6"/>
-  <circle cx="300" cy="300" r="270" fill="none" stroke="${mainColor}" stroke-width="2"/>
-  <circle cx="300" cy="300" r="176" fill="none" stroke="${mainColor}" stroke-width="3"/>
+  <!-- Cardinal Architectural Markers (Exact East & West 0° and 180°) -->
+  <g transform="translate(76, 300)">
+    <polygon points="0,-7 7,0 0,7 -7,0" fill="${accentColor}"/>
+    <circle cx="0" cy="0" r="2" fill="${WHITE}"/>
+  </g>
+  <g transform="translate(524, 300)">
+    <polygon points="0,-7 7,0 0,7 -7,0" fill="${accentColor}"/>
+    <circle cx="0" cy="0" r="2" fill="${WHITE}"/>
+  </g>
   
-  <!-- Tipografia Superior: AGILE (Extra Bold, Perfeita e Equilibrada) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="54px" letter-spacing="0.26em" fill="${mainColor}">
-    <textPath href="#stampTopArc" startOffset="50%" text-anchor="middle">AGILE</textPath>
-  </text>
+  <!-- Top Arc: AGILE (Pure Vector Paths, Perfectly Centered) -->
+  <g id="stamp-top-text" fill="${mainColor}">
+    ${topTextPaths}
+  </g>
   
-  <!-- Tipografia Inferior: ENGENHARIA CIVIL (Orientada para Leitura Natural Correta) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="25px" letter-spacing="0.22em" fill="${subColor}">
-    <textPath href="#stampBotArc" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
-  </text>
+  <!-- Bottom Arc: ENGENHARIA CIVIL (Pure Vector Paths, Upright & Perfectly Centered) -->
+  <g id="stamp-bot-text" fill="${subColor}">
+    ${botTextPaths}
+  </g>
   
-  <!-- Marcadores Técnicos Laterais (Losangos Precisos com Ponto Central) -->
-  <polygon points="70,290 80,300 70,310 60,300" fill="${accentColor}"/>
-  <polygon points="530,290 540,300 530,310 520,300" fill="${accentColor}"/>
-  
-  <!-- Símbolo Central Magnificado (scale 0.46 perfeitamente centralizado no anel interior) -->
-  <g transform="translate(300, 305) scale(0.46) translate(-400, -380)">
+  <!-- Central Symbol (Centroid 400, 390 perfectly centered at 300, 300) -->
+  <g transform="translate(300, 300) scale(0.42) translate(-400, -390)">
     ${getOptionCSymbol(colorMode)}
   </g>
 </svg>`;

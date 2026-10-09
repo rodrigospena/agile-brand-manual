@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
-  <defs>
-    <!-- Top Arc for AGILE (radius 220, clockwise) -->
-    <path id="stampTopArc" d="M 70,300 A 230,230 0 1,1 530,300" fill="none"/>
-    <!-- Bottom Arc for ENGENHARIA CIVIL (radius 230, counter-clockwise so text sits upright) -->
-    <path id="stampBotArc" d="M 70,300 A 230,230 0 0,0 530,300" fill="none"/>
-  </defs>
+  <!-- Precision Concentric Stamp Rings -->
+  <circle cx="300" cy="300" r="284" fill="none" stroke="#000000" stroke-width="5.5"/>
+  <circle cx="300" cy="300" r="268" fill="none" stroke="#000000" stroke-width="1.75"/>
+  <circle cx="300" cy="300" r="168" fill="none" stroke="#000000" stroke-width="2.5"/>
   
-  <!-- Anéis Estruturais de Precisão (Double Ring Profissional) -->
-  <circle cx="300" cy="300" r="285" fill="none" stroke="#000000" stroke-width="6"/>
-  <circle cx="300" cy="300" r="270" fill="none" stroke="#000000" stroke-width="2"/>
-  <circle cx="300" cy="300" r="176" fill="none" stroke="#000000" stroke-width="3"/>
+  <!-- Cardinal Architectural Markers (Exact East & West 0° and 180°) -->
+  <g transform="translate(76, 300)">
+    <polygon points="0,-7 7,0 0,7 -7,0" fill="#000000"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(524, 300)">
+    <polygon points="0,-7 7,0 0,7 -7,0" fill="#000000"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+  </g>
   
-  <!-- Tipografia Superior: AGILE (Extra Bold, Perfeita e Equilibrada) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="54px" letter-spacing="0.26em" fill="#000000">
-    <textPath href="#stampTopArc" startOffset="50%" text-anchor="middle">AGILE</textPath>
-  </text>
+  <!-- Top Arc: AGILE (Pure Vector Paths, Perfectly Centered) -->
+  <g id="stamp-top-text" fill="#000000">
+    <path d="M -9.72 0.00 L -18.46 0.00 L -5.36 -38.74 L 5.36 -38.74 L 18.46 0.00 L 9.67 0.00 L 7.07 -7.90 L -7.12 -7.90 L -9.72 0.00 M 0.00 -29.85 L -4.89 -14.92 L 4.84 -14.92 L 0.00 -29.85" transform="translate(230.72, 89.09) rotate(-18.18)" />
+<path d="M 0.78 0.62 L 0.78 0.62 Q -3.38 0.62 -6.97 -0.88 Q -10.56 -2.39 -13.26 -5.10 Q -15.96 -7.80 -17.47 -11.44 Q -18.98 -15.08 -18.98 -19.40 L -18.98 -19.40 Q -18.98 -23.71 -17.52 -27.38 Q -16.07 -31.04 -13.42 -33.72 Q -10.76 -36.40 -7.20 -37.88 Q -3.64 -39.36 0.57 -39.36 L 0.57 -39.36 Q 4.78 -39.36 8.14 -37.96 Q 11.49 -36.56 13.83 -34.22 Q 16.17 -31.88 17.16 -29.02 L 17.16 -29.02 L 10.04 -25.58 Q 9.05 -28.39 6.58 -30.24 Q 4.11 -32.08 0.57 -32.08 L 0.57 -32.08 Q -2.86 -32.08 -5.46 -30.47 Q -8.06 -28.86 -9.49 -26.03 Q -10.92 -23.19 -10.92 -19.40 L -10.92 -19.40 Q -10.92 -15.60 -9.41 -12.74 Q -7.90 -9.88 -5.28 -8.27 Q -2.65 -6.66 0.78 -6.66 L 0.78 -6.66 Q 3.43 -6.66 5.75 -7.67 Q 8.06 -8.68 9.49 -10.61 Q 10.92 -12.53 10.92 -15.24 L 10.92 -15.24 L 10.92 -15.34 L 0.57 -15.34 L 0.57 -22.10 L 18.98 -22.10 L 18.98 -17.99 Q 18.98 -13.26 17.42 -9.75 Q 15.86 -6.24 13.23 -3.93 Q 10.61 -1.61 7.36 -0.49 Q 4.11 0.62 0.78 0.62" transform="translate(278.12, 79.08) rotate(-5.66)" />
+<path d="M 4.03 0.00 L -4.03 0.00 L -4.03 -38.74 L 4.03 -38.74 L 4.03 0.00" transform="translate(312.19, 78.33) rotate(3.15)" />
+<path d="M 12.22 0.00 L -12.22 0.00 L -12.22 -38.74 L -4.16 -38.74 L -4.16 -7.02 L 12.22 -7.02 L 12.22 0.00" transform="translate(339.34, 81.51) rotate(10.21)" />
+<path d="M 13.03 0.00 L -13.03 0.00 L -13.03 -38.74 L 13.03 -38.74 L 13.03 -31.72 L -4.97 -31.72 L -4.97 -22.93 L 11.99 -22.93 L 11.99 -15.91 L -4.97 -15.91 L -4.97 -7.02 L 13.03 -7.02 L 13.03 0.00" transform="translate(374.42, 90.85) rotate(19.59)" />
+  </g>
   
-  <!-- Tipografia Inferior: ENGENHARIA CIVIL (Orientada para Leitura Natural Correta) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="25px" letter-spacing="0.22em" fill="#000000">
-    <textPath href="#stampBotArc" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
-  </text>
+  <!-- Bottom Arc: ENGENHARIA CIVIL (Pure Vector Paths, Upright & Perfectly Centered) -->
+  <g id="stamp-bot-text" fill="#000000">
+    <path d="M 6.01 0.00 L -6.01 0.00 L -6.01 -17.88 L 6.01 -17.88 L 6.01 -14.64 L -2.29 -14.64 L -2.29 -10.58 L 5.53 -10.58 L 5.53 -7.34 L -2.29 -7.34 L -2.29 -3.24 L 6.01 -3.24 L 6.01 0.00" transform="translate(174.35, 483.02) rotate(34.47)" />
+<path d="M -3.60 0.00 L -7.32 0.00 L -7.32 -17.88 L -4.46 -17.88 L 3.60 -7.25 L 3.60 -17.88 L 7.32 -17.88 L 7.32 0.00 L 4.44 0.00 L -3.60 -10.87 L -3.60 0.00" transform="translate(190.36, 493.03) rotate(29.60)" />
+<path d="M 0.36 0.29 L 0.36 0.29 Q -1.56 0.29 -3.22 -0.41 Q -4.87 -1.10 -6.12 -2.35 Q -7.37 -3.60 -8.06 -5.28 Q -8.76 -6.96 -8.76 -8.95 L -8.76 -8.95 Q -8.76 -10.94 -8.09 -12.64 Q -7.42 -14.33 -6.19 -15.56 Q -4.97 -16.80 -3.32 -17.48 Q -1.68 -18.17 0.26 -18.17 L 0.26 -18.17 Q 2.21 -18.17 3.76 -17.52 Q 5.30 -16.87 6.38 -15.79 Q 7.46 -14.71 7.92 -13.39 L 7.92 -13.39 L 4.63 -11.81 Q 4.18 -13.10 3.04 -13.96 Q 1.90 -14.81 0.26 -14.81 L 0.26 -14.81 Q -1.32 -14.81 -2.52 -14.06 Q -3.72 -13.32 -4.38 -12.01 Q -5.04 -10.70 -5.04 -8.95 L -5.04 -8.95 Q -5.04 -7.20 -4.34 -5.88 Q -3.65 -4.56 -2.44 -3.82 Q -1.22 -3.07 0.36 -3.07 L 0.36 -3.07 Q 1.58 -3.07 2.65 -3.54 Q 3.72 -4.01 4.38 -4.90 Q 5.04 -5.78 5.04 -7.03 L 5.04 -7.03 L 5.04 -7.08 L 0.26 -7.08 L 0.26 -10.20 L 8.76 -10.20 L 8.76 -8.30 Q 8.76 -6.12 8.04 -4.50 Q 7.32 -2.88 6.11 -1.81 Q 4.90 -0.74 3.40 -0.23 Q 1.90 0.29 0.36 0.29" transform="translate(209.66, 502.79) rotate(24.01)" />
+<path d="M 6.01 0.00 L -6.01 0.00 L -6.01 -17.88 L 6.01 -17.88 L 6.01 -14.64 L -2.29 -14.64 L -2.29 -10.58 L 5.53 -10.58 L 5.53 -7.34 L -2.29 -7.34 L -2.29 -3.24 L 6.01 -3.24 L 6.01 0.00" transform="translate(228.57, 510.19) rotate(18.77)" />
+<path d="M -3.60 0.00 L -7.32 0.00 L -7.32 -17.88 L -4.46 -17.88 L 3.60 -7.25 L 3.60 -17.88 L 7.32 -17.88 L 7.32 0.00 L 4.44 0.00 L -3.60 -10.87 L -3.60 0.00" transform="translate(246.69, 515.50) rotate(13.90)" />
+<path d="M -3.48 0.00 L -7.20 0.00 L -7.20 -17.88 L -3.48 -17.88 L -3.48 -10.15 L 3.48 -10.15 L 3.48 -17.88 L 7.20 -17.88 L 7.20 0.00 L 3.48 0.00 L 3.48 -6.91 L -3.48 -6.91 L -3.48 0.00" transform="translate(266.36, 519.44) rotate(8.72)" />
+<path d="M -4.49 0.00 L -8.52 0.00 L -2.47 -17.88 L 2.47 -17.88 L 8.52 0.00 L 4.46 0.00 L 3.26 -3.65 L -3.29 -3.65 L -4.49 0.00 M 0.00 -13.78 L -2.26 -6.89 L 2.23 -6.89 L 0.00 -13.78" transform="translate(287.51, 521.65) rotate(3.23)" />
+<path d="M -3.36 0.00 L -7.08 0.00 L -7.08 -17.88 L -0.24 -17.88 Q 1.61 -17.88 3.04 -17.23 Q 4.46 -16.58 5.28 -15.31 Q 6.10 -14.04 6.10 -12.17 L 6.10 -12.17 Q 6.10 -10.34 5.26 -9.06 Q 4.42 -7.78 3.00 -7.13 L 3.00 -7.13 L 7.08 0.00 L 2.90 0.00 L -0.72 -6.48 L -3.36 -6.48 L -3.36 0.00 M -3.36 -14.64 L -3.36 -9.72 L -0.22 -9.72 Q 0.96 -9.72 1.67 -10.39 Q 2.38 -11.06 2.38 -12.17 L 2.38 -12.17 Q 2.38 -13.30 1.67 -13.97 Q 0.96 -14.64 -0.22 -14.64 L -0.22 -14.64 L -3.36 -14.64" transform="translate(308.65, 521.83) rotate(-2.23)" />
+<path d="M 1.86 0.00 L -1.86 0.00 L -1.86 -17.88 L 1.86 -17.88 L 1.86 0.00" transform="translate(323.10, 520.80) rotate(-5.97)" />
+<path d="M -4.49 0.00 L -8.52 0.00 L -2.47 -17.88 L 2.47 -17.88 L 8.52 0.00 L 4.46 0.00 L 3.26 -3.65 L -3.29 -3.65 L -4.49 0.00 M 0.00 -13.78 L -2.26 -6.89 L 2.23 -6.89 L 0.00 -13.78" transform="translate(338.87, 518.57) rotate(-10.08)" />
+<path d="M 0.68 0.29 L 0.68 0.29 Q -1.24 0.29 -2.88 -0.41 Q -4.52 -1.10 -5.75 -2.35 Q -6.97 -3.60 -7.66 -5.28 Q -8.34 -6.96 -8.34 -8.95 L -8.34 -8.95 Q -8.34 -10.94 -7.67 -12.64 Q -7.00 -14.33 -5.77 -15.56 Q -4.55 -16.80 -2.90 -17.48 Q -1.26 -18.17 0.68 -18.17 L 0.68 -18.17 Q 2.63 -18.17 4.18 -17.52 Q 5.72 -16.87 6.80 -15.79 Q 7.88 -14.71 8.34 -13.39 L 8.34 -13.39 L 5.05 -11.81 Q 4.60 -13.10 3.46 -13.96 Q 2.32 -14.81 0.68 -14.81 L 0.68 -14.81 Q -0.90 -14.81 -2.10 -14.06 Q -3.30 -13.32 -3.96 -12.01 Q -4.62 -10.70 -4.62 -8.95 L -4.62 -8.95 Q -4.62 -7.20 -3.96 -5.88 Q -3.30 -4.56 -2.10 -3.82 Q -0.90 -3.07 0.68 -3.07 L 0.68 -3.07 Q 2.32 -3.07 3.46 -3.92 Q 4.60 -4.78 5.05 -6.07 L 5.05 -6.07 L 8.34 -4.49 Q 7.88 -3.17 6.80 -2.09 Q 5.72 -1.01 4.18 -0.36 Q 2.63 0.29 0.68 0.29" transform="translate(372.40, 509.86) rotate(-19.03)" />
+<path d="M 1.86 0.00 L -1.86 0.00 L -1.86 -17.88 L 1.86 -17.88 L 1.86 0.00" transform="translate(387.09, 504.20) rotate(-23.10)" />
+<path d="M 2.16 0.00 L -2.16 0.00 L -8.28 -17.88 L -4.20 -17.88 L 0.00 -4.80 L 4.20 -17.88 L 8.28 -17.88 L 2.16 0.00" transform="translate(401.30, 497.54) rotate(-27.15)" />
+<path d="M 1.86 0.00 L -1.86 0.00 L -1.86 -17.88 L 1.86 -17.88 L 1.86 0.00" transform="translate(414.99, 489.90) rotate(-31.20)" />
+<path d="M 5.64 0.00 L -5.64 0.00 L -5.64 -17.88 L -1.92 -17.88 L -1.92 -3.24 L 5.64 -3.24 L 5.64 0.00" transform="translate(425.95, 482.81) rotate(-34.57)" />
+  </g>
   
-  <!-- Marcadores Técnicos Laterais (Losangos Precisos com Ponto Central) -->
-  <polygon points="70,290 80,300 70,310 60,300" fill="#000000"/>
-  <polygon points="530,290 540,300 530,310 520,300" fill="#000000"/>
-  
-  <!-- Símbolo Central Magnificado (scale 0.46 perfeitamente centralizado no anel interior) -->
-  <g transform="translate(300, 305) scale(0.46) translate(-400, -380)">
+  <!-- Central Symbol (Centroid 400, 390 perfectly centered at 300, 300) -->
+  <g transform="translate(300, 300) scale(0.42) translate(-400, -390)">
     
     <!-- Outer "A" Architectural Frame (Option C: Gap 60px) -->
     <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#000000" />
