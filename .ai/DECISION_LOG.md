@@ -42,4 +42,17 @@
   1. **Compensação Óptica:** Hastes diagonais do 'A' reforçadas em +24% (208 unidades), ápice recortado geometricamente e vetorização em caminhos puros (`<path>`).
   2. **Carimbo Técnico Magnificado:** Símbolo escalado para `scale(0.40)` no núcleo (raio 188px) e tipografia expandida (`AGILE` em 42px / `ENGENHARIA CIVIL` em 22px).
   3. **Pipeline Completo:** Regeneração de todos os 16 SVGs por diretório, 56 PNGs em alta definição (512px a 2048px), favicons e `agile-brand-kit-completo.zip`.
-  4. **Auditoria Geral:** Execução do script `scripts/audit-client-delivery.mjs` com 259/259 verificações aprovadas (0 falhas) registrado em `.ai/audits/AUDIT-CLIENT-DELIVERY.md`.
+---
+
+## [ADR-004] Calibração de Kerning Óptico, Redesign do Selo Técnico em Anel Sólido e Showcase de Mockups
+- **Data:** 09/10/2026
+- **Status:** Aprovado, Publicado & Em Produção
+- **Contexto:** Refinamentos de alta precisão na tipografia, no carimbo técnico e inclusão de aplicações práticas:
+  1. O 'A' customizado em 208 upm estava +34% mais espesso que as hastes reais de `I`, `L` e `E` (155 upm), e o espaçamento mecânico causava desconexão óptica no par `A-G`.
+  2. O carimbo anterior em traço fino parecia vazio e sofria com desalinhamentos e texto invertido em alguns visualizadores SVG.
+  3. Necessidade de demonstrar o impacto prático da identidade visual no mundo real através do acervo de mockups em alta definição.
+- **Decisão:**
+  1. **Tipografia & Kerning Óptico:** Espessura da haste diagonal do `A` calibrada para exatamente 155 upm (idêntica às hastes de `I`, `L`, `E`). Compensação de kerning óptico distribuída (-16px no par `A-G`, +4px no `G-I`, +9px no `I-L`, +3px no `L-E`), mantendo a ancoragem total de 404.8px na base do símbolo.
+  2. **Selo Técnico em Anel Sólido (Master Solid Seal):** Reconstrução completa com anel estrutural em Deep Navy sólido, tipografia curva calculada por trigonometria em caminhos vetoriais puros (zero drift de fonte), marcadores cardeais em losango e núcleo com textura técnica de blueprint e símbolo perfeitamente centralizado no centroide geométrico (300, 300).
+  3. **Showcase de Mockups Reais:** Criação de seção dedicada no Manual de Marca exibindo 5 aplicações de alto padrão: Caderno Executivo em Couro, Capacete de Proteção EPI, Cartão de Visita em Hot Stamping, Pasta Institucional de Projetos e Fachada Corporativa em Letra-Caixa.
+  4. **Deploy em Produção:** Sincronização e deploy contínuo na VM do Project X (`https://madebypx.com/agile/`) com verificação HTTP 200 em todos os ativos.
