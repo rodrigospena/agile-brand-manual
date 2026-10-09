@@ -192,9 +192,9 @@ function getOptionCSymbol(colorMode = 'color') {
   if (colorMode === 'dark') {
     outerA = WHITE;
     bLeft = ORANGE;
-    bRight = ORANGE_LIGHT;
+    bRight = NAVY_LIGHT;
     roof = ORANGE_ROOF;
-    louver = NAVY;
+    louver = WHITE;
   } else if (colorMode === 'white') {
     outerA = WHITE;
     bLeft = WHITE;
