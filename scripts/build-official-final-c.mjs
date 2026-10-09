@@ -333,62 +333,90 @@ function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = 
 }
 
 /**
- * RECONSTRUCTED HIGH-IMPACT TECHNICAL STAMP (100% MATHEMATICAL & OPTICAL PERFECTION)
- * - Pure vector paths for both text arcs, eliminating browser font drift
- * - Centered central symbol (centroid 400, 390 -> 300, 300)
- * - Precision architectural double ring and cardinal diamond markers
+ * MASTER SOLID RING TECHNICAL SEAL (SELO & CARIMBO OFICIAL DE ENGENHARIA)
+ * - Solid Navy ring band with engraved crisp typography
+ * - Precision architectural diamond badges
+ * - Inner blueprint grid core with centered Agile Symbol
  */
 function buildStamp(colorMode = 'color') {
-  let mainColor = NAVY;
-  let accentColor = ORANGE;
-  let subColor = ORANGE;
+  let ringFill = NAVY;
+  let textTopFill = WHITE;
+  let textBotFill = ORANGE_LIGHT;
+  let coreFill = WHITE;
+  let strokeAccent = ORANGE;
+  let markerFill = ORANGE;
+  let gridStroke = 'rgba(11,27,61,0.06)';
 
   if (colorMode === 'dark') {
-    mainColor = WHITE;
-    accentColor = ORANGE;
-    subColor = ORANGE_LIGHT;
+    ringFill = NAVY_LIGHT;
+    textTopFill = WHITE;
+    textBotFill = ORANGE_LIGHT;
+    coreFill = NAVY;
+    strokeAccent = ORANGE;
+    markerFill = ORANGE;
+    gridStroke = 'rgba(255,255,255,0.06)';
   } else if (colorMode === 'white') {
-    mainColor = WHITE;
-    accentColor = WHITE;
-    subColor = WHITE;
+    ringFill = '#0F254E';
+    textTopFill = WHITE;
+    textBotFill = '#CBD5E1';
+    coreFill = WHITE;
+    strokeAccent = '#CBD5E1';
+    markerFill = WHITE;
+    gridStroke = 'rgba(11,27,61,0.04)';
   } else if (colorMode === 'mono') {
-    mainColor = BLACK;
-    accentColor = BLACK;
-    subColor = BLACK;
+    ringFill = BLACK;
+    textTopFill = WHITE;
+    textBotFill = '#E2E8F0';
+    coreFill = WHITE;
+    strokeAccent = BLACK;
+    markerFill = BLACK;
+    gridStroke = 'rgba(0,0,0,0.04)';
   }
 
-  const topTextPaths = buildArcTextPaths('AGILE', 300, 300, 222, 52, -Math.PI / 2, true, 0.05);
-  const botTextPaths = buildArcTextPaths('ENGENHARIA CIVIL', 300, 300, 222, 24, Math.PI / 2, false, 0.025);
+  const topText = buildArcTextPaths('AGILE', 300, 300, 237, 50, -Math.PI / 2, true, 0.08);
+  const botText = buildArcTextPaths('ENGENHARIA CIVIL', 300, 300, 237, 24, Math.PI / 2, false, 0.04);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
-  <!-- Precision Concentric Stamp Rings -->
-  <circle cx="300" cy="300" r="284" fill="none" stroke="${mainColor}" stroke-width="5.5"/>
-  <circle cx="300" cy="300" r="268" fill="none" stroke="${mainColor}" stroke-width="1.75"/>
-  <circle cx="300" cy="300" r="168" fill="none" stroke="${mainColor}" stroke-width="2.5"/>
-  
-  <!-- Cardinal Architectural Markers (Exact East & West 0° and 180°) -->
-  <g transform="translate(76, 300)">
-    <polygon points="0,-7 7,0 0,7 -7,0" fill="${accentColor}"/>
+  <defs>
+    <pattern id="sealGrid-${colorMode}" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="${gridStroke}" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Outer Solid Precision Ring Band -->
+  <circle cx="300" cy="300" r="286" fill="${ringFill}"/>
+  <circle cx="300" cy="300" r="286" fill="none" stroke="${strokeAccent}" stroke-width="4"/>
+  <circle cx="300" cy="300" r="278" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+  <!-- Inner Core Disc -->
+  <circle cx="300" cy="300" r="190" fill="${coreFill}"/>
+  <circle cx="300" cy="300" r="190" fill="url(#sealGrid-${colorMode})"/>
+  <circle cx="300" cy="300" r="190" fill="none" stroke="${strokeAccent}" stroke-width="3"/>
+  <circle cx="300" cy="300" r="182" fill="none" stroke="${NAVY}" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Left/Right Architectural Diamond Badges on the Solid Ring -->
+  <g transform="translate(68, 300)">
+    <polygon points="0,-12 4,-4 12,0 4,4 0,12 -4,4 -12,0 -4,-4" fill="${markerFill}"/>
     <circle cx="0" cy="0" r="2" fill="${WHITE}"/>
   </g>
-  <g transform="translate(524, 300)">
-    <polygon points="0,-7 7,0 0,7 -7,0" fill="${accentColor}"/>
+  <g transform="translate(532, 300)">
+    <polygon points="0,-12 4,-4 12,0 4,4 0,12 -4,4 -12,0 -4,-4" fill="${markerFill}"/>
     <circle cx="0" cy="0" r="2" fill="${WHITE}"/>
   </g>
-  
-  <!-- Top Arc: AGILE (Pure Vector Paths, Perfectly Centered) -->
-  <g id="stamp-top-text" fill="${mainColor}">
-    ${topTextPaths}
+
+  <!-- Top Arc: AGILE in Solid Band -->
+  <g fill="${textTopFill}">
+    ${topText}
   </g>
-  
-  <!-- Bottom Arc: ENGENHARIA CIVIL (Pure Vector Paths, Upright & Perfectly Centered) -->
-  <g id="stamp-bot-text" fill="${subColor}">
-    ${botTextPaths}
+
+  <!-- Bottom Arc: ENGENHARIA CIVIL in Solid Band -->
+  <g fill="${textBotFill}">
+    ${botText}
   </g>
-  
-  <!-- Central Symbol (Centroid 400, 390 perfectly centered at 300, 300) -->
-  <g transform="translate(300, 300) scale(0.42) translate(-400, -390)">
+
+  <!-- Central Agile Symbol (Centroid 400, 390 perfectly centered at 300, 300) -->
+  <g transform="translate(300, 300) scale(0.44) translate(-400, -390)">
     ${getOptionCSymbol(colorMode)}
   </g>
 </svg>`;
