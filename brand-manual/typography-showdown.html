@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manrope — Teste de Espessura & Robustez — Agile Engenharia</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #070F24; color: #fff; font-family: system-ui, -apple-system, sans-serif; padding: 40px 20px; }
+    .container { max-width: 1350px; margin: 0 auto; }
+    h1 { font-size: 2.3rem; color: #fff; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.02em; }
+    p.lead { color: #94A3B8; font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6; max-width: 950px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .card { background: #0F1E3D; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; transition: transform 0.2s, border-color 0.2s; position: relative; }
+    .card:hover { border-color: rgba(255,107,0,0.5); }
+    .card.highlight { border: 2px solid #FF7A1A; background: linear-gradient(180deg, #132752 0%, #0F1E3D 100%); }
+    .card-header { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+    .card h3 { font-size: 1.2rem; color: #FFF; font-weight: 700; }
+    .card .desc { font-size: 0.88rem; color: #94A3B8; margin-bottom: 16px; line-height: 1.45; min-height: 42px; }
+    .badge { align-self: flex-start; background: rgba(255,255,255,0.1); color: #E2E8F0; padding: 4px 10px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; }
+    .badge.rec { background: rgba(255,107,0,0.25); color: #FF7A1A; border: 1px solid rgba(255,107,0,0.5); }
+    .preview-box { background: #FFFFFF; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(0,0,0,0.25); position: relative; }
+    .preview-label { align-self: flex-start; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; color: #64748B; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manrope — Variações de Espessura & Peso</h1>
+    <p class="lead">
+      Aplicamos a família <strong>Manrope</strong> com 3 níveis graduais de espessura para você avaliar a harmonia exata com a força e proporção do símbolo da Agile.
+    </p>
+
+    <div class="grid">
+      
+    <div class="card ">
+      <div class="card-header">
+        <span class="badge ">Opção 1 (Forte)</span>
+        <h3>Nível 1: Manrope ExtraBold (+2.5px)</h3>
+      </div>
+      <p class="desc">Ganho de +20% de espessura nos traços. Linhas firmes, elegantes e altamente legíveis.</p>
+      
+      <div class="preview-box">
+        <div class="preview-label">Vertical Lockup</div>
+        <svg viewBox="0 0 800 860" width="100%">
+          <g transform="translate(400, 360) scale(0.92) translate(-400, -380)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M227.58 765L222.81 765L250.58 688.68L255.35 688.68L283.13 765L278.35 765L251.32 690.69L254.50 690.69L227.58 765M272.42 745.18L233.41 745.18L233.41 740.94L272.42 740.94 M344.66 766.59Q336.13 766.59 329.72 763.67Q323.30 760.76 319.01 755.46Q314.72 750.16 312.57 742.87Q310.43 735.59 310.43 726.84Q310.43 715.18 314.24 706.25Q318.06 697.32 325.66 692.26Q333.27 687.20 344.66 687.20Q355.58 687.20 362.84 692.31Q370.10 697.42 373.18 705.53L368.83 707.34Q366.07 700.18 359.87 695.91Q353.67 691.65 344.66 691.65Q334.86 691.65 328.37 696.13Q321.87 700.61 318.59 708.55Q315.30 716.50 315.19 726.84Q315.09 737.17 318.38 745.13Q321.66 753.08 328.26 757.61Q334.86 762.14 344.66 762.14Q354.47 762.14 360.51 758.24Q366.55 754.35 369.33 747.40Q372.12 740.46 372.12 731.29L351.76 731.29L351.76 726.84L376.68 726.84Q376.83 728.32 376.86 729.49Q376.89 730.66 376.89 731.40Q376.89 741.36 373.55 749.34Q370.21 757.32 363.08 761.95Q355.95 766.59 344.66 766.59 M415 765L410.55 765L410.55 688.68L415 688.68 M496.36 765L453.96 765L453.96 688.68L458.41 688.68L458.41 760.55L496.36 760.55 M574.01 765L527.37 765L527.37 688.68L574.01 688.68L574.01 693.13L531.82 693.13L531.82 724.61L567.65 724.61L567.65 729.07L531.82 729.07L531.82 760.55L574.01 760.55" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+
+      <div class="preview-box" style="margin-top: 14px; min-height: 120px; padding: 12px 20px;">
+        <div class="preview-label">Horizontal Lockup</div>
+        <svg viewBox="0 0 800 236" width="100%">
+          <g transform="translate(125, 118) scale(0.25) translate(-400, -390)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M245.93 162L241.82 162L265.71 96.36L269.81 96.36L293.69 162L289.59 162L266.35 98.10L269.08 98.10L245.93 162M284.49 144.95L250.94 144.95L250.94 141.31L284.49 141.31 M346.40 163.37Q339.06 163.37 333.54 160.86Q328.03 158.35 324.34 153.80Q320.64 149.24 318.80 142.97Q316.95 136.70 316.95 129.18Q316.95 119.15 320.23 111.47Q323.51 103.79 330.06 99.44Q336.60 95.09 346.40 95.09Q355.79 95.09 362.03 99.49Q368.27 103.89 370.92 110.86L367.18 112.41Q364.81 106.26 359.48 102.59Q354.14 98.92 346.40 98.92Q337.96 98.92 332.38 102.77Q326.80 106.62 323.97 113.46Q321.14 120.29 321.05 129.18Q320.96 138.07 323.79 144.91Q326.61 151.74 332.29 155.64Q337.96 159.54 346.40 159.54Q354.83 159.54 360.02 156.19Q365.22 152.84 367.61 146.87Q370.01 140.90 370.01 133.01L352.50 133.01L352.50 129.18L373.93 129.18Q374.06 130.46 374.09 131.46Q374.11 132.46 374.11 133.10Q374.11 141.67 371.24 148.53Q368.37 155.39 362.23 159.38Q356.10 163.37 346.40 163.37 M406.66 162L402.84 162L402.84 96.36L406.66 96.36 M476.41 162L439.95 162L439.95 96.36L443.78 96.36L443.78 158.17L476.41 158.17 M542.97 162L502.86 162L502.86 96.36L542.97 96.36L542.97 100.19L506.69 100.19L506.69 127.27L537.50 127.27L537.50 131.10L506.69 131.10L506.69 158.17L542.97 158.17" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+    </div>
+  
+      
+    <div class="card highlight">
+      <div class="card-header">
+        <span class="badge rec">Opção 2 (⭐ Equilíbrio Ideal)</span>
+        <h3>Nível 2: Manrope Black / Heavy (+4.5px)</h3>
+      </div>
+      <p class="desc">Peso Black encorpado. Casa perfeitamente com a largura dos pilares e a massa do símbolo.</p>
+      
+      <div class="preview-box">
+        <div class="preview-label">Vertical Lockup</div>
+        <svg viewBox="0 0 800 860" width="100%">
+          <g transform="translate(400, 360) scale(0.92) translate(-400, -380)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M227.58 765L222.81 765L250.58 688.68L255.35 688.68L283.13 765L278.35 765L251.32 690.69L254.50 690.69L227.58 765M272.42 745.18L233.41 745.18L233.41 740.94L272.42 740.94 M344.66 766.59Q336.13 766.59 329.72 763.67Q323.30 760.76 319.01 755.46Q314.72 750.16 312.57 742.87Q310.43 735.59 310.43 726.84Q310.43 715.18 314.24 706.25Q318.06 697.32 325.66 692.26Q333.27 687.20 344.66 687.20Q355.58 687.20 362.84 692.31Q370.10 697.42 373.18 705.53L368.83 707.34Q366.07 700.18 359.87 695.91Q353.67 691.65 344.66 691.65Q334.86 691.65 328.37 696.13Q321.87 700.61 318.59 708.55Q315.30 716.50 315.19 726.84Q315.09 737.17 318.38 745.13Q321.66 753.08 328.26 757.61Q334.86 762.14 344.66 762.14Q354.47 762.14 360.51 758.24Q366.55 754.35 369.33 747.40Q372.12 740.46 372.12 731.29L351.76 731.29L351.76 726.84L376.68 726.84Q376.83 728.32 376.86 729.49Q376.89 730.66 376.89 731.40Q376.89 741.36 373.55 749.34Q370.21 757.32 363.08 761.95Q355.95 766.59 344.66 766.59 M415 765L410.55 765L410.55 688.68L415 688.68 M496.36 765L453.96 765L453.96 688.68L458.41 688.68L458.41 760.55L496.36 760.55 M574.01 765L527.37 765L527.37 688.68L574.01 688.68L574.01 693.13L531.82 693.13L531.82 724.61L567.65 724.61L567.65 729.07L531.82 729.07L531.82 760.55L574.01 760.55" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="4.5" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+
+      <div class="preview-box" style="margin-top: 14px; min-height: 120px; padding: 12px 20px;">
+        <div class="preview-label">Horizontal Lockup</div>
+        <svg viewBox="0 0 800 236" width="100%">
+          <g transform="translate(125, 118) scale(0.25) translate(-400, -390)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M245.93 162L241.82 162L265.71 96.36L269.81 96.36L293.69 162L289.59 162L266.35 98.10L269.08 98.10L245.93 162M284.49 144.95L250.94 144.95L250.94 141.31L284.49 141.31 M346.40 163.37Q339.06 163.37 333.54 160.86Q328.03 158.35 324.34 153.80Q320.64 149.24 318.80 142.97Q316.95 136.70 316.95 129.18Q316.95 119.15 320.23 111.47Q323.51 103.79 330.06 99.44Q336.60 95.09 346.40 95.09Q355.79 95.09 362.03 99.49Q368.27 103.89 370.92 110.86L367.18 112.41Q364.81 106.26 359.48 102.59Q354.14 98.92 346.40 98.92Q337.96 98.92 332.38 102.77Q326.80 106.62 323.97 113.46Q321.14 120.29 321.05 129.18Q320.96 138.07 323.79 144.91Q326.61 151.74 332.29 155.64Q337.96 159.54 346.40 159.54Q354.83 159.54 360.02 156.19Q365.22 152.84 367.61 146.87Q370.01 140.90 370.01 133.01L352.50 133.01L352.50 129.18L373.93 129.18Q374.06 130.46 374.09 131.46Q374.11 132.46 374.11 133.10Q374.11 141.67 371.24 148.53Q368.37 155.39 362.23 159.38Q356.10 163.37 346.40 163.37 M406.66 162L402.84 162L402.84 96.36L406.66 96.36 M476.41 162L439.95 162L439.95 96.36L443.78 96.36L443.78 158.17L476.41 158.17 M542.97 162L502.86 162L502.86 96.36L542.97 96.36L542.97 100.19L506.69 100.19L506.69 127.27L537.50 127.27L537.50 131.10L506.69 131.10L506.69 158.17L542.97 158.17" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="4.5" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+    </div>
+  
+      
+    <div class="card ">
+      <div class="card-header">
+        <span class="badge ">Opção 3 (Mega Robusta)</span>
+        <h3>Nível 3: Manrope Ultra Black (+6.8px)</h3>
+      </div>
+      <p class="desc">Peso ultra denso com forte presença de engenharia pesada e infraestrutura.</p>
+      
+      <div class="preview-box">
+        <div class="preview-label">Vertical Lockup</div>
+        <svg viewBox="0 0 800 860" width="100%">
+          <g transform="translate(400, 360) scale(0.92) translate(-400, -380)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M227.58 765L222.81 765L250.58 688.68L255.35 688.68L283.13 765L278.35 765L251.32 690.69L254.50 690.69L227.58 765M272.42 745.18L233.41 745.18L233.41 740.94L272.42 740.94 M344.66 766.59Q336.13 766.59 329.72 763.67Q323.30 760.76 319.01 755.46Q314.72 750.16 312.57 742.87Q310.43 735.59 310.43 726.84Q310.43 715.18 314.24 706.25Q318.06 697.32 325.66 692.26Q333.27 687.20 344.66 687.20Q355.58 687.20 362.84 692.31Q370.10 697.42 373.18 705.53L368.83 707.34Q366.07 700.18 359.87 695.91Q353.67 691.65 344.66 691.65Q334.86 691.65 328.37 696.13Q321.87 700.61 318.59 708.55Q315.30 716.50 315.19 726.84Q315.09 737.17 318.38 745.13Q321.66 753.08 328.26 757.61Q334.86 762.14 344.66 762.14Q354.47 762.14 360.51 758.24Q366.55 754.35 369.33 747.40Q372.12 740.46 372.12 731.29L351.76 731.29L351.76 726.84L376.68 726.84Q376.83 728.32 376.86 729.49Q376.89 730.66 376.89 731.40Q376.89 741.36 373.55 749.34Q370.21 757.32 363.08 761.95Q355.95 766.59 344.66 766.59 M415 765L410.55 765L410.55 688.68L415 688.68 M496.36 765L453.96 765L453.96 688.68L458.41 688.68L458.41 760.55L496.36 760.55 M574.01 765L527.37 765L527.37 688.68L574.01 688.68L574.01 693.13L531.82 693.13L531.82 724.61L567.65 724.61L567.65 729.07L531.82 729.07L531.82 760.55L574.01 760.55" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="6.8" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+
+      <div class="preview-box" style="margin-top: 14px; min-height: 120px; padding: 12px 20px;">
+        <div class="preview-label">Horizontal Lockup</div>
+        <svg viewBox="0 0 800 236" width="100%">
+          <g transform="translate(125, 118) scale(0.25) translate(-400, -390)">
+            
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
+    <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
+    <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
+    <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />
+    <polygon points="325,390 400,435 400,455 325,410" fill="#FFFFFF" />
+    <polygon points="325,465 400,510 400,530 325,485" fill="#FFFFFF" />
+    <polygon points="325,540 400,585 400,605 325,560" fill="#FFFFFF" />
+    <polygon points="325,615 400,660 400,678 325,633" fill="#FFFFFF" />
+  
+          </g>
+          <path d="M245.93 162L241.82 162L265.71 96.36L269.81 96.36L293.69 162L289.59 162L266.35 98.10L269.08 98.10L245.93 162M284.49 144.95L250.94 144.95L250.94 141.31L284.49 141.31 M346.40 163.37Q339.06 163.37 333.54 160.86Q328.03 158.35 324.34 153.80Q320.64 149.24 318.80 142.97Q316.95 136.70 316.95 129.18Q316.95 119.15 320.23 111.47Q323.51 103.79 330.06 99.44Q336.60 95.09 346.40 95.09Q355.79 95.09 362.03 99.49Q368.27 103.89 370.92 110.86L367.18 112.41Q364.81 106.26 359.48 102.59Q354.14 98.92 346.40 98.92Q337.96 98.92 332.38 102.77Q326.80 106.62 323.97 113.46Q321.14 120.29 321.05 129.18Q320.96 138.07 323.79 144.91Q326.61 151.74 332.29 155.64Q337.96 159.54 346.40 159.54Q354.83 159.54 360.02 156.19Q365.22 152.84 367.61 146.87Q370.01 140.90 370.01 133.01L352.50 133.01L352.50 129.18L373.93 129.18Q374.06 130.46 374.09 131.46Q374.11 132.46 374.11 133.10Q374.11 141.67 371.24 148.53Q368.37 155.39 362.23 159.38Q356.10 163.37 346.40 163.37 M406.66 162L402.84 162L402.84 96.36L406.66 96.36 M476.41 162L439.95 162L439.95 96.36L443.78 96.36L443.78 158.17L476.41 158.17 M542.97 162L502.86 162L502.86 96.36L542.97 96.36L542.97 100.19L506.69 100.19L506.69 127.27L537.50 127.27L537.50 131.10L506.69 131.10L506.69 158.17L542.97 158.17" fill="#0B1B3D" stroke="#0B1B3D" stroke-width="6.8" stroke-linejoin="round" stroke-miterlimit="2" />
+        </svg>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+</body>
+</html>

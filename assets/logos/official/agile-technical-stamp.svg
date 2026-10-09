@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
-      .stamp-text {
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        font-weight: 800;
-        font-size: 28px;
-        letter-spacing: 0.28em;
-        fill: #0B1B3D;
-      }
-      .stamp-sub {
-        font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        letter-spacing: 0.25em;
-        fill: #FF6B00;
-      }
-    </style>
-    <path id="cTop" d="M 100,300 A 200,200 0 0,1 500,300" fill="none"/>
-    <path id="cBot" d="M 500,300 A 200,200 0 0,1 100,300" fill="none"/>
+    <path id="stampTopArc" d="M 72,300 A 228,228 0 0,1 528,300" fill="none"/>
+    <path id="stampBotArc" d="M 528,300 A 228,228 0 0,1 72,300" fill="none"/>
   </defs>
   
-  <circle cx="300" cy="300" r="280" fill="none" stroke="#0B1B3D" stroke-width="5"/>
-  <circle cx="300" cy="300" r="262" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-dasharray="8 6"/>
-  <circle cx="300" cy="300" r="175" fill="none" stroke="#0B1B3D" stroke-width="2.5"/>
-  <text class="stamp-text">
-    <textPath href="#cTop" startOffset="50%" text-anchor="middle">AGILE</textPath>
+  <!-- Anéis Estruturais de Engenharia -->
+  <circle cx="300" cy="300" r="282" fill="none" stroke="#0B1B3D" stroke-width="6"/>
+  <circle cx="300" cy="300" r="264" fill="none" stroke="#0B1B3D" stroke-width="2" stroke-dasharray="9 6"/>
+  <circle cx="300" cy="300" r="188" fill="none" stroke="#0B1B3D" stroke-width="3"/>
+  
+  <!-- Tipografia Circular AGILE (Ampliada & Imponente) -->
+  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="42px" letter-spacing="0.26em" fill="#0B1B3D">
+    <textPath href="#stampTopArc" startOffset="50%" text-anchor="middle">AGILE</textPath>
   </text>
-  <text class="stamp-sub">
-    <textPath href="#cBot" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
+  
+  <!-- Tipografia Circular ENGENHARIA CIVIL (Ampliada & Nítida) -->
+  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="22px" letter-spacing="0.20em" fill="#FF6B00">
+    <textPath href="#stampBotArc" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
   </text>
-  <circle cx="95" cy="300" r="6" fill="#FF6B00"/>
-  <circle cx="505" cy="300" r="6" fill="#FF6B00"/>
-  <g transform="translate(300, 305) scale(0.32) translate(-400, -380)">
+  
+  <!-- Marcadores / Delimitadores de Eixo -->
+  <circle cx="72" cy="300" r="7" fill="#FF6B00"/>
+  <circle cx="528" cy="300" r="7" fill="#FF6B00"/>
+  
+  <!-- Símbolo Central Ampliado (scale 0.40 no núcleo) -->
+  <g transform="translate(300, 304) scale(0.40) translate(-400, -380)">
     
-    <!-- Outer "A" Frame with Chamfered Modern Peak -->
-    <polygon points="400,100 620,680 495,680 435,530 365,530 305,680 180,680" fill="#0B1B3D" />
+    <!-- Outer "A" Architectural Frame (Option C: Gap 60px) -->
+    <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#0B1B3D" />
     
-    <!-- Central Isometric Building -->
+    <!-- Central Isometric Building Structure -->
     <polygon points="400,290 475,335 400,380 325,335" fill="#FF9D54" />
     <polygon points="325,335 400,380 400,680 325,680" fill="#FF6B00" />
     <polygon points="400,380 475,335 475,680 400,680" fill="#162C5B" />

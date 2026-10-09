@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <g id="agile-symbol-v2">
+    
+    <!-- Hastes Estruturais do "A" (Esbeltas, topo chanfrado moderno, vão interno amplo) -->
+    <polygon points="400,105 615,680 535,680 445,445 355,445 265,680 185,680" fill="#FFFFFF" />
+    
+    <!-- Topo Isométrico 100% Integrado à Fita Ascendente (Sem bloco flutuante) -->
+    <polygon points="400,285 470,332 400,378 330,332" fill="#E2E8F0" />
+    
+    <!-- Coluna / Fita Contínua Ascendente de Evolução -->
+    <polygon points="330,332 400,378 400,680 330,680" fill="#FFFFFF" />
+    <polygon points="400,378 470,332 470,680 400,680" fill="#CBD5E1" />
+    
+    <!-- Ranhura Negativa de Precisão Arquitetônica (Respiro dinâmico do travessão) -->
+    <polygon points="330,490 400,532 400,548 330,506" fill="#071A33" />
+    <polygon points="400,532 470,490 470,506 400,548" fill="#071A33" />
+  
+  </g>
+</svg>

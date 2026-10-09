@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparativo de Abertura das Pernas do "A" — Agile Engenharia</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/manual.css" />
+  <style>
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 960px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .option-card {
+      background: rgba(16, 32, 68, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .option-card.recommended {
+      border-color: var(--color-orange-500);
+      box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
+    }
+    .option-stage {
+      min-height: 280px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      transition: all 0.25s ease;
+    }
+    .option-stage img {
+      max-width: 90%;
+      max-height: 220px;
+      object-fit: contain;
+    }
+    .badge-rec {
+      background: var(--color-orange-500);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .spec-table {
+      width: 100%;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+    .spec-table td {
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      color: var(--text-secondary);
+    }
+    .spec-table td:last-child {
+      text-align: right;
+      color: #fff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="blueprint-bg">
+
+  <!-- Header -->
+  <header class="header-bar">
+    <a href="index.html" class="brand-badge">
+      <img src="../assets/logos/exports/agile-symbol-dark.svg" alt="Agile" class="brand-badge-icon" />
+      <span class="brand-badge-text">AGILE</span>
+      <span class="brand-tag-pill">Laboratório de Refinamento</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">📖 Voltar ao Manual</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="hero" style="padding: 2.5rem 1rem 1.5rem;">
+      <span class="hero-pill">🔬 Refinamento de Geometria & Respiro</span>
+      <h1>Comparativo: Abertura na Base do "A"</h1>
+      <p>
+        Compare lado a lado o respiro negativo entre os pilares estruturais da letra "A" e as paredes laterais do edifício isométrico central.
+      </p>
+
+      <!-- Background Switcher -->
+      <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
+        <div class="btn-group">
+          <button class="btn-toggle bg-switch-btn active" data-bg="bg-light">⚪ Fundo Claro (Branco)</button>
+          <button class="btn-toggle bg-switch-btn" data-bg="bg-navy">🔵 Deep Navy</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-grid">
+      
+      <!-- Opção A: Atual -->
+      <div class="option-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: var(--font-brand); font-weight: 700; color: #fff;">Opção A (Atual)</span>
+          <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Folga 20px</span>
+        </div>
+
+        <div class="option-stage bg-light" id="stage-a">
+          <img src="../assets/logos/exports/agile-preview-gap20.svg" alt="Opção A" id="img-a" />
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #fff;">Folga Estreita (20px)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;">
+            Abertura original. Em reduções pequenas, a fresta tende a fechar, criando uma sensação de aperto na base do prédio.
+          </p>
+          <table class="spec-table">
+            <tr><td>Respiro da base:</td><td>20 px (Estreito)</td></tr>
+            <tr><td>Largura do pilar:</td><td>125 px</td></tr>
+            <tr><td>Ângulo interno:</td><td>Fechado</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Opção B: Balanceada (Recomendada) -->
+      <div class="option-card recommended">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: var(--font-brand); font-weight: 700; color: #fff;">Opção B (Balanceada)</span>
+          <span class="badge-rec">⭐ Recomendada</span>
+        </div>
+
+        <div class="option-stage bg-light" id="stage-b">
+          <img src="../assets/logos/exports/agile-preview-gap45.svg" alt="Opção B" id="img-b" />
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: var(--color-orange-400);">Folga Balanceada (45px)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;">
+            <strong>Equilíbrio arquitetônico perfeito:</strong> O edifício ganha respiro e silhueta independente, mantendo a robustez e estabilidade das pernas do "A".
+          </p>
+          <table class="spec-table">
+            <tr><td>Respiro da base:</td><td>45 px (Ótimo)</td></tr>
+            <tr><td>Largura do pilar:</td><td>100 px (Sólido)</td></tr>
+            <tr><td>Ângulo interno:</td><td>Harmônico 1:2.25</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Opção C: Ampla -->
+      <div class="option-card">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-family: var(--font-brand); font-weight: 700; color: #fff;">Opção C (Ampla)</span>
+          <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Folga 60px</span>
+        </div>
+
+        <div class="option-stage bg-light" id="stage-c">
+          <img src="../assets/logos/exports/agile-preview-gap60.svg" alt="Opção C" id="img-c" />
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; margin-bottom: 4px; color: #fff;">Folga Ampla (60px)</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4;">
+            Máximo respiro e pernas mais esguias. Cria uma sensação de grande leveza e espaço aéreo amplo.
+          </p>
+          <table class="spec-table">
+            <tr><td>Respiro da base:</td><td>60 px (Muito Amplo)</td></tr>
+            <tr><td>Largura do pilar:</td><td>85 px</td></tr>
+            <tr><td>Ângulo interno:</td><td>Aberto</td></tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Visual Close-up Detail Comparison -->
+    <section style="margin-top: 4rem;">
+      <div class="section-header">
+        <h2>Zoom de Detalhe na Base</h2>
+        <p>Observe como a Opção B resolve o estrangulamento da base preservando o peso do pilar.</p>
+      </div>
+
+      <div class="glass-card" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 2rem; padding: 2.5rem 1.5rem;">
+        <div style="text-align: center;">
+          <div style="width: 220px; height: 160px; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #fff; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">
+            <img src="../assets/logos/exports/agile-preview-gap20.svg" style="width: 380px; max-width: none; transform: translateY(40px);" alt="Zoom A" />
+          </div>
+          <span style="display: block; margin-top: 8px; font-size: 0.82rem; color: var(--text-secondary);">Opção A: Folga 20px (Apertada)</span>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 220px; height: 160px; overflow: hidden; border-radius: 8px; border: 2px solid var(--color-orange-500); background: #fff; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">
+            <img src="../assets/logos/exports/agile-preview-gap45.svg" style="width: 380px; max-width: none; transform: translateY(40px);" alt="Zoom B" />
+          </div>
+          <span style="display: block; margin-top: 8px; font-size: 0.82rem; color: var(--color-orange-400); font-weight: 700;">Opção B: Folga 45px (Ideal)</span>
+        </div>
+
+        <div style="text-align: center;">
+          <div style="width: 220px; height: 160px; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: #fff; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 10px;">
+            <img src="../assets/logos/exports/agile-preview-gap60.svg" style="width: 380px; max-width: none; transform: translateY(40px);" alt="Zoom C" />
+          </div>
+          <span style="display: block; margin-top: 8px; font-size: 0.82rem; color: var(--text-secondary);">Opção C: Folga 60px (Muito Aberta)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const btns = document.querySelectorAll('.bg-switch-btn');
+    const stages = ['stage-a', 'stage-b', 'stage-c'];
+    const imgs = [
+      { id: 'img-a', light: '../assets/logos/exports/agile-preview-gap20.svg', dark: '../assets/logos/exports/agile-preview-gap20-dark.svg' },
+      { id: 'img-b', light: '../assets/logos/exports/agile-preview-gap45.svg', dark: '../assets/logos/exports/agile-preview-gap45-dark.svg' },
+      { id: 'img-c', light: '../assets/logos/exports/agile-preview-gap60.svg', dark: '../assets/logos/exports/agile-preview-gap60-dark.svg' }
+    ];
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const bg = btn.getAttribute('data-bg');
+        const isDark = (bg === 'bg-navy');
+
+        stages.forEach(sId => {
+          const s = document.getElementById(sId);
+          if (s) s.className = `option-stage ${bg}`;
+        });
+
+        imgs.forEach(item => {
+          const imgEl = document.getElementById(item.id);
+          if (imgEl) {
+            imgEl.src = isDark ? item.dark : item.light;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,3 +1,9 @@
 # PXOS internal quarantine
 .internal/
 
+# Dependencies
+node_modules/
+
+# Local font downloads
+*.ttf
+*.otf

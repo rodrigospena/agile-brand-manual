@@ -58,7 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
-      if (parsed.variants) Object.assign(state.variants, parsed.variants);
+      if (parsed.variants) {
+        Object.keys(parsed.variants).forEach(k => {
+          if (state.variants[k] && parsed.variants[k].status) {
+            state.variants[k].status = parsed.variants[k].status;
+          }
+        });
+      }
     } catch (e) {
       console.warn('Could not parse saved selector state', e);
     }

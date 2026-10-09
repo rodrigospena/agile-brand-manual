@@ -1,5 +1,6 @@
-// Agile Brand Manual Interactivity
+// Agile Brand Manual — Interactive Engine
 document.addEventListener('DOMContentLoaded', () => {
+  
   // 1. Toast Notification System
   const toast = document.getElementById('toast');
   function showToast(message) {
@@ -8,17 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     toast.classList.add('show');
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 2400);
+    }, 2500);
   }
 
-  // 2. Click to Copy Color Tokens
+  // 2. Click to Copy Color Tokens & Code Snippets
   document.querySelectorAll('.copyable, .swatch-color').forEach(el => {
     el.addEventListener('click', () => {
       const code = el.getAttribute('data-copy') || el.textContent.trim();
+      if (!code) return;
+      
       navigator.clipboard.writeText(code).then(() => {
-        showToast(`Copiado: ${code}`);
+        showToast(`📋 Copiado para a área de transferência: ${code}`);
       }).catch(() => {
-        showToast(`Valor: ${code}`);
+        showToast(`Código: ${code}`);
       });
     });
   });
@@ -27,46 +30,88 @@ document.addEventListener('DOMContentLoaded', () => {
   const typoInput = document.getElementById('typo-input');
   const typoPreview1 = document.getElementById('typo-preview-1');
   const typoPreview2 = document.getElementById('typo-preview-2');
-  const typoPreview3 = document.getElementById('typo-preview-3');
 
   if (typoInput) {
     typoInput.addEventListener('input', (e) => {
-      const val = e.target.value || 'Agile Engenharia';
+      const val = e.target.value.trim() || 'AGILE';
       if (typoPreview1) typoPreview1.textContent = val.toUpperCase();
-      if (typoPreview2) typoPreview2.textContent = val;
-      if (typoPreview3) typoPreview3.textContent = val;
+      if (typoPreview2) typoPreview2.textContent = e.target.value || 'Engenharia Civil & Legalização';
     });
   }
 
-  // 4. Background Color Switcher for Logos
-  document.querySelectorAll('.btn-bg-switch').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const targetBoxId = btn.getAttribute('data-target');
+  // 4. Hero Master Showcase Stage Switcher
+  const heroStageCanvas = document.getElementById('hero-stage-canvas');
+  const heroLogoImg = document.getElementById('main-hero-logo');
+  const heroBgBtns = document.querySelectorAll('.hero-bg-btn');
+
+  heroBgBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
       const bgClass = btn.getAttribute('data-bg');
-      const targetBox = document.getElementById(targetBoxId);
-      
-      if (targetBox) {
-        targetBox.className = `logo-display-box ${bgClass}`;
-        // Update active button state within group
-        btn.parentElement.querySelectorAll('.btn-bg-switch').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+      const isDark = (bgClass === 'stage-bg-navy' || bgClass === 'stage-bg-blueprint' || bgClass === 'stage-bg-slate');
+      const isMono = (bgClass === 'stage-bg-mono');
+
+      // Update active button state
+      heroBgBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Update Canvas Background Class
+      if (heroStageCanvas) {
+        heroStageCanvas.className = `hero-stage-canvas ${bgClass}`;
+      }
+
+      // Dynamically Swap SVG Source based on background contrast
+      if (heroLogoImg) {
+        heroLogoImg.style.opacity = '0';
+        setTimeout(() => {
+          if (isMono) {
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-mono.svg?v=4';
+          } else if (isDark) {
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-dark.svg?v=4';
+          } else {
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary.svg?v=4';
+          }
+          heroLogoImg.style.opacity = '1';
+        }, 150);
       }
     });
   });
 
-  // 5. Download SVG Helper
-  window.downloadSvg = function(svgId, fileName) {
-    const svgEl = document.getElementById(svgId);
-    if (!svgEl) return;
-    const svgData = new XMLSerializer().serializeToString(svgEl);
-    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
-    const svgUrl = URL.createObjectURL(svgBlob);
-    const downloadLink = document.createElement('a');
-    downloadLink.href = svgUrl;
-    downloadLink.download = `${fileName}.svg`;
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-    showToast(`Download iniciado: ${fileName}.svg`);
-  };
+  // 5. Applications Section Background Switchers (Vertical & Horizontal Lockups)
+  document.querySelectorAll('.btn-bg-switch').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetBoxId = btn.getAttribute('data-target');
+      const bgClass = btn.getAttribute('data-bg');
+      const lockupType = btn.getAttribute('data-lockup'); // 'vertical' or 'horizontal'
+      const targetBox = document.getElementById(targetBoxId);
+      
+      if (!targetBox) return;
+
+      // Update button group active state
+      btn.parentElement.querySelectorAll('.btn-bg-switch').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Update background class
+      targetBox.className = `logo-display-box ${bgClass}`;
+
+      // Swap image source
+      const img = targetBox.querySelector('img');
+      if (img) {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          const isDark = (bgClass === 'bg-navy' || bgClass === 'bg-slate' || bgClass === 'bg-blueprint');
+          if (lockupType === 'horizontal') {
+            img.src = isDark 
+              ? 'assets/logos/exports/agile-logo-horizontal-dark.svg?v=4'
+              : 'assets/logos/exports/agile-logo-horizontal.svg?v=4';
+          } else {
+            img.src = isDark 
+              ? 'assets/logos/exports/agile-logo-primary-dark.svg?v=4'
+              : 'assets/logos/exports/agile-logo-primary.svg?v=4';
+          }
+          img.style.opacity = '1';
+        }, 120);
+      }
+    });
+  });
+
 });

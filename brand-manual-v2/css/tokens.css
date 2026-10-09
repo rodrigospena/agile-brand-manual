@@ -1,0 +1,87 @@
+/* Agile Brand Design Tokens — Master Specification */
+:root {
+  /* Core Brand Colors (Calibrados v2 — Parecer Técnico) */
+  --color-navy-950: #050E1A;
+  --color-navy-900: #102A43; /* Azul Principal: Equilibrado e Confiável */
+  --color-navy-850: #071A33; /* Azul Profundo */
+  --color-navy-800: #132E4B;
+  --color-navy-700: #1A365D;
+  --color-navy-600: #294A94;
+  --color-navy-100: #E6ECF8;
+  --color-navy-50:  #F0F4FC;
+
+  --color-orange-500: #FF7A1A; /* Laranja Vibrante Calibrado */
+  --color-orange-600: #E6660F;
+  --color-orange-400: #FF9B4A; /* Laranja Claro / Luz */
+  --color-orange-300: #FFB37A;
+  --color-orange-100: #FFEBD6;
+  --color-orange-50:  #FFF6ED;
+
+  --color-white:     #FFFFFF;
+  --color-slate-900: #0F172A;
+  --color-slate-850: #141E33;
+  --color-slate-800: #1E293B;
+  --color-slate-700: #334155;
+  --color-slate-500: #667085; /* Cinza Neutro de Apoio */
+  --color-slate-400: #94A3B8;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50:  #F8FAFC; /* Fundo Claro */
+
+  /* Semantic UI Backgrounds & Surfaces */
+  --bg-primary: #071A33;
+  --bg-secondary: #0A223E;
+  --bg-surface: #102A43;
+  --bg-surface-glass: rgba(16, 42, 67, 0.75);
+  --bg-card: rgba(16, 42, 67, 0.70);
+  --bg-card-border: rgba(255, 122, 26, 0.25);
+  --bg-card-hover: rgba(22, 54, 88, 0.88);
+
+  /* Preview Stage Canvas Tokens */
+  --stage-light: #FFFFFF;
+  --stage-light-subtle: #F8FAFC;
+  --stage-navy: #102A43;
+  --stage-slate: #071A33;
+
+  /* Typography Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #667085;
+  --text-accent: #FF7A1A;
+  --text-dark: #102A43;
+
+  /* Typography Families */
+  --font-brand: 'Plus Jakarta Sans', 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 35px rgba(255, 107, 0, 0.3);
+  --shadow-glow-strong: 0 0 50px rgba(255, 107, 0, 0.45);
+  --shadow-blueprint: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 36px rgba(0, 0, 0, 0.45);
+  --shadow-stage: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}

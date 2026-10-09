@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/manual.css" />
   <style>
     .controls-panel {
-      background: rgba(18, 36, 78, 0.7);
-      border: 1px solid rgba(255, 107, 0, 0.25);
+      background: rgba(16, 32, 68, 0.75);
+      border: 1px solid rgba(255, 107, 0, 0.28);
       border-radius: var(--radius-lg);
       padding: 1.5rem;
       margin-bottom: 2.5rem;
@@ -19,7 +19,8 @@
       gap: 1.5rem;
       align-items: center;
       justify-content: space-between;
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
     }
 
     .control-group {
@@ -29,43 +30,11 @@
     }
 
     .control-label {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       color: var(--text-secondary);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-    }
-
-    .btn-group {
-      display: flex;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 4px;
-      border-radius: var(--radius-md);
-      gap: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .btn-toggle {
-      background: transparent;
-      border: none;
-      color: var(--text-secondary);
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition-fast);
-    }
-
-    .btn-toggle:hover {
-      color: var(--color-white);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .btn-toggle.active {
-      background: var(--color-orange-500);
-      color: var(--color-white);
-      box-shadow: 0 2px 8px rgba(255, 107, 0, 0.4);
     }
 
     .selector-card {
@@ -78,12 +47,12 @@
 
     .selector-card.status-favorite {
       border-color: rgba(255, 215, 0, 0.6);
-      box-shadow: 0 0 24px rgba(255, 215, 0, 0.15);
+      box-shadow: 0 0 28px rgba(255, 215, 0, 0.18);
     }
 
     .selector-card.status-eliminated {
       opacity: 0.45;
-      filter: grayscale(0.8);
+      filter: grayscale(0.85);
       border-color: rgba(239, 68, 68, 0.3);
     }
 
@@ -96,6 +65,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      gap: 8px;
     }
 
     .card-title-group h3 {
@@ -110,7 +80,7 @@
       display: inline-block;
       font-size: 0.68rem;
       font-weight: 700;
-      padding: 2px 6px;
+      padding: 2px 8px;
       background: rgba(255, 107, 0, 0.15);
       color: var(--color-orange-400);
       border-radius: var(--radius-sm);
@@ -168,12 +138,12 @@
       align-items: center;
       justify-content: center;
       padding: 1.25rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
     }
 
     .preview-svg-img {
       max-width: 90%;
-      max-height: 210px;
+      max-height: 200px;
       object-fit: contain;
     }
 
@@ -195,13 +165,8 @@
       gap: 8px;
     }
 
-    .btn-sm {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.78rem;
-    }
-
     .counter-badge {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
       padding: 2px 8px;
       border-radius: var(--radius-full);
       font-size: 0.75rem;
@@ -209,7 +174,7 @@
     }
 
     .ai-concept-card {
-      background: rgba(18, 36, 78, 0.5);
+      background: rgba(16, 32, 68, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -221,6 +186,7 @@
     .ai-concept-card:hover {
       border-color: var(--color-orange-500);
       transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .ai-concept-img {
@@ -241,7 +207,7 @@
   <!-- Header -->
   <header class="header-bar">
     <a href="index.html" class="brand-badge">
-      <img src="../assets/logos/exports/agile-symbol.svg" alt="Agile" />
+      <img src="../assets/logos/exports/agile-symbol-dark.svg" alt="Agile" class="brand-badge-icon" />
       <span class="brand-badge-text">AGILE</span>
       <span class="brand-tag-pill">Painel de Decisão & IA Lab</span>
     </a>
@@ -255,7 +221,7 @@
   <main class="container">
     
     <!-- Hero Title -->
-    <div class="hero" style="padding: 2rem 1rem 2rem;">
+    <div class="hero" style="padding: 2.5rem 1rem 2rem;">
       <span class="hero-pill">⚡ 12 Variantes Vetoriais + Conceitos IA</span>
       <h1>Painel de Comparação & Eliminação</h1>
       <p>
@@ -307,7 +273,7 @@
     </div>
 
     <!-- AI Concepts Lab Section -->
-    <section style="margin-top: 4.5rem;" id="ai-lab">
+    <section style="margin-top: 5rem;" id="ai-lab">
       <div class="section-header">
         <h2>✨ Laboratório de Conceitos IA (Nano Banana Explorations)</h2>
         <p>Conceitos visuais exploratórios gerados com IA para expandir repertório visual, maximalismo 3D e novas formas de volumetria.</p>

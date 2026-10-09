@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap');
+      .brand-title-v2 {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 92px;
+        letter-spacing: 0.09em;
+        text-anchor: middle;
+      }
+      .brand-tagline-v2 {
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.24em;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  <!-- Símbolo Oficial V2 -->
+  <g id="agile-symbol" transform="translate(400, 360) scale(0.90) translate(-400, -380)">
+    
+    <!-- Hastes Estruturais do "A" (Esbeltas, topo chanfrado moderno, vão interno amplo) -->
+    <polygon points="400,105 615,680 535,680 445,445 355,445 265,680 185,680" fill="#000000" />
+    
+    <!-- Topo Isométrico 100% Integrado à Fita Ascendente (Sem bloco flutuante) -->
+    <polygon points="400,285 470,332 400,378 330,332" fill="#94A3B8" />
+    
+    <!-- Coluna / Fita Contínua Ascendente de Evolução -->
+    <polygon points="330,332 400,378 400,680 330,680" fill="#000000" />
+    <polygon points="400,378 470,332 470,680 400,680" fill="#475569" />
+    
+    <!-- Ranhura Negativa de Precisão Arquitetônica (Respiro dinâmico do travessão) -->
+    <polygon points="330,490 400,532 400,548 330,506" fill="#FFFFFF" />
+    <polygon points="400,532 470,490 470,506 400,548" fill="#FFFFFF" />
+  
+  </g>
+  
+  <!-- Tipografia Refinada V2 -->
+  <text x="400" y="755" class="brand-title-v2" fill="#000000">AGILE</text>
+  <text x="400" y="800" class="brand-tagline-v2" fill="#475569">ENGENHARIA E REGULARIZAÇÃO</text>
+</svg>
