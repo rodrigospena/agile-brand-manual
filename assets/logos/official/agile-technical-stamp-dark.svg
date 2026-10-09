@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
   <defs>
-    <!-- Text Arcs (radius r=222) -->
-    <path id="stampTopArc" d="M 78,300 A 222,222 0 0,1 522,300" fill="none"/>
-    <path id="stampBotArc" d="M 522,300 A 222,222 0 0,1 78,300" fill="none"/>
+    <!-- Top Arc for AGILE (radius 220, clockwise) -->
+    <path id="stampTopArc" d="M 70,300 A 230,230 0 1,1 530,300" fill="none"/>
+    <!-- Bottom Arc for ENGENHARIA CIVIL (radius 230, counter-clockwise so text sits upright) -->
+    <path id="stampBotArc" d="M 70,300 A 230,230 0 0,0 530,300" fill="none"/>
   </defs>
   
   <!-- Anéis Estruturais de Precisão (Double Ring Profissional) -->
-  <circle cx="300" cy="300" r="284" fill="none" stroke="#FFFFFF" stroke-width="6"/>
-  <circle cx="300" cy="300" r="268" fill="none" stroke="#FFFFFF" stroke-width="2"/>
-  <circle cx="300" cy="300" r="172" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="300" cy="300" r="285" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <circle cx="300" cy="300" r="270" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="300" cy="300" r="176" fill="none" stroke="#FFFFFF" stroke-width="3"/>
   
-  <!-- Tipografia Superior: AGILE (Extra Grande, Bold e Impactante) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="52px" letter-spacing="0.28em" fill="#FFFFFF">
+  <!-- Tipografia Superior: AGILE (Extra Bold, Perfeita e Equilibrada) -->
+  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="54px" letter-spacing="0.26em" fill="#FFFFFF">
     <textPath href="#stampTopArc" startOffset="50%" text-anchor="middle">AGILE</textPath>
   </text>
   
-  <!-- Tipografia Inferior: ENGENHARIA CIVIL (Grande, Nítida e Imponente) -->
+  <!-- Tipografia Inferior: ENGENHARIA CIVIL (Orientada para Leitura Natural Correta) -->
   <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="25px" letter-spacing="0.22em" fill="#FFA768">
     <textPath href="#stampBotArc" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
   </text>
   
-  <!-- Marcadores / Delimitadores Geométricos em Losango/Ponto -->
-  <polygon points="78,290 88,300 78,310 68,300" fill="#FF6B00"/>
-  <polygon points="522,290 532,300 522,310 512,300" fill="#FF6B00"/>
+  <!-- Marcadores Técnicos Laterais (Losangos Precisos com Ponto Central) -->
+  <polygon points="70,290 80,300 70,310 60,300" fill="#FF6B00"/>
+  <polygon points="530,290 540,300 530,310 520,300" fill="#FF6B00"/>
   
-  <!-- Símbolo Central Magnificado (scale 0.47 preenchendo o núcleo de raio 172) -->
-  <g transform="translate(300, 305) scale(0.47) translate(-400, -380)">
+  <!-- Símbolo Central Magnificado (scale 0.46 perfeitamente centralizado no anel interior) -->
+  <g transform="translate(300, 305) scale(0.46) translate(-400, -380)">
     
     <!-- Outer "A" Architectural Frame (Option C: Gap 60px) -->
     <polygon points="400,100 620,680 535,680 445,495 355,495 265,680 180,680" fill="#FFFFFF" />
