@@ -56,3 +56,19 @@
   2. **Selo Técnico em Anel Sólido (Master Solid Seal):** Reconstrução completa com anel estrutural em Deep Navy sólido, tipografia curva calculada por trigonometria em caminhos vetoriais puros (zero drift de fonte), marcadores cardeais em losango e núcleo com textura técnica de blueprint e símbolo perfeitamente centralizado no centroide geométrico (300, 300).
   3. **Showcase de Mockups Reais:** Criação de seção dedicada no Manual de Marca exibindo 5 aplicações de alto padrão: Caderno Executivo em Couro, Capacete de Proteção EPI, Cartão de Visita em Hot Stamping, Pasta Institucional de Projetos e Fachada Corporativa em Letra-Caixa.
   4. **Deploy em Produção:** Sincronização e deploy contínuo na VM do Project X (`https://madebypx.com/agile/`) com verificação HTTP 200 em todos os ativos.
+
+---
+
+## [ADR-005] Modernização do Brand Manual, Família Tríade de Carimbos, Grid 2-Colunas de Mockups e Deploy na VM
+- **Data:** 09/10/2026
+- **Status:** Aprovado, Comitado, Enviado ao GitHub e Publicado na VM
+- **Contexto:** Solicitação de modernização estética do cabeçalho, remoção universal de emojis em prol de ícones SVG técnicos, correção no arco e na fonte do carimbo técnico, simplificação do grid de mockups e publicação em ambiente remoto:
+  1. A letra "A" no carimbo anterior utilizava o glifo com traço horizontal da fonte padrão e estava tangente à borda superior.
+  2. O layout dos mockups demandava menor escala, ausência de ruído textual e apresentação direta em grid de 2 colunas.
+  3. A interface do manual exigia um cabeçalho mais moderno e sem emojis infantis em botões.
+- **Decisão:**
+  1. **Tipografia do Carimbo:** Adoção da geometria proprietária da letra `A` sem traço horizontal (open chevron) e centralização polar pelo centro óptico vertical dos caracteres no anel ($R = 236\text{px}$).
+  2. **Tríade de Carimbos Técnicos:** Apresentação e distribuição simultânea dos 3 carimbos oficiais: Institucional Color, Noturno (Dark) e Monocromático (P&B / ABNT).
+  3. **Mockups Limpos em 2 Colunas:** Conversão da galeria para um grid balanceado de 2 colunas, sem textos ou títulos, com proporções travadas em `16:10` e foco na imagem.
+  4. **Header Moderno & UI Limpa:** Nova navbar em glassmorphism com a assinatura horizontal oficial branca (`agile-logo-horizontal-white.svg`), remoção de emojis e adoção de ícones SVG.
+  5. **Repositório GitHub & Deploy na VM:** Criação do repositório remoto `rodrigospena/agile-brand-manual` no GitHub, `git push origin master` e deploy com Nginx recarregado em `https://madebypx.com/agile/` (HTTP/2 200 OK).
