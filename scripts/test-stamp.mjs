@@ -44,20 +44,29 @@ function getOptionCSymbol(colorMode = 'color') {
 }
 
 /**
- * Places glyphs along an arc as pure vector paths.
- * @param {string} text 
- * @param {number} cx Center X
- * @param {number} cy Center Y
- * @param {number} radius Radius of baseline
- * @param {number} fontSize Font size in px
- * @param {number} centerAngle Center angle in radians (-PI/2 for top, PI/2 for bottom)
- * @param {boolean} isTop True if text curves along the top (outward baseline), False if along bottom (upright)
- * @param {number} letterSpacingExtra Extra radian spacing between letters
+ * Places glyphs along an arc as pure vector paths with exact trigonometry and vertical centering.
  */
-function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = true, letterSpacingExtra = 0) {
+function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = true, letterSpacingExtra = 0, useCustomA = false) {
   const scale = fontSize / 1000;
   const glyphs = [];
   let totalArcLength = 0;
+
+  const legW = 155;
+  const outerW_A = 690;
+  const topW = 175;
+  const topX1 = (outerW_A - topW) / 2;
+  const topX2 = topX1 + topW;
+  const apexY = 745 - (legW * 0.98);
+
+  const ptsA = [
+    [0, 0],
+    [topX1, 745],
+    [topX2, 745],
+    [outerW_A, 0],
+    [outerW_A - legW, 0],
+    [outerW_A / 2, apexY],
+    [legW, 0]
+  ];
 
   for (let i = 0; i < text.length; i++) {
     const ch = text[i];
@@ -66,15 +75,31 @@ function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = 
       totalArcLength += (280 * scale) + (letterSpacingExtra * radius);
       continue;
     }
-    const g = font.charToGlyph(ch);
-    const bb = g.getBoundingBox();
-    const w = (bb.x2 - bb.x1) * scale;
-    const xOffset = bb.x1 * scale;
-    glyphs.push({ ch, glyph: g, width: w, xOffset, isSpace: false });
-    totalArcLength += w + (letterSpacingExtra * radius);
+
+    if (ch === 'A' && useCustomA) {
+      const w = outerW_A * scale;
+      const pathD = ptsA.map((pt, idx) => {
+        const px = ((pt[0] - outerW_A / 2) * scale).toFixed(2);
+        const py = ((372.5 - pt[1]) * scale).toFixed(2);
+        return (idx === 0 ? 'M' : 'L') + ' ' + px + ' ' + py;
+      }).join(' ') + ' Z';
+
+      glyphs.push({ ch, width: w, pathD, isSpace: false });
+      totalArcLength += w + (letterSpacingExtra * radius);
+    } else {
+      const g = font.charToGlyph(ch);
+      const bb = g.getBoundingBox();
+      const w = (bb.x2 - bb.x1) * scale;
+      const xCenter = ((bb.x1 + bb.x2) / 2) * scale;
+      const yCenter = 372.5 * scale;
+      const p = g.getPath(-xCenter, yCenter, fontSize);
+      const pathD = commandsToSvgPath(p.commands);
+
+      glyphs.push({ ch, glyph: g, width: w, pathD, isSpace: false });
+      totalArcLength += w + (letterSpacingExtra * radius);
+    }
   }
 
-  // Remove trailing spacing from total arc
   totalArcLength -= (letterSpacingExtra * radius);
   const totalTheta = totalArcLength / radius;
 
@@ -89,26 +114,15 @@ function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = 
     }
 
     const glyphCenterArc = currentArc + (item.width / 2);
-    // Relative theta from start of word:
     const thetaRel = (glyphCenterArc / totalArcLength - 0.5) * totalTheta;
-    // For top arc, increasing theta moves left to right (from -PI to 0).
-    // For bottom arc, decreasing theta moves left to right (from PI to 0).
     const angle = isTop ? (centerAngle + thetaRel) : (centerAngle - thetaRel);
 
-    // Position on circle:
     const gx = cx + radius * Math.cos(angle);
     const gy = cy + radius * Math.sin(angle);
 
-    // Rotation angle in degrees:
-    // For top arc: text is upright when angle=-PI/2, rotation = (angle + PI/2)
-    // For bottom arc: text is upright when angle=PI/2, rotation = (angle - PI/2)
     const rotDeg = isTop ? (angle + Math.PI / 2) * (180 / Math.PI) : (angle - Math.PI / 2) * (180 / Math.PI);
 
-    // In local space, baseline is at (0, 0), glyph is centered at X = 0:
-    const p = item.glyph.getPath(-item.width / 2 - item.xOffset, 0, fontSize);
-    const d = commandsToSvgPath(p.commands);
-
-    paths.push(`<path d="${d}" transform="translate(${gx.toFixed(2)}, ${gy.toFixed(2)}) rotate(${rotDeg.toFixed(2)})" />`);
+    paths.push(`<path d="${item.pathD}" transform="translate(${gx.toFixed(2)}, ${gy.toFixed(2)}) rotate(${rotDeg.toFixed(2)})" />`);
 
     currentArc += item.width + (letterSpacingExtra * radius);
   }
@@ -117,8 +131,8 @@ function buildArcTextPaths(text, cx, cy, radius, fontSize, centerAngle, isTop = 
 }
 
 function buildTestStamp() {
-  const topTextPaths = buildArcTextPaths('AGILE', 300, 300, 222, 52, -Math.PI / 2, true, 0.05);
-  const botTextPaths = buildArcTextPaths('ENGENHARIA CIVIL', 300, 300, 222, 24, Math.PI / 2, false, 0.025);
+  const topTextPaths = buildArcTextPaths('AGILE', 300, 300, 236, 48, -Math.PI / 2, true, 0.08, true);
+  const botTextPaths = buildArcTextPaths('ENGENHARIA CIVIL', 300, 300, 236, 23, Math.PI / 2, false, 0.035, false);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">

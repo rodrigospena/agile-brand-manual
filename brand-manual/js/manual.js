@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!code) return;
       
       navigator.clipboard.writeText(code).then(() => {
-        showToast(`📋 Copiado para a área de transferência: ${code}`);
+        showToast(`Copiado para a área de transferência: ${code}`);
       }).catch(() => {
         showToast(`Código: ${code}`);
       });
@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
         heroLogoImg.style.opacity = '0';
         setTimeout(() => {
           if (isMono) {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-mono.svg?v=20261009-v6';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-mono.svg?v=20261009-v7';
           } else if (isDark) {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v6';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v7';
           } else {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary.svg?v=20261009-v6';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary.svg?v=20261009-v7';
           }
           heroLogoImg.style.opacity = '1';
         }, 150);

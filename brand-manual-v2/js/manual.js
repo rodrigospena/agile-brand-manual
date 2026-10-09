@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!code) return;
       
       navigator.clipboard.writeText(code).then(() => {
-        showToast(`📋 Copiado para a área de transferência: ${code}`);
+        showToast(`Copiado para a área de transferência: ${code}`);
       }).catch(() => {
         showToast(`Código: ${code}`);
       });
@@ -64,11 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
         heroLogoImg.style.opacity = '0';
         setTimeout(() => {
           if (isMono) {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-mono.svg';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-mono.svg?v=20261009-v7';
           } else if (isDark) {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-dark.svg';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v7';
           } else {
-            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary.svg';
+            heroLogoImg.src = 'assets/logos/exports/agile-logo-primary.svg?v=20261009-v7';
           }
           heroLogoImg.style.opacity = '1';
         }, 150);
@@ -101,12 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
           const isDark = (bgClass === 'bg-navy' || bgClass === 'bg-slate' || bgClass === 'bg-blueprint');
           if (lockupType === 'horizontal') {
             img.src = isDark 
-              ? 'assets/logos/exports/agile-logo-horizontal-dark.svg'
-              : 'assets/logos/exports/agile-logo-horizontal.svg';
+              ? 'assets/logos/exports/agile-logo-horizontal-dark.svg?v=20261009-v6'
+              : 'assets/logos/exports/agile-logo-horizontal.svg?v=20261009-v6';
           } else {
             img.src = isDark 
-              ? 'assets/logos/exports/agile-logo-primary-dark.svg'
-              : 'assets/logos/exports/agile-logo-primary.svg';
+              ? 'assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v6'
+              : 'assets/logos/exports/agile-logo-primary.svg?v=20261009-v6';
           }
           img.style.opacity = '1';
         }, 120);

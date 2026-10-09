@@ -82,55 +82,30 @@
       max-width: 90%;
       object-fit: contain;
     }
-
-    .stamp-preview-canvas {
-      background: #FFFFFF;
-      background-image: radial-gradient(#CBD5E1 1.2px, transparent 1.2px);
-      background-size: 16px 16px;
-      border: 1px solid #E2E8F0;
-      border-radius: var(--radius-md);
-      padding: 2rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
-      position: relative;
-    }
-
-    .stamp-preview-canvas::after {
-      content: 'PRANCHA TÉCNICA • ESCALA 1:1';
-      position: absolute;
-      bottom: 8px;
-      right: 12px;
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: #94A3B8;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body class="blueprint-bg">
 
-  <!-- Header Sticky Navigation -->
+  <!-- Header Sticky Navigation (Modern Glassmorphic) -->
   <header class="header-bar">
     <a href="./" class="brand-badge">
-      <img src="assets/logos/exports/agile-symbol-dark.svg?v=20261009-v6" alt="Agile Símbolo" class="brand-badge-icon" />
-      <span class="brand-badge-text">AGILE</span>
+      <img src="assets/logos/exports/agile-logo-horizontal-white.svg?v=20261009-v7" alt="Agile Engenharia" class="brand-badge-logo" />
       <span class="brand-tag-pill">Manual de Marca</span>
     </a>
     <nav class="nav-links">
       <a href="#marca" class="nav-link">Marca</a>
-      <a href="#downloads" class="nav-link">📦 Downloads</a>
-      <a href="#mockups" class="nav-link">📸 Mockups</a>
+      <a href="#downloads" class="nav-link">Downloads</a>
+      <a href="#mockups" class="nav-link">Aplicações</a>
       <a href="#pilares" class="nav-link">Pilares</a>
+      <a href="#carimbos" class="nav-link">Carimbos</a>
       <a href="#anatomia" class="nav-link">Construção</a>
       <a href="#cores" class="nav-link">Cores</a>
       <a href="#tipografia" class="nav-link">Tipografia</a>
       <a href="#regras" class="nav-link">Diretrizes</a>
-      <a href="#downloads" class="btn btn-primary btn-sm">📥 Baixar Brand Kit</a>
+      <a href="#downloads" class="btn btn-primary btn-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Baixar Brand Kit
+      </a>
     </nav>
   </header>
 
@@ -138,16 +113,29 @@
 
     <!-- Hero Section -->
     <section class="hero" id="marca">
-      <span class="hero-pill">Arquitetura de Marca & Diretrizes Oficiais</span>
+      <span class="hero-pill">Arquitetura de Marca &amp; Diretrizes Oficiais</span>
       <h1>Manual de Identidade Visual</h1>
       <p>
         O guia oficial de aplicação e governança da marca <strong>Agile Engenharia</strong>.
-        Uma identidade visual sólida, precisa e contemporânea, concebida para transmitir autoridade técnica, segurança jurídica e excelência em engenharia e regularização.
+        Uma identidade visual sólida, precisa e contemporânea, concebida para transmitir autoridade técnica, segurança jurídica e excelência em engenharia e regularização imobiliária.
       </p>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="#downloads" class="btn btn-primary">📦 Central de Downloads (Brand Kit)</a>
-        <a href="#anatomia" class="btn btn-secondary">📐 Construção & Proporções</a>
-        <a href="#cores" class="btn btn-secondary">🎨 Paleta Cromática</a>
+      <div style="display: flex; justify-content: center; gap: 0.85rem; flex-wrap: wrap;">
+        <a href="#downloads" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Central de Downloads
+        </a>
+        <a href="#carimbos" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+          Carimbos Técnicos
+        </a>
+        <a href="#anatomia" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path></svg>
+          Construção &amp; Proporções
+        </a>
+        <a href="#cores" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+          Paleta Cromática
+        </a>
       </div>
     </section>
 
@@ -159,20 +147,20 @@
         <div class="hero-stage-topbar">
           <div class="hero-stage-title-group">
             <h3>Assinatura Principal da Marca</h3>
-            <p>Composição institucional com monograma arquitetônico e tipografia geométrica exclusiva com open chevron (Λ).</p>
+            <p>Composição institucional com monograma arquitetônico integrado e tipografia geométrica proprietária com open chevron (Λ).</p>
           </div>
           <div class="btn-group">
-            <button class="btn-toggle hero-bg-btn active" data-bg="stage-bg-light">⚪ Fundo Claro</button>
-            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-navy">🔵 Deep Navy</button>
-            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-mono">⬛ Monocromático</button>
-            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-blueprint">📐 Grid Técnico</button>
-            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-slate">🌑 Slate Dark</button>
+            <button class="btn-toggle hero-bg-btn active" data-bg="stage-bg-light">Fundo Claro</button>
+            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-navy">Deep Navy</button>
+            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-mono">Monocromático</button>
+            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-blueprint">Grid Técnico</button>
+            <button class="btn-toggle hero-bg-btn" data-bg="stage-bg-slate">Slate Dark</button>
           </div>
         </div>
 
         <!-- Live Canvas Stage -->
         <div class="hero-stage-canvas stage-bg-light" id="hero-stage-canvas">
-          <img src="assets/logos/exports/agile-logo-primary.svg?v=20261009-v6" alt="Agile Logotipo Oficial" id="main-hero-logo" />
+          <img src="assets/logos/exports/agile-logo-primary.svg?v=20261009-v7" alt="Agile Logotipo Oficial" id="main-hero-logo" />
         </div>
 
         <!-- Stage Bottom Spec & Downloads -->
@@ -183,12 +171,12 @@
             <span class="spec-chip">Proporção: <strong>Harmonizada em Escala Áurea</strong></span>
             <span class="spec-chip">Grafia Institucional: <strong>AGILE</strong></span>
           </div>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="downloads/svg/agile-logo-primary.svg" download="agile-logo-primary.svg" class="btn btn-secondary btn-sm">📥 SVG Claro</a>
-            <a href="downloads/svg/agile-logo-primary-dark.svg" download="agile-logo-primary-dark.svg" class="btn btn-secondary btn-sm">📥 SVG Noturno</a>
-            <a href="downloads/svg/agile-logo-primary-mono.svg" download="agile-logo-primary-mono.svg" class="btn btn-secondary btn-sm">📥 SVG Monocromático</a>
-            <a href="downloads/png/agile-logo-primary-2048px.png" download="agile-logo-primary-2048px.png" class="btn btn-secondary btn-sm">📥 PNG 2K Transparente</a>
-            <a href="downloads/svg/agile-symbol.svg" download="agile-symbol.svg" class="btn btn-primary btn-sm">📥 Símbolo Isolado</a>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-logo-primary.svg" download="agile-logo-primary.svg" class="btn btn-secondary btn-sm">SVG Claro</a>
+            <a href="downloads/svg/agile-logo-primary-dark.svg" download="agile-logo-primary-dark.svg" class="btn btn-secondary btn-sm">SVG Noturno</a>
+            <a href="downloads/svg/agile-logo-primary-mono.svg" download="agile-logo-primary-mono.svg" class="btn btn-secondary btn-sm">SVG Monocromático</a>
+            <a href="downloads/png/agile-logo-primary-2048px.png" download="agile-logo-primary-2048px.png" class="btn btn-secondary btn-sm">PNG 2K Transparente</a>
+            <a href="downloads/svg/agile-symbol.svg" download="agile-symbol.svg" class="btn btn-primary btn-sm">Símbolo Isolado</a>
           </div>
         </div>
 
@@ -198,7 +186,7 @@
     <!-- Central de Downloads Oficiais -->
     <section id="downloads" class="downloads-section">
       <div class="section-header" style="border-color: var(--color-orange-500);">
-        <h2>📦 Central de Arquivos Oficiais da Marca</h2>
+        <h2>Central de Arquivos Oficiais da Marca</h2>
         <p>Acesse e baixe todos os formatos vetoriais e bitmaps em alta definição para aplicações digitais, pranchas de projeto e impressões de grande formato.</p>
       </div>
 
@@ -208,11 +196,12 @@
           <span class="brand-tag-pill" style="margin-bottom: 6px; display: inline-block;">Pacote Completo Oficial</span>
           <h3 style="font-family: var(--font-brand); font-size: 1.35rem; color: #fff; margin-bottom: 4px;">Agile Brand Kit Completo (.ZIP)</h3>
           <p style="font-size: 0.88rem; color: var(--text-secondary); max-width: 600px;">
-            Arquivo mestre consolidado com todas as variantes vetoriais (.SVG), versões monocromáticas minimalistas, versões em alta resolução (.PNG 2K com fundo transparente), favicons institucionais e o carimbo técnico de prancha.
+            Arquivo mestre consolidado com todas as variantes vetoriais (.SVG), versões monocromáticas, renders em ultra resolução (.PNG 2K com fundo transparente), favicons institucionais e a família completa dos 3 carimbos técnicos.
           </p>
         </div>
-        <a href="downloads/agile-brand-kit-completo.zip" download="agile-brand-kit-completo.zip" class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
-          📦 Baixar Pacote Completo (.ZIP)
+        <a href="downloads/agile-brand-kit-completo.zip" download="agile-brand-kit-completo.zip" class="btn btn-primary" style="padding: 0.85rem 1.75rem; font-size: 0.95rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Baixar Brand Kit Completo (.ZIP)
         </a>
       </div>
 
@@ -222,7 +211,7 @@
         <!-- 1. Lockup Vertical Claro -->
         <div class="download-card">
           <div class="download-preview-thumb bg-light">
-            <img src="assets/logos/exports/agile-logo-primary.svg?v=20261009-v6" alt="Lockup Vertical Claro" />
+            <img src="assets/logos/exports/agile-logo-primary.svg?v=20261009-v7" alt="Lockup Vertical Claro" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Vertical (Fundo Claro)</h4>
@@ -238,7 +227,7 @@
         <!-- 2. Lockup Vertical Noturno -->
         <div class="download-card">
           <div class="download-preview-thumb bg-navy">
-            <img src="assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v6" alt="Lockup Vertical Noturno" />
+            <img src="assets/logos/exports/agile-logo-primary-dark.svg?v=20261009-v7" alt="Lockup Vertical Noturno" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Vertical (Fundo Escuro)</h4>
@@ -254,7 +243,7 @@
         <!-- 3. Lockup Vertical Monocromático -->
         <div class="download-card">
           <div class="download-preview-thumb bg-light">
-            <img src="assets/logos/exports/agile-logo-primary-mono.svg?v=20261009-v6" alt="Lockup Vertical Monocromático" />
+            <img src="assets/logos/exports/agile-logo-primary-mono.svg?v=20261009-v7" alt="Lockup Vertical Monocromático" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Vertical (Monocromático)</h4>
@@ -270,7 +259,7 @@
         <!-- 4. Lockup Horizontal Claro -->
         <div class="download-card">
           <div class="download-preview-thumb bg-light">
-            <img src="assets/logos/exports/agile-logo-horizontal.svg?v=20261009-v6" alt="Lockup Horizontal Claro" />
+            <img src="assets/logos/exports/agile-logo-horizontal.svg?v=20261009-v7" alt="Lockup Horizontal Claro" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Horizontal (Fundo Claro)</h4>
@@ -286,7 +275,7 @@
         <!-- 5. Lockup Horizontal Noturno -->
         <div class="download-card">
           <div class="download-preview-thumb bg-navy">
-            <img src="assets/logos/exports/agile-logo-horizontal-dark.svg?v=20261009-v6" alt="Lockup Horizontal Noturno" />
+            <img src="assets/logos/exports/agile-logo-horizontal-dark.svg?v=20261009-v7" alt="Lockup Horizontal Noturno" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Horizontal (Fundo Escuro)</h4>
@@ -302,7 +291,7 @@
         <!-- 6. Lockup Horizontal Monocromático -->
         <div class="download-card">
           <div class="download-preview-thumb bg-light">
-            <img src="assets/logos/exports/agile-logo-horizontal-mono.svg?v=20261009-v6" alt="Lockup Horizontal Monocromático" />
+            <img src="assets/logos/exports/agile-logo-horizontal-mono.svg?v=20261009-v7" alt="Lockup Horizontal Monocromático" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Assinatura Horizontal (Monocromático)</h4>
@@ -318,7 +307,7 @@
         <!-- 7. Símbolo Isolado Claro & Noturno -->
         <div class="download-card">
           <div class="download-preview-thumb bg-light">
-            <img src="assets/logos/exports/agile-symbol.svg?v=20261009-v6" alt="Símbolo Claro" />
+            <img src="assets/logos/exports/agile-symbol.svg?v=20261009-v7" alt="Símbolo Claro" />
           </div>
           <div>
             <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Símbolo Institucional (Isolado)</h4>
@@ -332,30 +321,62 @@
           </div>
         </div>
 
-        <!-- 8. Carimbo Técnico Oficial -->
+        <!-- 8. Carimbo Institucional Color -->
         <div class="download-card">
-          <div class="download-preview-thumb" style="background: #FFFFFF; border: 1px solid #E2E8F0; padding: 4px;">
-            <img src="assets/logos/exports/agile-technical-stamp.svg?v=20261009-v6" alt="Carimbo Técnico" style="max-height: 86px; width: auto;" />
+          <div class="download-preview-thumb bg-light">
+            <img src="assets/logos/exports/agile-technical-stamp.svg?v=20261009-v7" alt="Carimbo Técnico Color" style="max-height: 80px;" />
           </div>
           <div>
-            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Carimbo Técnico de Prancha</h4>
-            <p style="font-size: 0.78rem; color: var(--text-secondary);">Selo oficial para memoriais e prefeitura.</p>
+            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Carimbo Técnico Institucional (Color)</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary);">Selo oficial com tipografia técnica calibrada.</p>
           </div>
           <div style="display: flex; gap: 6px; flex-wrap: wrap;">
             <a href="downloads/svg/agile-technical-stamp.svg" download="agile-technical-stamp.svg" class="btn btn-secondary btn-sm">SVG Color</a>
-            <a href="downloads/svg/agile-technical-stamp-mono.svg" download="agile-technical-stamp-mono.svg" class="btn btn-secondary btn-sm">SVG Mono</a>
             <a href="downloads/png/agile-technical-stamp-2048px.png" download="agile-technical-stamp-2048px.png" class="btn btn-secondary btn-sm">PNG 2K</a>
+            <a href="downloads/png/agile-technical-stamp-1024px.png" download="agile-technical-stamp-1024px.png" class="btn btn-secondary btn-sm">PNG 1K</a>
           </div>
         </div>
 
-        <!-- 9. Favicons & App Icons -->
+        <!-- 9. Carimbo Técnico Noturno -->
         <div class="download-card">
-          <div class="download-preview-thumb bg-light">
-            <img src="downloads/favicons/favicon-512x512.png?v=20261009-v6" alt="Favicon" style="max-height: 70px;" />
+          <div class="download-preview-thumb bg-navy">
+            <img src="assets/logos/exports/agile-technical-stamp-dark.svg?v=20261009-v7" alt="Carimbo Técnico Noturno" style="max-height: 80px;" />
           </div>
           <div>
-            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Favicons & Ícones Digitais</h4>
-            <p style="font-size: 0.78rem; color: var(--text-secondary);">Arquivos otimizados para browsers e mobile.</p>
+            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Carimbo Técnico Noturno (Dark)</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary);">Versão escura contrastante para apresentações.</p>
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-technical-stamp-dark.svg" download="agile-technical-stamp-dark.svg" class="btn btn-secondary btn-sm">SVG Dark</a>
+            <a href="downloads/png/agile-technical-stamp-dark-2048px.png" download="agile-technical-stamp-dark-2048px.png" class="btn btn-secondary btn-sm">PNG 2K</a>
+            <a href="downloads/png/agile-technical-stamp-dark-1024px.png" download="agile-technical-stamp-dark-1024px.png" class="btn btn-secondary btn-sm">PNG 1K</a>
+          </div>
+        </div>
+
+        <!-- 10. Carimbo Técnico Monocromático -->
+        <div class="download-card">
+          <div class="download-preview-thumb bg-light">
+            <img src="assets/logos/exports/agile-technical-stamp-mono.svg?v=20261009-v7" alt="Carimbo Técnico Monocromático" style="max-height: 80px;" />
+          </div>
+          <div>
+            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Carimbo Monocromático (P&amp;B / ABNT)</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary);">Para plotagem preto e branco e aprovação legal.</p>
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-technical-stamp-mono.svg" download="agile-technical-stamp-mono.svg" class="btn btn-secondary btn-sm">SVG Mono</a>
+            <a href="downloads/png/agile-technical-stamp-mono-2048px.png" download="agile-technical-stamp-mono-2048px.png" class="btn btn-secondary btn-sm">PNG 2K</a>
+            <a href="downloads/png/agile-technical-stamp-mono-1024px.png" download="agile-technical-stamp-mono-1024px.png" class="btn btn-secondary btn-sm">PNG 1K</a>
+          </div>
+        </div>
+
+        <!-- 11. Favicons & App Icons -->
+        <div class="download-card">
+          <div class="download-preview-thumb bg-light">
+            <img src="downloads/favicons/favicon-512x512.png?v=20261009-v7" alt="Favicon" style="max-height: 70px;" />
+          </div>
+          <div>
+            <h4 style="font-size: 0.92rem; color: #fff; margin-bottom: 2px;">Favicons &amp; Ícones Digitais</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary);">Arquivos otimizados para navegadores e mobile.</p>
           </div>
           <div style="display: flex; gap: 6px; flex-wrap: wrap;">
             <a href="downloads/favicons/favicon.ico" download="favicon.ico" class="btn btn-secondary btn-sm">.ICO</a>
@@ -375,64 +396,20 @@
       </div>
 
       <div class="mockups-grid">
-        <!-- Mockup 1: Caderno Executivo -->
-        <div class="mockup-card">
-          <div class="mockup-img-wrapper">
-            <img src="assets/mockups/mockup_1.jpeg" alt="Caderno Executivo em Couro Agile Engenharia" class="mockup-img" loading="lazy" />
-          </div>
-          <div class="mockup-info">
-            <span class="mockup-tag">Papelaria & Gestão</span>
-            <h3 class="mockup-title">Caderno Executivo em Couro</h3>
-            <p class="mockup-desc">Gravação em baixo-relevo do monograma e logotipo com acabamento premium para reuniões de alinhamento e governança de projetos.</p>
-          </div>
+        <div class="mockup-img-card">
+          <img src="assets/mockups/mockup_1.jpeg" alt="Caderno Executivo em Couro Agile Engenharia" class="mockup-img" loading="lazy" />
         </div>
-
-        <!-- Mockup 2: Capacete de Obra -->
-        <div class="mockup-card">
-          <div class="mockup-img-wrapper">
-            <img src="assets/mockups/mockup_2.jpeg" alt="Capacete de Proteção Técnico Agile Engenharia" class="mockup-img" loading="lazy" />
-          </div>
-          <div class="mockup-info">
-            <span class="mockup-tag">Canteiro & Campo</span>
-            <h3 class="mockup-title">Equipamento de Proteção Individual</h3>
-            <p class="mockup-desc">Símbolo institucional em alta visibilidade e fidelidade cromática para identificação de engenheiros e responsáveis técnicos em campo.</p>
-          </div>
+        <div class="mockup-img-card">
+          <img src="assets/mockups/mockup_2.jpeg" alt="Capacete de Proteção Técnico Agile Engenharia" class="mockup-img" loading="lazy" />
         </div>
-
-        <!-- Mockup 3: Cartão de Visita -->
-        <div class="mockup-card">
-          <div class="mockup-img-wrapper">
-            <img src="assets/mockups/mockup_3.jpeg" alt="Cartão de Visita Premium Agile Engenharia" class="mockup-img" loading="lazy" />
-          </div>
-          <div class="mockup-info">
-            <span class="mockup-tag">Relações Corporativas</span>
-            <h3 class="mockup-title">Cartão de Visita Premium</h3>
-            <p class="mockup-desc">Papel nobre Deep Navy 400g com aplicação do monograma em hot stamping prateado e acabamento fosco soft-touch.</p>
-          </div>
+        <div class="mockup-img-card">
+          <img src="assets/mockups/mockup_3.jpeg" alt="Cartão de Visita Premium Agile Engenharia" class="mockup-img" loading="lazy" />
         </div>
-
-        <!-- Mockup 4: Pasta Técnica de Documentação -->
-        <div class="mockup-card">
-          <div class="mockup-img-wrapper">
-            <img src="assets/mockups/mockup_4.jpeg" alt="Pasta Técnica de Documentação Agile Engenharia" class="mockup-img" loading="lazy" />
-          </div>
-          <div class="mockup-info">
-            <span class="mockup-tag">Documentação & Laudos</span>
-            <h3 class="mockup-title">Pasta Institucional de Projetos</h3>
-            <p class="mockup-desc">Apresentação formal de memoriais, plantas aprovadas e alvarás entregues a clientes, cartórios e prefeituras.</p>
-          </div>
+        <div class="mockup-img-card">
+          <img src="assets/mockups/mockup_4.jpeg" alt="Pasta Técnica de Documentação Agile Engenharia" class="mockup-img" loading="lazy" />
         </div>
-
-        <!-- Mockup 5: Fachada Arquitetônica -->
-        <div class="mockup-card">
-          <div class="mockup-img-wrapper">
-            <img src="assets/mockups/mockup_5.jpeg" alt="Fachada Corporativa Agile Engenharia" class="mockup-img" loading="lazy" />
-          </div>
-          <div class="mockup-info">
-            <span class="mockup-tag">Arquitetura & Fachada</span>
-            <h3 class="mockup-title">Totem & Fachada Corporativa</h3>
-            <p class="mockup-desc">Letra-caixa metálica retroiluminada em alumínio naval e acrílico leitoso de alta durabilidade e impacto visual urbano.</p>
-          </div>
+        <div class="mockup-img-card mockup-full-width">
+          <img src="assets/mockups/mockup_5.jpeg" alt="Fachada Corporativa Agile Engenharia" class="mockup-img" loading="lazy" />
         </div>
       </div>
     </section>
@@ -455,7 +432,7 @@
         <!-- Pilar 2 -->
         <div class="pillar-card">
           <img src="assets/icons/icon-confianca.svg" alt="Confiança" class="pillar-icon" />
-          <h3 class="pillar-title">Segurança & Confiança</h3>
+          <h3 class="pillar-title">Segurança &amp; Confiança</h3>
           <p class="pillar-desc">Conformidade jurídica rigorosa, transparência documental e proteção patrimonial definitiva para cada cliente.</p>
         </div>
 
@@ -475,11 +452,95 @@
       </div>
     </section>
 
+    <!-- Família Completa dos 3 Carimbos Técnicos Oficiais -->
+    <section style="margin-bottom: 4.5rem;" id="carimbos">
+      <div class="section-header">
+        <h2>Família Oficial de Carimbos Técnicos</h2>
+        <p>Selos de autenticidade geométrica homologados para pranchas técnicas, memoriais descritivos, processos municipais e documentos cartorários.</p>
+      </div>
+
+      <div class="stamps-triad-grid">
+        
+        <!-- 1. Carimbo Institucional Color -->
+        <div class="stamp-item-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="brand-tag-pill">Institucional Color</span>
+              <span style="font-size: 0.72rem; color: var(--text-secondary); font-family: var(--font-mono);">PRANCHA 1:1</span>
+            </div>
+            
+            <div class="stamp-canvas-frame stamp-canvas-light">
+              <img src="assets/logos/exports/agile-technical-stamp.svg?v=20261009-v7" alt="Carimbo Técnico Oficial Color" />
+            </div>
+
+            <h4 style="font-family: var(--font-brand); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 0.35rem;">Carimbo Institucional Color</h4>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              Aplicação principal em pranchas técnicas coloridas, capas de memoriais executivos, laudos de avaliação e apresentações de projeto para clientes.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-technical-stamp.svg" download="agile-technical-stamp.svg" class="btn btn-secondary btn-sm" style="flex: 1;">SVG Vetorial</a>
+            <a href="downloads/png/agile-technical-stamp-2048px.png" download="agile-technical-stamp-2048px.png" class="btn btn-secondary btn-sm" style="flex: 1;">PNG 2K</a>
+          </div>
+        </div>
+
+        <!-- 2. Carimbo Técnico Noturno (Dark) -->
+        <div class="stamp-item-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="brand-tag-pill">Noturno / Dark</span>
+              <span style="font-size: 0.72rem; color: var(--text-secondary); font-family: var(--font-mono);">DIGITAL &amp; LUXO</span>
+            </div>
+            
+            <div class="stamp-canvas-frame stamp-canvas-dark">
+              <img src="assets/logos/exports/agile-technical-stamp-dark.svg?v=20261009-v7" alt="Carimbo Técnico Noturno" />
+            </div>
+
+            <h4 style="font-family: var(--font-brand); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 0.35rem;">Carimbo Técnico Noturno</h4>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              Composição sobre fundo Deep Navy com contraste otimizado para plataformas digitais, dashboards de acompanhamento de obras e relatórios executivos.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-technical-stamp-dark.svg" download="agile-technical-stamp-dark.svg" class="btn btn-secondary btn-sm" style="flex: 1;">SVG Vetorial</a>
+            <a href="downloads/png/agile-technical-stamp-dark-2048px.png" download="agile-technical-stamp-dark-2048px.png" class="btn btn-secondary btn-sm" style="flex: 1;">PNG 2K</a>
+          </div>
+        </div>
+
+        <!-- 3. Carimbo Monocromático (P&B / ABNT) -->
+        <div class="stamp-item-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="brand-tag-pill">Monocromático / PB</span>
+              <span style="font-size: 0.72rem; color: var(--text-secondary); font-family: var(--font-mono);">NORMA ABNT</span>
+            </div>
+            
+            <div class="stamp-canvas-frame stamp-canvas-mono">
+              <img src="assets/logos/exports/agile-technical-stamp-mono.svg?v=20261009-v7" alt="Carimbo Técnico Monocromático" />
+            </div>
+
+            <h4 style="font-family: var(--font-brand); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 0.35rem;">Carimbo Monocromático (P&amp;B)</h4>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.25rem;">
+              Desenvolvido estritamente para plotagem em preto e branco, carimbos físicos em fotopolímero/madeira e aprovações perante prefeituras e cartórios.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="downloads/svg/agile-technical-stamp-mono.svg" download="agile-technical-stamp-mono.svg" class="btn btn-secondary btn-sm" style="flex: 1;">SVG Vetorial</a>
+            <a href="downloads/png/agile-technical-stamp-mono-2048px.png" download="agile-technical-stamp-mono-2048px.png" class="btn btn-secondary btn-sm" style="flex: 1;">PNG 2K</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Anatomia do Símbolo e Logometria -->
     <section style="margin-bottom: 4.5rem;" id="anatomia">
       <div class="section-header">
-        <h2>Anatomia & Rigor Geométrico</h2>
-        <p>Estrutura milimétrica inspirada na precisão e estabilidade da engenharia civil.</p>
+        <h2>Anatomia &amp; Rigor Geométrico</h2>
+        <p>Estrutura milimétrica inspirada na precisão, verticalidade e estabilidade da engenharia civil.</p>
       </div>
 
       <div class="grid-2">
@@ -488,33 +549,33 @@
             <h3 style="font-family: var(--font-brand); font-size: 1.25rem; margin-bottom: 1rem; color: var(--color-orange-400);">Fundamentos da Geometria</h3>
             <ul style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin-left: 1.2rem;">
               <li><strong>Monograma Arquitetônico:</strong> Estrutura triangular em 'A' com corte angular moderno no ápice, simbolizando elevação e solidez técnica.</li>
-              <li><strong>Tipografia Exclusiva:</strong> Wordmark desenhado sob medida com o monograma em <strong>Open Chevron (Λ)</strong>, criando identidade única com o símbolo.</li>
+              <li><strong>Tipografia Exclusiva:</strong> Wordmark desenhado sob medida com o monograma em <strong>Open Chevron (Λ)</strong>, criando identidade única e harmônica com o símbolo.</li>
               <li><strong>Edificação em Espaço Negativo:</strong> Prisma central escalonado em perspectiva isométrica, representando edifícios e regularização urbana.</li>
-              <li><strong>Harmonia Cromática:</strong> Contraste entre Safety Orange e Amber Rust sobre o Deep Navy, transmitindo dinamismo e autoridade.</li>
+              <li><strong>Harmonia Cromática:</strong> Contraste balanceado entre Safety Orange e Deep Navy, transmitindo dinamismo, precisão e autoridade institucional.</li>
             </ul>
           </div>
           <div style="margin-top: 1.75rem; display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="downloads/svg/agile-symbol.svg" download="agile-symbol.svg" class="btn btn-secondary btn-sm">📥 Baixar Símbolo Claro</a>
-            <a href="downloads/svg/agile-symbol-dark.svg" download="agile-symbol-dark.svg" class="btn btn-secondary btn-sm">📥 Baixar Símbolo Noturno</a>
-            <a href="downloads/svg/agile-symbol-mono.svg" download="agile-symbol-mono.svg" class="btn btn-secondary btn-sm">📥 Baixar Símbolo Mono</a>
+            <a href="downloads/svg/agile-symbol.svg" download="agile-symbol.svg" class="btn btn-secondary btn-sm">Símbolo Claro</a>
+            <a href="downloads/svg/agile-symbol-dark.svg" download="agile-symbol-dark.svg" class="btn btn-secondary btn-sm">Símbolo Noturno</a>
+            <a href="downloads/svg/agile-symbol-mono.svg" download="agile-symbol-mono.svg" class="btn btn-secondary btn-sm">Símbolo Mono</a>
           </div>
         </div>
 
         <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; background: rgba(16, 32, 68, 0.65); border: 1px solid rgba(255, 255, 255, 0.1);">
           <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <span class="brand-tag-pill">Selo & Carimbo Institucional</span>
-            <span style="font-size: 0.75rem; color: var(--text-secondary); font-family: var(--font-mono);">APLICAÇÃO OFICIAL</span>
+            <span class="brand-tag-pill">Símbolo Oficial</span>
+            <span style="font-size: 0.75rem; color: var(--text-secondary); font-family: var(--font-mono);">ISOMETRIA PURA</span>
           </div>
 
-          <div class="stamp-preview-canvas">
-            <img src="assets/logos/exports/agile-technical-stamp.svg?v=20261009-v6" alt="Carimbo Técnico Oficial Agile" style="max-width: 260px; width: 100%; filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));" />
+          <div style="width: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(7, 15, 36, 0.6); border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.06);">
+            <img src="assets/logos/exports/agile-symbol-dark.svg?v=20261009-v7" alt="Símbolo Oficial Agile" style="max-height: 180px; width: auto; filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.35));" />
           </div>
 
           <div style="margin-top: 1.25rem; text-align: center; width: 100%;">
-            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">Homologado para pranchas técnicas de arquitetura e engenharia, memoriais e processos de aprovação municipal.</p>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">O símbolo unifica a letra 'A' com o prisma tridimensional do edifício e as brises solares da arquitetura contemporânea.</p>
             <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
-              <a href="downloads/svg/agile-technical-stamp.svg" download="agile-technical-stamp.svg" class="btn btn-secondary btn-sm">📥 Baixar Carimbo (SVG)</a>
-              <a href="downloads/png/agile-technical-stamp-2048px.png" download="agile-technical-stamp-2048px.png" class="btn btn-secondary btn-sm">📥 PNG Alta Resolução</a>
+              <a href="downloads/svg/agile-symbol.svg" download="agile-symbol.svg" class="btn btn-secondary btn-sm">Baixar SVG</a>
+              <a href="downloads/png/agile-symbol-2048px.png" download="agile-symbol-2048px.png" class="btn btn-secondary btn-sm">PNG 2K Transparente</a>
             </div>
           </div>
         </div>
@@ -581,7 +642,7 @@
             <div class="swatch-row"><span>HEX:</span><span class="copyable" data-copy="#FFFFFF">#FFFFFF</span></div>
             <div class="swatch-row"><span>RGB:</span><span class="copyable" data-copy="255, 255, 255">255, 255, 255</span></div>
             <div class="swatch-row"><span>CMYK:</span><span class="copyable" data-copy="0, 0, 0, 0">0, 0, 0, 0</span></div>
-            <div class="swatch-row"><span>Aplicação:</span><span>Fundo & Negativo</span></div>
+            <div class="swatch-row"><span>Aplicação:</span><span>Fundo &amp; Negativo</span></div>
           </div>
         </div>
       </div>
@@ -599,7 +660,7 @@
           <div>
             <span class="brand-tag-pill">Wordmark Exclusivo da Marca</span>
             <div style="margin: 1.25rem 0 0.75rem;">
-              <img src="assets/logos/exports/agile-logo-horizontal-white.svg?v=20261009-v6" alt="Wordmark Exclusivo Agile" style="max-width: 320px; width: 100%; height: auto;" />
+              <img src="assets/logos/exports/agile-logo-horizontal-white.svg?v=20261009-v7" alt="Wordmark Exclusivo Agile" style="max-width: 320px; width: 100%; height: auto;" />
             </div>
             <p style="color: var(--text-secondary); font-size: 0.9rem;">
               <strong>Desenho:</strong> Tipografia geométrica proprietária com <strong>'A' em Open Chevron (Λ)</strong> calibrado a 155 upm para harmonização total com as hastes de <em>G, I, L, E</em>.<br/>
@@ -609,8 +670,8 @@
           </div>
 
           <div>
-            <span class="brand-tag-pill">Tipografia de Apoio & Textos Corridos</span>
-            <h4 style="font-family: var(--font-body); font-size: 1.4rem; font-weight: 600; margin: 0.75rem 0;" id="typo-preview-2">Engenharia Civil & Legalização</h4>
+            <span class="brand-tag-pill">Tipografia de Apoio &amp; Textos Corridos</span>
+            <h4 style="font-family: var(--font-body); font-size: 1.4rem; font-weight: 600; margin: 0.75rem 0;" id="typo-preview-2">Engenharia Civil &amp; Legalização</h4>
             <p style="color: var(--text-secondary); font-size: 0.9rem;">
               <strong>Família:</strong> Inter / Plus Jakarta Sans<br/>
               <strong>Peso:</strong> Regular (400) e SemiBold (600)<br/>
@@ -621,7 +682,7 @@
 
         <!-- Live Playground -->
         <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-          <label style="font-size: 0.82rem; font-weight: 700; color: var(--color-orange-400); text-transform: uppercase;">⚡ Testador de Textos Complementares</label>
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--color-orange-400); text-transform: uppercase;">Testador de Textos Complementares</label>
           <input type="text" id="typo-input" placeholder="Digite uma frase para testar a tipografia institucional de apoio..." style="width: 100%; padding: 0.85rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid rgba(255, 107, 0, 0.4); background: rgba(0, 0, 0, 0.35); color: #fff; font-size: 1rem; margin-top: 0.5rem;" />
         </div>
       </div>
@@ -636,7 +697,10 @@
 
       <div class="grid-2">
         <div class="rule-card do">
-          <span class="rule-badge do">✓ Boas Práticas Recomendadas</span>
+          <span class="rule-badge do">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Boas Práticas Recomendadas
+          </span>
           <h4 style="font-family: var(--font-brand); margin-bottom: 0.5rem; color: #4ADE80;">Aplicações Corretas</h4>
           <ul style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.8; margin-left: 1.2rem;">
             <li>Utilizar sempre os arquivos vetoriais originais (.SVG) para produções gráficas e digitais.</li>
@@ -647,7 +711,10 @@
         </div>
 
         <div class="rule-card dont">
-          <span class="rule-badge dont">✕ Práticas Não Permitidas</span>
+          <span class="rule-badge dont">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            Práticas Não Permitidas
+          </span>
           <h4 style="font-family: var(--font-brand); margin-bottom: 0.5rem; color: #F87171;">Usos Incorretos</h4>
           <ul style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.8; margin-left: 1.2rem;">
             <li><strong>Nunca</strong> distorcer, achatar ou esticar a proporção original do símbolo e tipografia.</li>
@@ -667,4 +734,3 @@
   <script src="js/manual.js"></script>
 </body>
 </html>
-
