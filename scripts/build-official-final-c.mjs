@@ -45,37 +45,100 @@ function coordsToSvgPath(points, startX, baselineY, fontSize, unitsPerEm) {
 
 /**
  * Builds pure vector path for AGILE wordmark with:
- * - 'A' without crossbar, optically thickened by +22% to eliminate thinning illusion
- * - 'G', 'I', 'L', 'E' from Plus Jakarta Sans ExtraBold
- * - Calibrated geometric kerning
+ * - 'A' without crossbar, optically thickened by +24% (legW=208)
+ * - Exact logometric span: width matches the base of the symbol icon perfectly (404.8px)
  */
-function buildAgileWordmarkPaths(startX = 0, baselineY = 100, fontSize = 100, tracking = 28) {
+function buildVerticalAlignedWordmark(targetStartX = 197.6, targetTotalWidth = 404.8, baselineY = 772, fontSize = 96) {
+  const scale = fontSize / 1000;
+  
+  // Glyph widths:
+  const legW = 208;
+  const outerW_A = 730;
+  const topW = 220;
+  const topX1 = (outerW_A - topW) / 2;
+  const topX2 = topX1 + topW;
+  const apexY = 745 - (legW * 0.96);
+
+  const glyphA_w = outerW_A * scale;
+  
+  const glyphG = font.charToGlyph('G');
+  const bbG = glyphG.getBoundingBox();
+  const glyphG_w = (bbG.x2 - bbG.x1) * scale;
+  
+  const glyphI = font.charToGlyph('I');
+  const bbI = glyphI.getBoundingBox();
+  const glyphI_w = (bbI.x2 - bbI.x1) * scale;
+
+  const glyphL = font.charToGlyph('L');
+  const bbL = glyphL.getBoundingBox();
+  const glyphL_w = (bbL.x2 - bbL.x1) * scale;
+
+  const glyphE = font.charToGlyph('E');
+  const bbE = glyphE.getBoundingBox();
+  const glyphE_w = (bbE.x2 - bbE.x1) * scale;
+
+  const totalGlyphsWidth = glyphA_w + glyphG_w + glyphI_w + glyphL_w + glyphE_w;
+  const totalGapSpace = targetTotalWidth - totalGlyphsWidth;
+  const gap = totalGapSpace / 4; // Equal breathable letter spacing
+
+  let curX = targetStartX;
+  const paths = [];
+
+  // 1. A
+  const ptsA = [
+    [0, 0],
+    [topX1, 745],
+    [topX2, 745],
+    [outerW_A, 0],
+    [outerW_A - legW, 0],
+    [outerW_A / 2, apexY],
+    [legW, 0]
+  ];
+  paths.push(coordsToSvgPath(ptsA, curX, baselineY, fontSize, 1000));
+  curX += glyphA_w + gap;
+
+  // 2. G
+  paths.push(getCleanGlyphPath(glyphG, curX - (bbG.x1 * scale), baselineY, fontSize));
+  curX += glyphG_w + gap;
+
+  // 3. I
+  paths.push(getCleanGlyphPath(glyphI, curX - (bbI.x1 * scale), baselineY, fontSize));
+  curX += glyphI_w + gap;
+
+  // 4. L
+  paths.push(getCleanGlyphPath(glyphL, curX - (bbL.x1 * scale), baselineY, fontSize));
+  curX += glyphL_w + gap;
+
+  // 5. E
+  paths.push(getCleanGlyphPath(glyphE, curX - (bbE.x1 * scale), baselineY, fontSize));
+
+  return paths.join(' ');
+}
+
+function buildHorizontalWordmark(startX = 350, baselineY = 215, fontSize = 98, tracking = 38) {
   const scale = fontSize / 1000;
   let curX = startX;
   const paths = [];
 
-  // 1. Optically Thickened Open 'A'
-  // Base leg width = 208 units (+24% over standard 168 to match perceived mass of G, I, L, E)
   const legW = 208;
-  const outerW = 730;
+  const outerW_A = 730;
   const topW = 220;
-  const topX1 = (outerW - topW) / 2;
+  const topX1 = (outerW_A - topW) / 2;
   const topX2 = topX1 + topW;
-  const apexY = 745 - (legW * 0.96); // 545.3 units
+  const apexY = 745 - (legW * 0.96);
 
   const ptsA = [
     [0, 0],
     [topX1, 745],
     [topX2, 745],
-    [outerW, 0],
-    [outerW - legW, 0],
-    [outerW / 2, apexY],
+    [outerW_A, 0],
+    [outerW_A - legW, 0],
+    [outerW_A / 2, apexY],
     [legW, 0]
   ];
   paths.push(coordsToSvgPath(ptsA, curX, baselineY, fontSize, 1000));
-  curX += (outerW * scale) + (tracking * scale * 0.85); // slight kerning compensation for diagonal A
+  curX += (outerW_A * scale) + tracking;
 
-  // 2. G, I, L, E from Plus Jakarta Sans ExtraBold
   const chars = ['G', 'I', 'L', 'E'];
   chars.forEach((ch, idx) => {
     const g = font.charToGlyph(ch);
@@ -87,14 +150,10 @@ function buildAgileWordmarkPaths(startX = 0, baselineY = 100, fontSize = 100, tr
     paths.push(p);
 
     const isLast = (idx === chars.length - 1);
-    curX += glyphVisibleWidth + (isLast ? 0 : tracking * scale);
+    curX += glyphVisibleWidth + (isLast ? 0 : tracking);
   });
 
-  return {
-    pathData: paths.join(' '),
-    totalWidth: curX - startX,
-    capHeight: 745 * scale
-  };
+  return paths.join(' ');
 }
 
 // -------------------------------------------------------------------------
@@ -161,12 +220,7 @@ function buildPrimaryLockup(colorMode = 'color') {
   if (colorMode === 'dark' || colorMode === 'white') textColor = WHITE;
   else if (colorMode === 'mono') textColor = BLACK;
 
-  const fontSize = 106;
-  const tracking = 30;
-  const dummy = buildAgileWordmarkPaths(0, 0, fontSize, tracking);
-  const startX = 400 - (dummy.totalWidth / 2);
-  const baselineY = 770;
-  const wordmark = buildAgileWordmarkPaths(startX, baselineY, fontSize, tracking);
+  const wordmarkPath = buildVerticalAlignedWordmark(197.6, 404.8, 775, 96);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
@@ -175,8 +229,8 @@ function buildPrimaryLockup(colorMode = 'color') {
     ${getOptionCSymbol(colorMode)}
   </g>
   
-  <!-- Tipografia Oficial AGILE (Caminho Vetorial Puro / 'A' Aberto Compensado) -->
-  <path id="agile-wordmark" d="${wordmark.pathData}" fill="${textColor}" />
+  <!-- Tipografia Oficial AGILE (Alinhada perfeitamente à largura da base do símbolo: 404.8px) -->
+  <path id="agile-wordmark" d="${wordmarkPath}" fill="${textColor}" />
 </svg>`;
 }
 
@@ -185,24 +239,26 @@ function buildHorizontalLockup(colorMode = 'color') {
   if (colorMode === 'dark' || colorMode === 'white') textColor = WHITE;
   else if (colorMode === 'mono') textColor = BLACK;
 
-  const fontSize = 96;
-  const tracking = 28;
-  const startX = 350;
-  const baselineY = 214;
-  const wordmark = buildAgileWordmarkPaths(startX, baselineY, fontSize, tracking);
+  const wordmarkPath = buildHorizontalWordmark(340, 215, 98, 42);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360">
   <!-- Símbolo Oficial Agile -->
-  <g id="agile-symbol" transform="translate(175, 180) scale(0.48) translate(-400, -380)">
+  <g id="agile-symbol" transform="translate(170, 180) scale(0.48) translate(-400, -380)">
     ${getOptionCSymbol(colorMode)}
   </g>
   
-  <!-- Tipografia Oficial AGILE (Caminho Vetorial Puro / 'A' Aberto Compensado) -->
-  <path id="agile-wordmark" d="${wordmark.pathData}" fill="${textColor}" />
+  <!-- Tipografia Oficial AGILE (Caminho Vetorial Puro com Respiro Harmonioso) -->
+  <path id="agile-wordmark" d="${wordmarkPath}" fill="${textColor}" />
 </svg>`;
 }
 
+/**
+ * RECONSTRUCTED HIGH-IMPACT TECHNICAL STAMP
+ * - Bold, authoritative typography on curved tracks
+ * - Enlarged central symbol filling the inner ring
+ * - Pure architectural concentric circles
+ */
 function buildStamp(colorMode = 'color') {
   let mainColor = NAVY;
   let accentColor = ORANGE;
@@ -222,37 +278,35 @@ function buildStamp(colorMode = 'color') {
     subColor = BLACK;
   }
 
-  // Expanded geometry:
-  // Inner circle r=188, Outer r=280
-  // Arc radius r=228
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
   <defs>
-    <path id="stampTopArc" d="M 72,300 A 228,228 0 0,1 528,300" fill="none"/>
-    <path id="stampBotArc" d="M 528,300 A 228,228 0 0,1 72,300" fill="none"/>
+    <!-- Text Arcs (radius r=222) -->
+    <path id="stampTopArc" d="M 78,300 A 222,222 0 0,1 522,300" fill="none"/>
+    <path id="stampBotArc" d="M 522,300 A 222,222 0 0,1 78,300" fill="none"/>
   </defs>
   
-  <!-- Anéis Estruturais de Engenharia -->
-  <circle cx="300" cy="300" r="282" fill="none" stroke="${mainColor}" stroke-width="6"/>
-  <circle cx="300" cy="300" r="264" fill="none" stroke="${mainColor}" stroke-width="2" stroke-dasharray="9 6"/>
-  <circle cx="300" cy="300" r="188" fill="none" stroke="${mainColor}" stroke-width="3"/>
+  <!-- Anéis Estruturais de Precisão (Double Ring Profissional) -->
+  <circle cx="300" cy="300" r="284" fill="none" stroke="${mainColor}" stroke-width="6"/>
+  <circle cx="300" cy="300" r="268" fill="none" stroke="${mainColor}" stroke-width="2"/>
+  <circle cx="300" cy="300" r="172" fill="none" stroke="${mainColor}" stroke-width="3.5"/>
   
-  <!-- Tipografia Circular AGILE (Ampliada & Imponente) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="42px" letter-spacing="0.26em" fill="${mainColor}">
+  <!-- Tipografia Superior: AGILE (Extra Grande, Bold e Impactante) -->
+  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="900" font-size="52px" letter-spacing="0.28em" fill="${mainColor}">
     <textPath href="#stampTopArc" startOffset="50%" text-anchor="middle">AGILE</textPath>
   </text>
   
-  <!-- Tipografia Circular ENGENHARIA CIVIL (Ampliada & Nítida) -->
-  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="22px" letter-spacing="0.20em" fill="${subColor}">
+  <!-- Tipografia Inferior: ENGENHARIA CIVIL (Grande, Nítida e Imponente) -->
+  <text font-family="'Plus Jakarta Sans', Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="25px" letter-spacing="0.22em" fill="${subColor}">
     <textPath href="#stampBotArc" startOffset="50%" text-anchor="middle">ENGENHARIA CIVIL</textPath>
   </text>
   
-  <!-- Marcadores / Delimitadores de Eixo -->
-  <circle cx="72" cy="300" r="7" fill="${accentColor}"/>
-  <circle cx="528" cy="300" r="7" fill="${accentColor}"/>
+  <!-- Marcadores / Delimitadores Geométricos em Losango/Ponto -->
+  <polygon points="78,290 88,300 78,310 68,300" fill="${accentColor}"/>
+  <polygon points="522,290 532,300 522,310 512,300" fill="${accentColor}"/>
   
-  <!-- Símbolo Central Ampliado (scale 0.40 no núcleo) -->
-  <g transform="translate(300, 304) scale(0.40) translate(-400, -380)">
+  <!-- Símbolo Central Magnificado (scale 0.47 preenchendo o núcleo de raio 172) -->
+  <g transform="translate(300, 305) scale(0.47) translate(-400, -380)">
     ${getOptionCSymbol(colorMode)}
   </g>
 </svg>`;
@@ -305,4 +359,4 @@ targets.forEach(dir => {
   });
 });
 
-console.log('✅ Todos os 15 SVGs oficiais (com A aberto compensado e carimbo ampliado) gerados com sucesso!');
+console.log('✅ SVGs atualizados com alinhamento na largura do ícone e novo carimbo imponente!');
